@@ -1,9 +1,8 @@
 package gsmith.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -15,32 +14,32 @@ import gsmith.GSmithMod;
 import gsmith.actions.LoseGoldAction;
 import gsmith.patches.AbstractCardEnum;
 
-
-
-public class BagSlam extends CustomCard {
+public class HeavyCoin extends CustomCard {
 	
-	public static final String ID = "Bag Slam";
+	public static final String ID = "Heavy Coin";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
 	
-	private static final int ATTACK_DMG = 16;
-	private static final int UPGRADE_PLUS_DMG =  6;
-	private static final int GOLD_LOSS = 10;
+	private static final int ATTACK_DMG = 10;
+	private static final int UPGRADE_PLUS_DMG = 3;
+	private static final int GOLD_LOSS = 5;
 	
-	public static final String PATH = "cards/bag_slam.png";
+	public static final String PATH = "cards/heavy_coin.png";
 	
-	public BagSlam() {
+	public HeavyCoin() {
 		super(ID, NAME, GSmithMod.makePath(PATH), COST, DESCRIPTION, AbstractCard.CardType.ATTACK, 
-				AbstractCardEnum.GOLD, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.ENEMY);
+				AbstractCardEnum.GOLD, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ALL_ENEMY);
 		
 		this.baseDamage = ATTACK_DMG;
+		this.isMultiDamage = true;
+		this.exhaust = true;
 	}
 
 	@Override
 	public AbstractCard makeCopy() {
-		return new BagSlam();
+		return new HeavyCoin();
 	}
 
 	@Override
@@ -49,17 +48,14 @@ public class BagSlam extends CustomCard {
 			this.upgradeName();
 			this.upgradeDamage(UPGRADE_PLUS_DMG);
 		}
-
 	}
 
 	@Override
 	public void use(AbstractPlayer player, AbstractMonster monster) {
 		
-		AbstractDungeon.actionManager.addToBottom(new DamageAction(monster, 
-				new DamageInfo(player, this.damage, this.damageTypeForTurn), 
-				AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-		
+		AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(player, this.multiDamage, 
+					this.damageTypeForTurn, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+			
 		AbstractDungeon.actionManager.addToBottom(new LoseGoldAction(player, GOLD_LOSS));
 	}
-
 }

@@ -31,10 +31,12 @@ import gsmith.cards.CoinWall;
 import gsmith.cards.FistFulOfCoin;
 import gsmith.cards.HalfPenny;
 import gsmith.cards.HardCrash;
+import gsmith.cards.HeavyCoin;
 import gsmith.cards.LooseChange;
 import gsmith.cards.NoCoin;
 import gsmith.cards.OldSurprise;
 import gsmith.cards.Payday;
+import gsmith.cards.SecretBags;
 import gsmith.cards.SpareChange;
 import gsmith.cards.StrikeD;
 import gsmith.cards.Thief;
@@ -138,6 +140,8 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 		BaseMod.addCard(new NoCoin());
 		BaseMod.addCard(new CoinBarrage());
 		BaseMod.addCard(new HardCrash());
+		BaseMod.addCard(new HeavyCoin());
+		BaseMod.addCard(new SecretBags());
 		
 		UnlockTracker.unlockCard("Thief");
 		UnlockTracker.unlockCard("Spare Change");
@@ -158,6 +162,8 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 		UnlockTracker.unlockCard("No Coin");
 		UnlockTracker.unlockCard("Coin Barrage");
 		UnlockTracker.unlockCard("Hard Crash");
+		UnlockTracker.unlockCard("Heavy Coin");
+		UnlockTracker.unlockCard("Secret Bags");
 	}
 	
 	@Override

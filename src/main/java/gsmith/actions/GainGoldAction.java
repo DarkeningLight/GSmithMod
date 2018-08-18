@@ -19,6 +19,7 @@ public class GainGoldAction extends AbstractGameAction {
 	@Override
 	public void update() {
 		player.gainGold(GOLD_GAIN);
+		this.isDone = true;
 
 	}
 

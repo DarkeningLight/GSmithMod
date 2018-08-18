@@ -19,6 +19,7 @@ public class LoseGoldAction extends AbstractGameAction {
 	@Override
 	public void update() {
 		player.loseGold(GOLD_LOSS);
+		this.isDone = true;
 
 	}
 
