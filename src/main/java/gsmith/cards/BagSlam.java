@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import basemod.abstracts.CustomCard;
 import gsmith.GSmithMod;
+import gsmith.actions.LoseGoldAction;
 import gsmith.patches.AbstractCardEnum;
 
 public class BagSlam extends CustomCard {
@@ -56,7 +57,7 @@ public class BagSlam extends CustomCard {
 				new DamageInfo(player, this.damage, this.damageTypeForTurn), 
 				AbstractGameAction.AttackEffect.BLUNT_HEAVY));
 		
-		player.loseGold(GOLD_LOSS);
+		AbstractDungeon.actionManager.addToBottom(new LoseGoldAction(player, GOLD_LOSS));
 	}
 
 }

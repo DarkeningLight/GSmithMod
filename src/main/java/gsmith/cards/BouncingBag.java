@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import basemod.abstracts.CustomCard;
 import gsmith.GSmithMod;
+import gsmith.actions.LoseGoldAction;
 import gsmith.patches.AbstractCardEnum;
 
 public class BouncingBag extends CustomCard {
@@ -57,7 +58,7 @@ public class BouncingBag extends CustomCard {
 			AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(player, this.multiDamage, 
 					this.damageTypeForTurn, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
 			}
-		player.loseGold(GOLD_LOSS);
+		AbstractDungeon.actionManager.addToBottom(new LoseGoldAction(player, GOLD_LOSS));
 	}
 	
 	@Override

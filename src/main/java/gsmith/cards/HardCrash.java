@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import basemod.abstracts.CustomCard;
 import gsmith.GSmithMod;
+import gsmith.actions.LoseGoldAction;
 import gsmith.patches.AbstractCardEnum;
 
 public class HardCrash extends CustomCard {
@@ -61,7 +62,7 @@ public class HardCrash extends CustomCard {
 				new DamageInfo(player, this.damage, this.damageTypeForTurn), 
 				AbstractGameAction.AttackEffect.BLUNT_LIGHT));
 		
-		player.loseGold(GOLD_LOSS);
+		AbstractDungeon.actionManager.addToBottom(new LoseGoldAction(player, GOLD_LOSS));
 		
 		if(player.gold == 0) {
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, 
