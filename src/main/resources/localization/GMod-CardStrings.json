@@ -1,0 +1,88 @@
+{
+	"Thief": {
+		"NAME": "Thief",
+		"DESCRIPTION": "Ethereal. Whenever you play an Attack card gain a gold."
+	},
+	"Spare Change": {
+		"NAME": "Spare Change",
+		"DESCRIPTION": "Gain 6 gold. Exhaust."
+	},
+	"Coin Wall": {
+		"NAME": "Coin Wall",
+		"DESCRIPTION": "Gain 20 gold. Exhaust."
+	},
+	"Payday": {
+		"NAME": "Payday",
+		"DESCRIPTION": "Ethereal. Gain 100 gold. Exhaust.",
+		"UPGRADE_DESCRIPTION": "Ethereal. Gain 150 gold. Exhaust."
+	},
+	"Treasure Map": {
+		"NAME": "Treasure Map",
+		"DESCRIPTION": "Gain 10 gold. Exhaust.",
+		"UPGRADE_DESCRIPTION": "Gain 15 gold. Exhaust."
+	},
+	"Strike_D": {
+		"NAME": "Strike",
+		"DESCRIPTION": "Deal !D! damage."
+	},
+	"Bag Slam": {
+		"NAME": "Bag Slam",
+		"DESCRIPTION": "Deal !D! damage. NL Lose 10 gold." 
+	},
+	"Coin Toss": {
+		"NAME": "Coin Toss",
+		"DESCRIPTION": "Deal !D! damage. NL Place a card from your discard pile on top of your draw pile." 
+	},
+	"Fistful of Coin": {
+		"NAME": "Fistful of Coin",
+		"DESCRIPTION": "Deal !D! damage. NL Lose 5 gold."  
+	},
+	"Loose Change": {
+		"NAME": "Loose Change",
+		"DESCRIPTION": "Deal !D! damage. NL Exhaust a card from your hand."  
+	},
+	"Best Bag": {
+		"NAME": "Best Bag #1",
+		"DESCRIPTION": "Deal !D! damage. NL Gain 5 gold. NL Exhaust.",  
+		"UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain 7 gold. NL Exhaust." 
+	}, 
+		"Bouncing Bag": {
+		"NAME": "Bouncing Bag",
+		"DESCRIPTION": "Ethereal. NL Deal !D! damage to ALL enemies !M! times. NL Lose 10 gold."
+	},
+		"Cheapskate": {
+		"NAME": "Cheapskate",
+		"DESCRIPTION": "Deal 5 Damage. NL Bankrupt: draw a card.",
+		"UPGRADE_DESCRIPTION": "Deal 5 Damage. NL Bankrupt: draw !M! cards."
+	},
+		"Old Surprise": {
+		"NAME": "Old Surprise",
+		"DESCRIPTION": "Innate. NL Bankrupt: gain !M! gold. NL Exhaust."
+	},
+	"Half Penny": {
+		"NAME": "Half Penny",
+		"DESCRIPTION": "Bankrupt: apply !M! Weak to ALL enemies.",  
+		"UPGRADE_DESCRIPTION": "Gain !B! Block. NL Bankrupt: apply !M! Weak to ALL enemies."
+	},
+	"Bribe": {
+		"NAME": "Bribe",
+		"DESCRIPTION": "Deal !D! damage. Prosperous: apply !M! Vulnerable to ALL enemies."
+	},
+	"Block Chain": {
+		"NAME": "Block Chain",
+		"DESCRIPTION": "Gain !B! Block. NL Exhaust."
+	},
+	"No Coin": {
+		"NAME": "No Coin",
+		"DESCRIPTION": "Lose 5 gold. NL Bankrupt: Draw a card.",
+		"UPGRADE_DESCRIPTION": "Lose 5 gold. NL Bankrupt: Draw !M! cards."
+	},
+	"Coin Barrage": {
+		"NAME": "Coin Barrage",
+		"DESCRIPTION": "Deal !D! damage to ALL enemies. NL Lose 50 gold. NL Exhaust."
+	},
+	"Hard Crash": {
+		"NAME": "Hard Crash",
+		"DESCRIPTION": "Deal !D! damage. NL Lose 10 gold. NL Bankrupt: gain !M! Strength."
+	}
+}

@@ -1,0 +1,9 @@
+{
+  "Thief": {
+    "NAME": "Thief",
+    "DESCRIPTIONS": [
+      "Whenever you play an #yAttack gain ",
+      " #yGold."
+    ]
+  }
+}

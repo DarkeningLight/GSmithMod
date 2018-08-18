@@ -1,0 +1,9 @@
+{
+  "Bag of Coins": {
+    "NAME": "Bag of Coins",
+    "FLAVOR": "Flavor",
+    "DESCRIPTIONS": [
+      "Whenever you take damage instead lose that much gold."
+    ]
+  }
+}
