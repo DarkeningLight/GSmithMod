@@ -55,7 +55,7 @@ public class SecretBags extends CustomCard {
 		}
 		
 		AbstractDungeon.actionManager.addToBottom(
-				new SecretBagsAction(player, this.energyOnUse, GOLD_GAIN, this.freeToPlayOnce));
+				new SecretBagsAction(player, this.energyOnUse, (this.magicNumber*this.energyOnUse), this.freeToPlayOnce));
 	}
 	
 	@Override
