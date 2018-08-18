@@ -3,11 +3,13 @@ package gsmith.cards;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import basemod.abstracts.CustomCard;
 import gsmith.GSmithMod;
+import gsmith.actions.GainGoldAction;
 import gsmith.patches.AbstractCardEnum;
 
 public class OldSurprise extends CustomCard {
@@ -50,7 +52,7 @@ public class OldSurprise extends CustomCard {
 		
 		if (player.gold == 0 ) {
 			this.exhaust = true;
-			player.gainGold(this.magicNumber);
+			AbstractDungeon.actionManager.addToBottom(new GainGoldAction(player, this.magicNumber));
 		}
 	}
 

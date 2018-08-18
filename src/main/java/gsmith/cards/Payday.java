@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import basemod.abstracts.CustomCard;
 import gsmith.GSmithMod;
+import gsmith.actions.GainGoldAction;
 import gsmith.patches.AbstractCardEnum;
 
 public class Payday extends CustomCard {
@@ -17,22 +18,26 @@ public class Payday extends CustomCard {
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 	private static final int COST = 2;
+	
+	private static final int GOLD_GAIN = 100;
+	private static final int UPGRADE_PLUS_GOLD = 50;
+	
 	public static final String PATH = "cards/payday.png";
 	
 	public Payday() {
 		super(ID, NAME, GSmithMod.makePath(PATH), COST, DESCRIPTION, AbstractCard.CardType.SKILL, 
 				AbstractCardEnum.GOLD, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
 		this.exhaust = true;
+		
+		this.baseMagicNumber = this.magicNumber = GOLD_GAIN;
 	}
 	
 	@Override
 	public void upgrade() {
 		if (!this.upgraded) {
 			this.upgradeName();
-			this.rawDescription = UPGRADE_DESCRIPTION;
-			initializeDescription();
+			this.upgradeMagicNumber(UPGRADE_PLUS_GOLD);
 		}
 
 	}
@@ -44,17 +49,12 @@ public class Payday extends CustomCard {
 
 	@Override
 	public void use(AbstractPlayer player, AbstractMonster monster) {
-		if (upgraded) {
-			AbstractDungeon.player.gainGold(150);
-		} 
-		else {
-			AbstractDungeon.player.gainGold(100);
-		}
+		AbstractDungeon.actionManager.addToBottom(new GainGoldAction(player, this.magicNumber));
 	}
 	
 	@Override
 	public void triggerOnEndOfPlayerTurn() {
-		AbstractDungeon.player.hand.moveToExhaustPile(this);
+		AbstractDungeon.player.hand.moveToExhaustPile(this); //To Exhaust
 	}
 
 }

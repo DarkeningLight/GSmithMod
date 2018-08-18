@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import basemod.abstracts.CustomCard;
 import gsmith.GSmithMod;
+import gsmith.actions.GainGoldAction;
 import gsmith.patches.AbstractCardEnum;
 
 public class BestBag extends CustomCard {
@@ -26,7 +27,7 @@ public class BestBag extends CustomCard {
 	private static final int ATTACK_DMG = 5;
 	private static final int UPGRADE_PLUS_DMG =  2;
 	private static final int GOLD_GAIN = 5;
-	private static final int GOLD_GAIN_UPGRADE = 7;
+	private static final int UPGRADE_PLUS_GOLD = 2;
 	
 	public static final String PATH = "cards/best_bag.png";
 	
@@ -36,6 +37,7 @@ public class BestBag extends CustomCard {
 		
 		this.baseDamage = ATTACK_DMG;
 		this.exhaust = true;
+		this.baseMagicNumber = this.magicNumber = GOLD_GAIN;
 	}
 
 	@Override
@@ -48,9 +50,7 @@ public class BestBag extends CustomCard {
 		if (!this.upgraded) {
 			this.upgradeName();
 			this.upgradeDamage(UPGRADE_PLUS_DMG);
-			
-			this.rawDescription = UPGRADE_DESCRIPTION;
-			initializeDescription();
+			this.upgradeMagicNumber(UPGRADE_PLUS_GOLD);
 		}
 
 	}
@@ -62,12 +62,7 @@ public class BestBag extends CustomCard {
 				new DamageInfo(player, this.damage, this.damageTypeForTurn), 
 				AbstractGameAction.AttackEffect.BLUNT_LIGHT));
 		
-		if (upgraded) {
-			player.gainGold(GOLD_GAIN_UPGRADE);
-		}
-		else {
-			player.gainGold(GOLD_GAIN);
-		}
+		AbstractDungeon.actionManager.addToBottom(new GainGoldAction(player, this.magicNumber));
 	}
 
 }

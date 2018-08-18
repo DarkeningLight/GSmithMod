@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import basemod.abstracts.CustomCard;
 import gsmith.GSmithMod;
+import gsmith.actions.GainGoldAction;
 import gsmith.patches.AbstractCardEnum;
 
 public class SpareChange extends CustomCard {
@@ -19,12 +20,15 @@ public class SpareChange extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
 	private static final int UPGRADED_COST = 0;
+	private static final int GOLD_GAIN = 6;
 	public static final String PATH = "cards/spare_change.png";
 	
 	public SpareChange() {
 		super(ID, NAME, GSmithMod.makePath(PATH), COST, DESCRIPTION, AbstractCard.CardType.SKILL, 
 				AbstractCardEnum.GOLD, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.SELF);
+		
 		this.exhaust = true;
+		this.baseMagicNumber = this.magicNumber = GOLD_GAIN;
 	}
 	
 	@Override
@@ -43,7 +47,7 @@ public class SpareChange extends CustomCard {
 
 	@Override
 	public void use(AbstractPlayer player, AbstractMonster monster) {
-		AbstractDungeon.player.gainGold(6);
+		AbstractDungeon.actionManager.addToBottom(new GainGoldAction(player, this.magicNumber));
 
 	}
 

@@ -1,25 +1,23 @@
 {
 	"Thief": {
 		"NAME": "Thief",
-		"DESCRIPTION": "Ethereal. Whenever you play an Attack card gain a gold."
+		"DESCRIPTION": "Ethereal. Whenever you play an attack gain a gold."
 	},
 	"Spare Change": {
 		"NAME": "Spare Change",
-		"DESCRIPTION": "Gain 6 gold. Exhaust."
+		"DESCRIPTION": "Gain !M! gold. Exhaust."
 	},
 	"Coin Wall": {
 		"NAME": "Coin Wall",
-		"DESCRIPTION": "Gain 20 gold. Exhaust."
+		"DESCRIPTION": "Gain !M! gold. Exhaust."
 	},
 	"Payday": {
 		"NAME": "Payday",
-		"DESCRIPTION": "Ethereal. Gain 100 gold. Exhaust.",
-		"UPGRADE_DESCRIPTION": "Ethereal. Gain 150 gold. Exhaust."
+		"DESCRIPTION": "Ethereal. Gain !M! gold. Exhaust."
 	},
 	"Treasure Map": {
 		"NAME": "Treasure Map",
-		"DESCRIPTION": "Gain 10 gold. Exhaust.",
-		"UPGRADE_DESCRIPTION": "Gain 15 gold. Exhaust."
+		"DESCRIPTION": "Gain !M! gold. Exhaust."
 	},
 	"Strike_D": {
 		"NAME": "Strike",
@@ -43,8 +41,7 @@
 	},
 	"Best Bag": {
 		"NAME": "Best Bag #1",
-		"DESCRIPTION": "Deal !D! damage. NL Gain 5 gold. NL Exhaust.",  
-		"UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain 7 gold. NL Exhaust." 
+		"DESCRIPTION": "Deal !D! damage. NL Gain !M! gold. NL Exhaust."
 	}, 
 		"Bouncing Bag": {
 		"NAME": "Bouncing Bag",
