@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
 import basemod.abstracts.CustomPlayer;
+import basemod.animations.SpriterAnimation;
 import gsmith.GSmithMod;
 import gsmith.patches.TheGoldsmithEnum;
 
@@ -43,7 +44,8 @@ public class TheGoldsmith extends CustomPlayer {
 	
 	public TheGoldsmith(String name, PlayerClass setClass) {
 		super(name, setClass, orbTextures, "img/char/goldsmith/orb/energyGoldVFX.png", 
-				"img/char/goldsmith/goldsmith.g3dj", "sls_md_juggernaut|idle");
+				new float[] {1,1,1,1,1,1,1,1,1,1,1,1}, 
+				new SpriterAnimation(GSmithMod.makePath("char/goldsmith/goldsmith.scml")));
 		
 		initializeClass(null, GSmithMod.makePath(GOLDSMITH_SHOULDER_2),
 				GSmithMod.makePath(GOLDSMITH_SHOULDER_1),
