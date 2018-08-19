@@ -20,10 +20,10 @@ public class CoinBarrage extends CustomCard {
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	private static final int COST = 2;
+	private static final int COST = 3;
 	
-	private static final int ATTACK_DMG = 32;
-	private static final int UPGRADE_PLUS_DMG =  16;
+	private static final int ATTACK_DMG = 30;
+	private static final int UPGRADE_PLUS_DMG =  10;
 	private static final int GOLD_LOSS = 50;
 	
 	public static final String PATH = "cards/coin_barrage.png";
@@ -53,9 +53,9 @@ public class CoinBarrage extends CustomCard {
 	@Override
 	public void use(AbstractPlayer player, AbstractMonster monster) {
 		
+		AbstractDungeon.actionManager.addToBottom(new LoseGoldAction(player, GOLD_LOSS));
+		
 		AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(player, this.multiDamage, 
 				this.damageTypeForTurn, AbstractGameAction.AttackEffect.SMASH));
-		
-		AbstractDungeon.actionManager.addToBottom(new LoseGoldAction(player, GOLD_LOSS));
 	}
 }

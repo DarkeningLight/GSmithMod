@@ -19,11 +19,11 @@ public class NoCoin extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-	private static final int COST = 1;
+	private static final int COST = 0;
 	
 	private static final int GOLD_LOSE = 5;
-	private static final int CARD_DRAW = 1;
-	private static final int UPGRADE_PLUS_DRAW =  1;
+	private static final int CARD_DRAW = 2;
+	private static final int UPGRADE_PLUS_DRAW =  2;
 	
 	public static final String PATH = "cards/no_coin.png";
 	

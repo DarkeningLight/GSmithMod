@@ -18,10 +18,10 @@ public class OldSurprise extends CustomCard {
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	private static final int COST = 1;
+	private static final int COST = 0;
 	
-	private static final int GOLD_GAIN = 20;
-	private static final int UPGRADE_PLUS_GOLD = 20;
+	private static final int GOLD_GAIN = 40;
+	private static final int UPGRADE_PLUS_GOLD = 30;
 	
 	public static final String PATH = "cards/old_surprise.png";
 	

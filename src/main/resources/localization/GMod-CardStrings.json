@@ -76,7 +76,7 @@
 	},
 	"Coin Barrage": {
 		"NAME": "Coin Barrage",
-		"DESCRIPTION": "Deal !D! damage to ALL enemies. NL Lose 50 gold. NL Exhaust."
+		"DESCRIPTION": "Lose 50 gold. NL Deal !D! damage to ALL enemies. NL Exhaust."
 	},
 	"Hard Crash": {
 		"NAME": "Hard Crash",
