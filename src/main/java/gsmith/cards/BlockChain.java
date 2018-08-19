@@ -21,7 +21,7 @@ public class BlockChain extends CustomCard {
 	private static final int COST = 0;
 	
 	private static final int BLOCK_AMT = 4;
-	private static final int UPGRADE_PLUS_BLOCK =  4;
+	private static final int UPGRADE_PLUS_BLOCK = 4;
 	
 	public static final String PATH = "cards/block_chain.png";
 	
@@ -29,7 +29,7 @@ public class BlockChain extends CustomCard {
 		super(ID, NAME, GSmithMod.makePath(PATH), COST, DESCRIPTION, AbstractCard.CardType.SKILL, 
 				AbstractCardEnum.GOLD, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF);
 		
-		this.block = BLOCK_AMT;
+		this.baseBlock = this.block = BLOCK_AMT;
 		this.exhaust = true;
 	}
 
