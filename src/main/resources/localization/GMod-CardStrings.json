@@ -89,5 +89,10 @@
 	"Secret Bags": {
 		"NAME": "Secret Bags",
 		"DESCRIPTION": "Ethereal. NL Spend all [R]. NL Gain !M! gold X times."
+	},
+	"Bigger Bag": {
+		"NAME": "Bigger Bag",
+		"DESCRIPTION": "Gain !M! gold. NL Place a copy of this card into your discard pile. All Bigger Bag cards give 1 additional gold this combat",
+		"UPGRADE_DESCRIPTION": "Gain !M! gold. NL Place a copy of this card into your discard pile. All Bigger Bag cards give 2 additional gold this combat"
 	}
 }
