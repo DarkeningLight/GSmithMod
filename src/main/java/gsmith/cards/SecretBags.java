@@ -31,6 +31,7 @@ public class SecretBags extends CustomCard {
 				AbstractCardEnum.GOLD, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
 		
 		this.baseMagicNumber = this.magicNumber = GOLD_GAIN;
+		this.exhaust = true;
 	}
 
 	@Override

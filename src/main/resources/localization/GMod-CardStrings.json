@@ -43,16 +43,16 @@
 		"NAME": "Best Bag #1",
 		"DESCRIPTION": "Deal !D! damage. NL Gain !M! gold. NL Exhaust."
 	}, 
-		"Bouncing Bag": {
+	"Bouncing Bag": {
 		"NAME": "Bouncing Bag",
 		"DESCRIPTION": "Ethereal. NL Deal !D! damage to ALL enemies !M! times. NL Lose 10 gold."
 	},
-		"Cheapskate": {
+	"Cheapskate": {
 		"NAME": "Cheapskate",
 		"DESCRIPTION": "Deal 5 Damage. NL Bankrupt: draw a card.",
 		"UPGRADE_DESCRIPTION": "Deal 5 Damage. NL Bankrupt: draw !M! cards."
 	},
-		"Old Surprise": {
+	"Old Surprise": {
 		"NAME": "Old Surprise",
 		"DESCRIPTION": "Innate. NL Bankrupt: gain !M! gold. NL Exhaust."
 	},
@@ -88,7 +88,7 @@
 	},
 	"Secret Bags": {
 		"NAME": "Secret Bags",
-		"DESCRIPTION": "Ethereal. NL Spend all [R]. NL Gain !M! gold X times."
+		"DESCRIPTION": "Ethereal. NL Spend all [R]. NL Gain !M! gold X times. NL Exhaust"
 	},
 	"Bigger Bag": {
 		"NAME": "Bigger Bag",
