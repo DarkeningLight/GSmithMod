@@ -32,6 +32,7 @@ import gsmith.cards.CoinBarrage;
 import gsmith.cards.CoinToss;
 import gsmith.cards.CoinWall;
 import gsmith.cards.FistFulOfCoin;
+import gsmith.cards.GoldRush;
 import gsmith.cards.HalfPenny;
 import gsmith.cards.HardCrash;
 import gsmith.cards.HeavyCoin;
@@ -40,6 +41,7 @@ import gsmith.cards.NoCoin;
 import gsmith.cards.OldSurprise;
 import gsmith.cards.Payday;
 import gsmith.cards.SecretBags;
+import gsmith.cards.SleightOfHand;
 import gsmith.cards.SpareChange;
 import gsmith.cards.StrikeD;
 import gsmith.cards.Thief;
@@ -160,6 +162,8 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 		BaseMod.addCard(new SecretBags());
 		//BaseMod.addCard(new BiggerBag());
 		BaseMod.addCard(new BlockChain());
+		BaseMod.addCard(new GoldRush());
+		BaseMod.addCard(new SleightOfHand());
 		
 		UnlockTracker.unlockCard("Thief");
 		UnlockTracker.unlockCard("Spare Change");
@@ -184,6 +188,8 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 		UnlockTracker.unlockCard("Secret Bags");
 		//UnlockTracker.unlockCard("Bigger Bag");
 		UnlockTracker.unlockCard("Block Chain");
+		UnlockTracker.unlockCard("Gold Rush");
+		UnlockTracker.unlockCard("Sleight of Hand");
 	}
 	
 	@Override

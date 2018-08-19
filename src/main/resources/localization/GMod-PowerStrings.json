@@ -5,5 +5,12 @@
       "Whenever you play an #yAttack gain ",
       " #yGold."
     ]
+  },
+  "Sleight of Hand": {
+    "NAME": "Sleight of Hand",
+    "DESCRIPTIONS": [
+      "Whenever you play an #ySkill gain ",
+      " #yGold."
+    ]
   }
 }

@@ -15,24 +15,24 @@ import gsmith.GSmithMod;
 import gsmith.actions.GainGoldAction;
 import gsmith.patches.AbstractCardEnum;
 
-public class BestBag extends CustomCard {
+public class GoldRush extends CustomCard {
 	
-	public static final String ID = "Best Bag";
+	public static final String ID = "Gold Rush";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	private static final int COST = 1;
+	private static final int COST = 2;
 	
-	private static final int ATTACK_DMG = 5;
-	private static final int UPGRADE_PLUS_DMG =  2;
-	private static final int GOLD_GAIN = 5;
-	private static final int UPGRADE_PLUS_GOLD = 2;
+	private static final int ATTACK_DMG = 20;
+	private static final int UPGRADE_PLUS_DMG =  6;
+	private static final int GOLD_GAIN = 20;
+	private static final int UPGRADE_PLUS_GOLD = 10;
 	
-	public static final String PATH = "cards/best_bag.png";
+	public static final String PATH = "cards/gold_rush.png";
 	
-	public BestBag() {
+	public GoldRush() {
 		super(ID, NAME, GSmithMod.makePath(PATH), COST, DESCRIPTION, AbstractCard.CardType.ATTACK, 
-				AbstractCardEnum.GOLD, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY);
+				AbstractCardEnum.GOLD, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.ENEMY);
 		
 		this.baseDamage = ATTACK_DMG;
 		this.exhaust = true;
@@ -41,7 +41,7 @@ public class BestBag extends CustomCard {
 
 	@Override
 	public AbstractCard makeCopy() {
-		return new BestBag();
+		return new GoldRush();
 	}
 
 	@Override
@@ -59,8 +59,8 @@ public class BestBag extends CustomCard {
 		
 		AbstractDungeon.actionManager.addToBottom(new DamageAction(monster, 
 				new DamageInfo(player, this.damage, this.damageTypeForTurn), 
-				AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-		
+				AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+
 		AbstractDungeon.actionManager.addToBottom(new GainGoldAction(player, this.magicNumber));
 	}
 

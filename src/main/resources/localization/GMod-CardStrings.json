@@ -94,5 +94,13 @@
 		"NAME": "Bigger Bag",
 		"DESCRIPTION": "Gain !M! gold. NL Place a copy of this card into your discard pile. All Bigger Bag cards give 1 additional gold this combat",
 		"UPGRADE_DESCRIPTION": "Gain !M! gold. NL Place a copy of this card into your discard pile. All Bigger Bag cards give 2 additional gold this combat"
+	},
+	"Gold Rush": {
+		"NAME": "Gold Rush",
+		"DESCRIPTION": "Deal !D! damage. NL Gain !M! gold. NL Exhaust."
+	},
+	"Sleight of Hand": {
+		"NAME": "Sleight of Hand",
+		"DESCRIPTION": "Ethereal. Whenever you play a skill gain !M! gold."
 	}
 }
