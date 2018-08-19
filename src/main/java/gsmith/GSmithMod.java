@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import basemod.BaseMod;
 import basemod.ModPanel;
 import basemod.interfaces.EditCardsSubscriber;
+import basemod.interfaces.EditCharactersSubscriber;
 import basemod.interfaces.EditKeywordsSubscriber;
 import basemod.interfaces.EditRelicsSubscriber;
 import basemod.interfaces.EditStringsSubscriber;
@@ -23,6 +24,7 @@ import basemod.interfaces.PostInitializeSubscriber;
 import gsmith.cards.BagSlam;
 import gsmith.cards.BestBag;
 import gsmith.cards.BiggerBag;
+import gsmith.cards.BlockChain;
 import gsmith.cards.BouncingBag;
 import gsmith.cards.Bribe;
 import gsmith.cards.Cheapskate;
@@ -42,12 +44,14 @@ import gsmith.cards.SpareChange;
 import gsmith.cards.StrikeD;
 import gsmith.cards.Thief;
 import gsmith.cards.TreasureMap;
+import gsmith.characters.TheGoldsmith;
 import gsmith.patches.AbstractCardEnum;
+import gsmith.patches.TheGoldsmithEnum;
 import gsmith.relics.BagOfCoins;
 
 @SpireInitializer
 public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber, EditStringsSubscriber, 
-									EditCardsSubscriber, EditKeywordsSubscriber {
+									EditCardsSubscriber, EditKeywordsSubscriber, EditCharactersSubscriber {
 	
 	private static final String MODNAME = "Goldsmith Mod";
 	private static final String AUTHOR = "People";
@@ -73,6 +77,9 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 	
 	//badge image
 	public static final String BADGE_IMG = "badge.png";
+	
+	private static final String GOLDSMITH_BUTTON = "charSelect/goldsmithButton.png";
+    private static final String GOLDSMITH_PORTRAIT = "charSelect/goldsmithPortraitBG.jpg";
 	
 	
 	// Short Texture Methods
@@ -112,7 +119,15 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
     	Settings.isTrial = false;
     	Settings.isDemo = false;
     }
-    
+
+	@Override
+	public void receiveEditCharacters() {
+		BaseMod.addCharacter(TheGoldsmith.class, "The Goldsmith", "Goldsmith class string",
+				AbstractCardEnum.GOLD.toString(), "The Goldsmith", 
+				makePath(GOLDSMITH_BUTTON), makePath(GOLDSMITH_PORTRAIT), 
+				TheGoldsmithEnum.THE_GOLDSMITH.toString());
+		
+	}
 
 	@Override
 	public void receiveEditRelics() {
@@ -143,7 +158,8 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 		BaseMod.addCard(new HardCrash());
 		BaseMod.addCard(new HeavyCoin());
 		BaseMod.addCard(new SecretBags());
-		BaseMod.addCard(new BiggerBag());
+		//BaseMod.addCard(new BiggerBag());
+		BaseMod.addCard(new BlockChain());
 		
 		UnlockTracker.unlockCard("Thief");
 		UnlockTracker.unlockCard("Spare Change");
@@ -166,7 +182,8 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 		UnlockTracker.unlockCard("Hard Crash");
 		UnlockTracker.unlockCard("Heavy Coin");
 		UnlockTracker.unlockCard("Secret Bags");
-		UnlockTracker.unlockCard("Bigger Bag");
+		//UnlockTracker.unlockCard("Bigger Bag");
+		UnlockTracker.unlockCard("Block Chain");
 	}
 	
 	@Override

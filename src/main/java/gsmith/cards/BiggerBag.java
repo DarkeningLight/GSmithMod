@@ -14,6 +14,7 @@ import gsmith.actions.BiggerBagAction;
 import gsmith.actions.GainGoldAction;
 import gsmith.patches.AbstractCardEnum;
 
+/* #TODO Rework Code */
 public class BiggerBag extends CustomCard {
 
 	public static final String ID = "Bigger Bag";
