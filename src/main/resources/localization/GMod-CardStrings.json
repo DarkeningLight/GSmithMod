@@ -102,5 +102,9 @@
 	"Sleight of Hand": {
 		"NAME": "Sleight of Hand",
 		"DESCRIPTION": "Ethereal. Whenever you play a skill gain !M! gold."
+	},
+	"Rainmaker": {
+		"NAME": "Rainmaker",
+		"DESCRIPTION": "At the start of your turn, Prosperous: gain !M! energy"
 	}
 }

@@ -12,5 +12,12 @@
       "Whenever you play an #ySkill gain ",
       " #yGold."
     ]
+  },
+  "Rainmaker": {
+    "NAME": "Rain Maker",
+    "DESCRIPTIONS": [
+      "At the start of your turn, #yProsperous: Gain",
+      " #yEnergy."
+    ]
   }
 }
