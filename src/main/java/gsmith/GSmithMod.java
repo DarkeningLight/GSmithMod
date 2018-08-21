@@ -32,13 +32,17 @@ import gsmith.cards.Cheapskate;
 import gsmith.cards.CoinBarrage;
 import gsmith.cards.CoinToss;
 import gsmith.cards.CoinWall;
+import gsmith.cards.Edge;
 import gsmith.cards.FistFulOfCoin;
 import gsmith.cards.GoldFu;
 import gsmith.cards.GoldRush;
 import gsmith.cards.HalfPenny;
 import gsmith.cards.HardCrash;
+import gsmith.cards.Heads;
 import gsmith.cards.HeavyCoin;
 import gsmith.cards.LooseChange;
+import gsmith.cards.MarketCrash;
+import gsmith.cards.Money;
 import gsmith.cards.NoCoin;
 import gsmith.cards.OldSurprise;
 import gsmith.cards.Payday;
@@ -47,6 +51,7 @@ import gsmith.cards.SecretBags;
 import gsmith.cards.SleightOfHand;
 import gsmith.cards.SpareChange;
 import gsmith.cards.StrikeD;
+import gsmith.cards.Tails;
 import gsmith.cards.Thief;
 import gsmith.cards.TreasureMap;
 import gsmith.characters.TheGoldsmith;
@@ -170,6 +175,11 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 		BaseMod.addCard(new Rainmaker());
 		BaseMod.addCard(new BagFu());
 		BaseMod.addCard(new GoldFu());
+		BaseMod.addCard(new MarketCrash());
+		BaseMod.addCard(new Money());
+		BaseMod.addCard(new Heads());
+		BaseMod.addCard(new Tails());
+		BaseMod.addCard(new Edge());
 		
 		UnlockTracker.unlockCard("Thief");
 		UnlockTracker.unlockCard("Spare Change");
@@ -199,6 +209,11 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 		UnlockTracker.unlockCard("Rainmaker");
 		UnlockTracker.unlockCard("Bag Fu");
 		UnlockTracker.unlockCard("Gold Fu");
+		UnlockTracker.unlockCard("Market Crash");
+		UnlockTracker.unlockCard("Money");
+		UnlockTracker.unlockCard("Heads");
+		UnlockTracker.unlockCard("Tails");
+		UnlockTracker.unlockCard("Edge");
 	}
 	
 	@Override

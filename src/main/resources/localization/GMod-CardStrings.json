@@ -116,5 +116,25 @@
 		"NAME": "Gold Fu",
 		"DESCRIPTION": "At the start of your turn, if Prosperous draw !M! cards.",
 		"UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, if Prosperous draw !M! cards."
+	},
+	"Market Crash": {
+		"NAME": "Market Crash",
+		"DESCRIPTION": "Deal !D! damage."
+	},
+	"Money": {
+		"NAME": "Money Money Money",
+		"DESCRIPTION": "If Prosperous deal !D! damage."
+	},
+	"Heads": {
+		"NAME": "Heads",
+		"DESCRIPTION": "Deal !D! damage. NL Gain !M! Strength."
+	},
+	"Tails": {
+		"NAME": "Tails",
+		"DESCRIPTION": "Deal !D! damage. NL Gain !M! Dexterity."
+	},
+	"Edge": {
+		"NAME": "Edge",
+		"DESCRIPTION": "Deal !D! damage. NL Gain !B! Block"
 	}
 }
