@@ -36,7 +36,6 @@ public class BagFuPower extends AbstractPower {
 		super.atStartOfTurn();
 		
 		if (this.owner.gold >= 500) {
-			System.out.println("Amount: " + this.amount);
 			this.flash();
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, 
 					new ThornsPower(this.owner, this.amount), this.amount));

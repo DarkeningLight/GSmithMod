@@ -12,7 +12,6 @@ import basemod.abstracts.CustomCard;
 import gsmith.GSmithMod;
 import gsmith.patches.AbstractCardEnum;
 import gsmith.powers.BagFuPower;
-import gsmith.powers.RainmakerPower;
 
 public class BagFu extends CustomCard {
 	
@@ -23,8 +22,7 @@ public class BagFu extends CustomCard {
 	public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 	private static final int COST = 1;
 	
-	private static final int THORNS_GAIN = 2;
-	private static final int UPGRADE_INCREASE_THORNS = 2;
+	private static final int THORNS_GAIN = 1;
 	
 	public static final String PATH = "cards/bag_fu.png";
 	
@@ -44,7 +42,6 @@ public class BagFu extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			this.upgradeName();
-			this.upgradeMagicNumber(UPGRADE_INCREASE_THORNS);
 			
 			this.isInnate = true;
 			
