@@ -21,6 +21,7 @@ import basemod.interfaces.EditKeywordsSubscriber;
 import basemod.interfaces.EditRelicsSubscriber;
 import basemod.interfaces.EditStringsSubscriber;
 import basemod.interfaces.PostInitializeSubscriber;
+import gsmith.cards.BagFu;
 import gsmith.cards.BagSlam;
 import gsmith.cards.BestBag;
 import gsmith.cards.BiggerBag;
@@ -166,6 +167,7 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 		BaseMod.addCard(new GoldRush());
 		//BaseMod.addCard(new SleightOfHand());
 		BaseMod.addCard(new Rainmaker());
+		BaseMod.addCard(new BagFu());
 		
 		UnlockTracker.unlockCard("Thief");
 		UnlockTracker.unlockCard("Spare Change");
@@ -193,6 +195,7 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 		UnlockTracker.unlockCard("Gold Rush");
 		//UnlockTracker.unlockCard("Sleight of Hand");
 		UnlockTracker.unlockCard("Rainmaker");
+		UnlockTracker.unlockCard("Bag Fu");
 	}
 	
 	@Override

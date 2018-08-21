@@ -16,8 +16,15 @@
   "Rainmaker": {
     "NAME": "Rain Maker",
     "DESCRIPTIONS": [
-      "At the start of your turn, #yProsperous: Gain",
+      "At the start of your turn, #yProsperous: Gain ",
       " #yEnergy."
+    ]
+  },
+  "Bag Fu": {
+    "NAME": "Bag Fu",
+    "DESCRIPTIONS": [
+      "At the start of your turn, #yProsperous: Gain ",
+      " #yThorns."
     ]
   }
 }

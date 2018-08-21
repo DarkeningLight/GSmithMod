@@ -106,5 +106,10 @@
 	"Rainmaker": {
 		"NAME": "Rainmaker",
 		"DESCRIPTION": "At the start of your turn, Prosperous: gain !M! energy"
+	},
+	"Bag Fu": {
+		"NAME": "Bag Fu",
+		"DESCRIPTION": "At the start of your turn, Prosperous: gain !M! Thorns",
+		"UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, Prosperous: gain !M! Thorns"
 	}
 }
