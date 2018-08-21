@@ -26,5 +26,12 @@
       "At the start of your turn, #yProsperous: Gain ",
       " #yThorns."
     ]
+  },
+  "Gold Fu": {
+    "NAME": "Gold Fu",
+    "DESCRIPTIONS": [
+      "At the start of your turn, if #yProsperous draw ",
+      " cards."
+    ]
   }
 }

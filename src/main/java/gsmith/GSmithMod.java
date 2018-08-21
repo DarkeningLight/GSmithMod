@@ -33,6 +33,7 @@ import gsmith.cards.CoinBarrage;
 import gsmith.cards.CoinToss;
 import gsmith.cards.CoinWall;
 import gsmith.cards.FistFulOfCoin;
+import gsmith.cards.GoldFu;
 import gsmith.cards.GoldRush;
 import gsmith.cards.HalfPenny;
 import gsmith.cards.HardCrash;
@@ -168,6 +169,7 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 		//BaseMod.addCard(new SleightOfHand());
 		BaseMod.addCard(new Rainmaker());
 		BaseMod.addCard(new BagFu());
+		BaseMod.addCard(new GoldFu());
 		
 		UnlockTracker.unlockCard("Thief");
 		UnlockTracker.unlockCard("Spare Change");
@@ -196,6 +198,7 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 		//UnlockTracker.unlockCard("Sleight of Hand");
 		UnlockTracker.unlockCard("Rainmaker");
 		UnlockTracker.unlockCard("Bag Fu");
+		UnlockTracker.unlockCard("Gold Fu");
 	}
 	
 	@Override

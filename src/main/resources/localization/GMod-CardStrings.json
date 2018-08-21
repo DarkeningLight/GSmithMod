@@ -49,21 +49,21 @@
 	},
 	"Cheapskate": {
 		"NAME": "Cheapskate",
-		"DESCRIPTION": "Deal 5 Damage. NL Bankrupt: draw a card.",
-		"UPGRADE_DESCRIPTION": "Deal 5 Damage. NL Bankrupt: draw !M! cards."
+		"DESCRIPTION": "Deal 5 Damage. NL If Bankrupt draw a card.",
+		"UPGRADE_DESCRIPTION": "Deal 5 Damage. NL If Bankrupt draw !M! cards."
 	},
 	"Old Surprise": {
 		"NAME": "Old Surprise",
-		"DESCRIPTION": "Innate. NL Bankrupt: gain !M! gold. NL Exhaust."
+		"DESCRIPTION": "Innate. NL If Bankrupt gain !M! gold. NL Exhaust."
 	},
 	"Half Penny": {
 		"NAME": "Half Penny",
-		"DESCRIPTION": "Bankrupt: apply !M! Weak to ALL enemies.",  
-		"UPGRADE_DESCRIPTION": "Gain !B! Block. NL Bankrupt: apply !M! Weak to ALL enemies."
+		"DESCRIPTION": "If Bankrupt apply !M! Weak to ALL enemies.",  
+		"UPGRADE_DESCRIPTION": "Gain !B! Block. NL If Bankrupt apply !M! Weak to ALL enemies."
 	},
 	"Bribe": {
 		"NAME": "Bribe",
-		"DESCRIPTION": "Deal !D! damage. Prosperous: apply !M! Vulnerable to ALL enemies."
+		"DESCRIPTION": "Deal !D! damage. If Prosperous apply !M! Vulnerable to ALL enemies."
 	},
 	"Block Chain": {
 		"NAME": "Block Chain",
@@ -71,8 +71,8 @@
 	},
 	"No Coin": {
 		"NAME": "No Coin",
-		"DESCRIPTION": "Lose 5 gold. NL Bankrupt: Draw a card.",
-		"UPGRADE_DESCRIPTION": "Lose 5 gold. NL Bankrupt: Draw !M! cards."
+		"DESCRIPTION": "Lose 5 gold. NL If Bankrupt Draw a card.",
+		"UPGRADE_DESCRIPTION": "Lose 5 gold. NL If Bankrupt Draw !M! cards."
 	},
 	"Coin Barrage": {
 		"NAME": "Coin Barrage",
@@ -80,7 +80,7 @@
 	},
 	"Hard Crash": {
 		"NAME": "Hard Crash",
-		"DESCRIPTION": "Deal !D! damage. NL Lose 10 gold. NL Bankrupt: gain !M! Strength."
+		"DESCRIPTION": "Deal !D! damage. NL Lose 10 gold. NL If Bankrupt gain !M! Strength."
 	},
 	"Heavy Coin": {
 		"NAME": "Heavy Coin",
@@ -105,11 +105,16 @@
 	},
 	"Rainmaker": {
 		"NAME": "Rainmaker",
-		"DESCRIPTION": "At the start of your turn, Prosperous: gain !M! energy"
+		"DESCRIPTION": "At the start of your turn, if Prosperous gain !M! [R]."
 	},
 	"Bag Fu": {
 		"NAME": "Bag Fu",
-		"DESCRIPTION": "At the start of your turn, Prosperous: gain !M! Thorns",
-		"UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, Prosperous: gain !M! Thorns"
+		"DESCRIPTION": "At the start of your turn, if Prosperous gain !M! Thorns.",
+		"UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn if Prosperous gain !M! Thorns."
+	},
+	"Gold Fu": {
+		"NAME": "Gold Fu",
+		"DESCRIPTION": "At the start of your turn, if Prosperous draw !M! cards.",
+		"UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, if Prosperous draw !M! cards."
 	}
 }
