@@ -71,8 +71,7 @@
 	},
 	"No Coin": {
 		"NAME": "No Coin",
-		"DESCRIPTION": "Lose 5 gold. NL If Bankrupt Draw a card.",
-		"UPGRADE_DESCRIPTION": "Lose 5 gold. NL If Bankrupt Draw !M! cards."
+		"DESCRIPTION": "Lose 5 gold. NL If Bankrupt draw !M! cards."
 	},
 	"Coin Barrage": {
 		"NAME": "Coin Barrage",
