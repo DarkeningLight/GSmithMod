@@ -31,11 +31,14 @@ import gsmith.cards.Bribe;
 import gsmith.cards.Cheapskate;
 import gsmith.cards.CoinBarrage;
 import gsmith.cards.CoinToss;
+import gsmith.cards.CoinTrick;
 import gsmith.cards.CoinWall;
+import gsmith.cards.CountingDesk;
 import gsmith.cards.Edge;
 import gsmith.cards.FistFulOfCoin;
 import gsmith.cards.GoldFu;
 import gsmith.cards.GoldRush;
+import gsmith.cards.GreedIsGood;
 import gsmith.cards.HalfPenny;
 import gsmith.cards.HardCrash;
 import gsmith.cards.Heads;
@@ -46,6 +49,7 @@ import gsmith.cards.Money;
 import gsmith.cards.NoCoin;
 import gsmith.cards.OldSurprise;
 import gsmith.cards.Payday;
+import gsmith.cards.PaymentAccepted;
 import gsmith.cards.Rainmaker;
 import gsmith.cards.SecretBags;
 import gsmith.cards.SleightOfHand;
@@ -180,6 +184,10 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 		BaseMod.addCard(new Heads());
 		BaseMod.addCard(new Tails());
 		BaseMod.addCard(new Edge());
+		BaseMod.addCard(new CoinTrick());
+		BaseMod.addCard(new GreedIsGood());
+		BaseMod.addCard(new PaymentAccepted());
+		BaseMod.addCard(new CountingDesk());
 		
 		UnlockTracker.unlockCard("Thief");
 		UnlockTracker.unlockCard("Spare Change");
@@ -214,6 +222,10 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 		UnlockTracker.unlockCard("Heads");
 		UnlockTracker.unlockCard("Tails");
 		UnlockTracker.unlockCard("Edge");
+		UnlockTracker.unlockCard("Coin Trick");
+		UnlockTracker.unlockCard("Greed is Good");
+		UnlockTracker.unlockCard("Payment Accepted");
+		UnlockTracker.unlockCard("Counting Desk");
 	}
 	
 	@Override
