@@ -1,6 +1,5 @@
 package gsmith.cards;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -10,50 +9,53 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import basemod.abstracts.CustomCard;
 import gsmith.GSmithMod;
+import gsmith.actions.LoseGoldAction;
 import gsmith.patches.AbstractCardEnum;
-import gsmith.powers.GoldFuPower;
 
-public class GoldFu extends CustomCard {
+public class EatTheCoins extends CustomCard {
 	
-	public static final String ID = "Gold Fu";
+	public static final String ID = "Eat The Coins";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-	private static final int COST = 2;
+	private static final int COST = 1;
 	
-	private static final int CARD_DRAW = 2;
+	private static final int HP_GAIN = 3;
+	private static final int UPGRADE_PLUS_HP =  2;
+	private static final int GOLD_LOSE = 10;
 	
-	public static final String PATH = "cards/gold_fu.png";
+	public static final String PATH = "cards/eat_the_coins.png";
 	
-	public GoldFu() {
-		super(ID, NAME, GSmithMod.makePath(PATH), COST, DESCRIPTION, AbstractCard.CardType.POWER, 
+	public EatTheCoins() {
+		super(ID, NAME, GSmithMod.makePath(PATH), COST, DESCRIPTION, AbstractCard.CardType.SKILL, 
 				AbstractCardEnum.GOLD, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
 		
-		this.baseMagicNumber = this.magicNumber = CARD_DRAW;
+		this.baseMagicNumber = this.magicNumber = HP_GAIN;
 	}
 
 	@Override
 	public AbstractCard makeCopy() {
-		return new GoldFu();
+		return new EatTheCoins();
 	}
 
 	@Override
 	public void upgrade() {
 		if (!this.upgraded) {
 			this.upgradeName();
-			
-			this.isInnate = true;
-			
-			this.rawDescription = UPGRADE_DESCRIPTION;
-			initializeDescription();
+			this.upgradeMagicNumber(UPGRADE_PLUS_HP);
 		}
 
 	}
 
 	@Override
 	public void use(AbstractPlayer player, AbstractMonster monster) {
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, 
-				new GoldFuPower(player, this.magicNumber), this.magicNumber));
+		
+		AbstractDungeon.actionManager.addToBottom(new LoseGoldAction(player, GOLD_LOSE));
+		
+		if (player.gold == 0) {
+			player.increaseMaxHp(this.magicNumber, true);
+			this.exhaust = true;
+		}	
 	}
+
 }

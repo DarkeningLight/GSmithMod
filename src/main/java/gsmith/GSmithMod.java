@@ -30,10 +30,12 @@ import gsmith.cards.BouncingBag;
 import gsmith.cards.Bribe;
 import gsmith.cards.Cheapskate;
 import gsmith.cards.CoinBarrage;
+import gsmith.cards.CoinCaddy;
 import gsmith.cards.CoinToss;
 import gsmith.cards.CoinTrick;
 import gsmith.cards.CoinWall;
 import gsmith.cards.CountingDesk;
+import gsmith.cards.EatTheCoins;
 import gsmith.cards.Edge;
 import gsmith.cards.FistFulOfCoin;
 import gsmith.cards.GoldFu;
@@ -188,6 +190,8 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 		BaseMod.addCard(new GreedIsGood());
 		BaseMod.addCard(new PaymentAccepted());
 		BaseMod.addCard(new CountingDesk());
+		BaseMod.addCard(new EatTheCoins());
+		BaseMod.addCard(new CoinCaddy());
 		
 		UnlockTracker.unlockCard("Thief");
 		UnlockTracker.unlockCard("Spare Change");
@@ -226,6 +230,8 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 		UnlockTracker.unlockCard("Greed is Good");
 		UnlockTracker.unlockCard("Payment Accepted");
 		UnlockTracker.unlockCard("Counting Desk");
+		UnlockTracker.unlockCard("Eat The Coins");
+		UnlockTracker.unlockCard("Coin Caddy");
 	}
 	
 	@Override

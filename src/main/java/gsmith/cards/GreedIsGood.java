@@ -1,7 +1,5 @@
 package gsmith.cards;
 
-import java.util.ArrayList;
-
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;

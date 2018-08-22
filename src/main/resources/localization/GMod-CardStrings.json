@@ -151,5 +151,14 @@
 	"Counting Desk": {
 		"NAME": "Counting Desk",
 		"DESCRIPTION": "Gain !M! Dexterity. NL At the end of your turn, lose !M! Dexerity."
+	},
+	"Eat The Coins": {
+		"NAME": "Eat The Coins",
+		"DESCRIPTION": "Lose 10 gold. NL If Bankrupt incraese your Max HP by !M!. Exhaust."
+	},
+	"Coin Caddy": {
+		"NAME": "Coin Caddy",
+		"DESCRIPTION": "Gain 1 Strength. NL If Prosperous gain 1 Strength. NL Exhasut.",
+		"UPGRADE_DESCRIPTION": "Gain 2 Strength. NL If Prosperous gain 3 Strength. NL Exhaust."
 	}
 }
