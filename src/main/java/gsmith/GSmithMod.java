@@ -32,6 +32,7 @@ import gsmith.cards.BestBag;
 import gsmith.cards.BlockChain;
 import gsmith.cards.BouncingBag;
 import gsmith.cards.Bribe;
+import gsmith.cards.CashToBurn;
 import gsmith.cards.Cheapskate;
 import gsmith.cards.CoinBarrage;
 import gsmith.cards.CoinCaddy;
@@ -39,6 +40,7 @@ import gsmith.cards.CoinToss;
 import gsmith.cards.CoinTrick;
 import gsmith.cards.CoinWall;
 import gsmith.cards.CountingDesk;
+import gsmith.cards.Distraction;
 import gsmith.cards.EatTheCoins;
 import gsmith.cards.Edge;
 import gsmith.cards.EmptyWallet;
@@ -54,6 +56,7 @@ import gsmith.cards.HeavyCoin;
 import gsmith.cards.LooseChange;
 import gsmith.cards.MarketCrash;
 import gsmith.cards.Money;
+import gsmith.cards.NeowsCoin;
 import gsmith.cards.NoCoin;
 import gsmith.cards.OldSurprise;
 import gsmith.cards.PayToWin;
@@ -62,6 +65,7 @@ import gsmith.cards.PaymentAccepted;
 import gsmith.cards.Rainmaker;
 import gsmith.cards.SaleSign;
 import gsmith.cards.SecretBags;
+import gsmith.cards.SmashAndRun;
 import gsmith.cards.SofaHunt;
 import gsmith.cards.SpareChange;
 import gsmith.cards.StrikeD;
@@ -201,6 +205,10 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 		BaseMod.addCard(new SofaHunt());
 		BaseMod.addCard(new EmptyWallet());
 		BaseMod.addCard(new PayToWin());
+		BaseMod.addCard(new SmashAndRun());
+		BaseMod.addCard(new NeowsCoin());
+		BaseMod.addCard(new Distraction());
+		BaseMod.addCard(new CashToBurn());
 		
 		unlockCards();
 	}
@@ -296,5 +304,9 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 		UnlockTracker.unlockCard("Sofa Hunt");
 		UnlockTracker.unlockCard("Empty Wallet");
 		UnlockTracker.unlockCard("Pay To Win");
+		UnlockTracker.unlockCard("Smash & Run");
+		UnlockTracker.unlockCard("Neow's Coin");
+		UnlockTracker.unlockCard("Distraction_D");
+		UnlockTracker.unlockCard("Cash To Burn");
 	}
 }

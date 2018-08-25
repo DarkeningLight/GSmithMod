@@ -179,5 +179,21 @@
 	"Pay To Win": {
 		"NAME": "Pay To Win",
 		"DESCRIPTION": "Lose 10 gold. NL Gain 1 Strength and 1 Dexterity."
+	},
+	"Smash & Run": {
+		"NAME": "Smash & Run",
+		"DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. Apply !M! Vulnerable. NL If Prosperous gain [R] [G] [B] [R]."
+	},
+	"Neow's Coin": {
+		"NAME": "Neow's Coin",
+		"DESCRIPTION": "If Bankrupt deal !D! damage and gain !B! Block."
+	},
+	"Distraction_D": {
+		"NAME": "Distraction",
+		"DESCRIPTION": "Gain !B! Block. NL Apply !M! Weak."
+	},
+	"Cash To Burn": {
+		"NAME": "Cash to Burn",
+		"DESCRIPTION": "Lose 10 gold. NL Draw !M! cards."
 	}
 }

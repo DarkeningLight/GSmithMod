@@ -3,7 +3,7 @@
     "NAME": "Bag of Coins",
     "FLAVOR": "Flavour",
     "DESCRIPTIONS": [
-      "Whenever you take damage instead lose that much gold. Gold is stolen at the end of your turn." 
+      "Whenever you take damage during combat instead lose that much gold. NL Gold is stolen at the end of your turn." 
       ]
   }
 }
