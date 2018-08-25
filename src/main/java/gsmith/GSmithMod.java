@@ -148,7 +148,6 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 	@Override
 	public void receiveEditRelics() {
 		BaseMod.addRelicToCustomPool(new BagOfCoins(), AbstractCardEnum.GOLD );
-		
 	}
 	
 	@Override
@@ -255,9 +254,9 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 	@Override
 	public void receiveEditKeywords() {
 		BaseMod.addKeyword(new String[] {"bankrupt" , "Bankrupt"}, 
-				"Text after bankrupt will only have an effect if you have no gold");
+				"You are #yBankrupt if you have 0 gold");
 		BaseMod.addKeyword(new String[] {"prosperous" , "Prosperous"}, 
-				"Text after prosperous will only have an effect if you have 500 or more gold");
+				"You are #yProsperous if you have 500 or more gold.");
 	}
 
 	public static int getActNumber() {
