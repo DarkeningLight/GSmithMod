@@ -154,11 +154,11 @@
 	},
 	"Eat The Coins": {
 		"NAME": "Eat The Coins",
-		"DESCRIPTION": "Lose 10 gold. NL If Bankrupt incraese your Max HP by !M!. Exhaust."
+		"DESCRIPTION": "Lose 10 gold. NL If Bankrupt increase your Max HP by !M!. Exhaust."
 	},
 	"Coin Caddy": {
 		"NAME": "Coin Caddy",
-		"DESCRIPTION": "Gain 1 Strength. NL If Prosperous gain 1 Strength. NL Exhasut.",
+		"DESCRIPTION": "Gain 1 Strength. NL If Prosperous gain 1 Strength. NL Exhaust.",
 		"UPGRADE_DESCRIPTION": "Gain 2 Strength. NL If Prosperous gain 3 Strength. NL Exhaust."
 	}
 }

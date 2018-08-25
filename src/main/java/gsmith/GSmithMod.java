@@ -6,7 +6,12 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.dungeons.Exordium;
+import com.megacrit.cardcrawl.dungeons.TheBeyond;
+import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.PowerStrings;
@@ -258,5 +263,23 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 				"Text after bankrupt will only have an effect if you have no gold");
 		BaseMod.addKeyword(new String[] {"prosperous" , "Prosperous"}, 
 				"Text after prosperous will only have an effect if you have 500 or more gold");
+	}
+
+	public static int getActNumber() {
+		AbstractDungeon dungeon = CardCrawlGame.dungeon;
+		
+		if (dungeon instanceof Exordium) {
+			return 1;
+		} 
+		else if (dungeon instanceof TheBeyond) {
+			return 3;
+		}
+		else if (dungeon instanceof TheCity) {
+			return 2;
+		}
+		else {
+			System.out.println("Can't find act");
+			return 0;
+		}
 	}
 }

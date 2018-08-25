@@ -33,5 +33,12 @@
       "At the start of your turn, if #yProsperous draw ",
       " cards."
     ]
+  },
+  "Debt": {
+    "NAME": "Neow's Tax",
+    "DESCRIPTIONS": [
+      "At the end of your turn, lose ",
+      " gold."
+    ]
   }
 }

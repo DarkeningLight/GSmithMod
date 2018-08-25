@@ -18,10 +18,10 @@ public class Payday extends CustomCard {
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	private static final int COST = 2;
+	private static final int COST = 3;
 	
-	private static final int GOLD_GAIN = 100;
-	private static final int UPGRADE_PLUS_GOLD = 50;
+	private static final int GOLD_GAIN = 70;
+	private static final int UPGRADE_PLUS_GOLD = 30;
 	
 	public static final String PATH = "cards/payday.png";
 	
