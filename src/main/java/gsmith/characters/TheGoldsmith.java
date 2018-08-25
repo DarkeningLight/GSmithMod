@@ -47,8 +47,8 @@ public class TheGoldsmith extends CustomPlayer {
 				new float[] {1,1,1,1,1,1,1,1,1,1,1,1}, 
 				new SpriterAnimation(GSmithMod.makePath("char/goldsmith/goldsmith.scml")));
 		
-		initializeClass(null, GSmithMod.makePath(GOLDSMITH_SHOULDER_2),
-				GSmithMod.makePath(GOLDSMITH_SHOULDER_1),
+		initializeClass(null, GSmithMod.makePath(GOLDSMITH_SHOULDER_1),
+				GSmithMod.makePath(GOLDSMITH_SHOULDER_2),
 				GSmithMod.makePath(GOLDSMITH_CORPSE),
 				getLoadout(), 20.0F, -10.0F, 220.0F, 290.0F, new EnergyManager(ENERGY_PER_TURN));
 	}

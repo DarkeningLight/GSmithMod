@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
 import basemod.abstracts.CustomRelic;
 import gsmith.GSmithMod;
@@ -21,14 +22,19 @@ public  class BagOfCoins extends CustomRelic {
 	}
 	
 	public int onAttacked(DamageInfo info, int damageAmount) {
-		if (AbstractDungeon.player.gold >= damageAmount) {
-			AbstractDungeon.player.loseGold(damageAmount);
-			return 0;
+		if (!(AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.EVENT)) {
+			if (AbstractDungeon.player.gold >= damageAmount) {
+				AbstractDungeon.player.loseGold(damageAmount);
+				return 0;
+			} 
+			else {
+				int damage = damageAmount - AbstractDungeon.player.gold;
+				AbstractDungeon.player.loseGold(AbstractDungeon.player.gold);
+				return damage;
+			}
 		} 
 		else {
-			int damage = damageAmount - AbstractDungeon.player.gold;
-			AbstractDungeon.player.loseGold(AbstractDungeon.player.gold);
-			return damage;
+			return damageAmount;
 		}
 	}
 	
