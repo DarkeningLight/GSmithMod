@@ -159,5 +159,25 @@
 		"NAME": "Coin Caddy",
 		"DESCRIPTION": "Gain 1 Strength. NL If Prosperous gain 1 Strength. NL Exhaust.",
 		"UPGRADE_DESCRIPTION": "Gain 2 Strength. NL If Prosperous gain 3 Strength. NL Exhaust."
+	},
+	"Hammer & Coin": {
+		"NAME": "Hammer & Coin",
+		"DESCRIPTION": "If Bankrupt deal !D! damage."
+	},
+	"Sale Sign": {
+		"NAME": "Sale Sign",
+		"DESCRIPTION": "If Bankrupt gain !B! Block."
+	},
+	"Sofa Hunt": {
+		"NAME": "Sofa Hunt",
+		"DESCRIPTION": "If Bankrupt gain !B! Block. Exhaust"
+	},
+	"Empty Wallet": {
+		"NAME": "Empty Wallet",
+		"DESCRIPTION": "Lose 10 gold NL Deal !D! damage and apply !M! Vulnerable."
+	},
+	"Pay To Win": {
+		"NAME": "Pay To Win",
+		"DESCRIPTION": "Lose 10 gold. NL Gain 1 Strength and 1 Dexterity."
 	}
 }

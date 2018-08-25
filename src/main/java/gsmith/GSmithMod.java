@@ -41,11 +41,13 @@ import gsmith.cards.CoinWall;
 import gsmith.cards.CountingDesk;
 import gsmith.cards.EatTheCoins;
 import gsmith.cards.Edge;
+import gsmith.cards.EmptyWallet;
 import gsmith.cards.FistFulOfCoin;
 import gsmith.cards.GoldFu;
 import gsmith.cards.GoldRush;
 import gsmith.cards.GreedIsGood;
 import gsmith.cards.HalfPenny;
+import gsmith.cards.HammerCoin;
 import gsmith.cards.HardCrash;
 import gsmith.cards.Heads;
 import gsmith.cards.HeavyCoin;
@@ -54,10 +56,13 @@ import gsmith.cards.MarketCrash;
 import gsmith.cards.Money;
 import gsmith.cards.NoCoin;
 import gsmith.cards.OldSurprise;
+import gsmith.cards.PayToWin;
 import gsmith.cards.Payday;
 import gsmith.cards.PaymentAccepted;
 import gsmith.cards.Rainmaker;
+import gsmith.cards.SaleSign;
 import gsmith.cards.SecretBags;
+import gsmith.cards.SofaHunt;
 import gsmith.cards.SpareChange;
 import gsmith.cards.StrikeD;
 import gsmith.cards.Tails;
@@ -191,47 +196,16 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 		BaseMod.addCard(new CountingDesk());
 		BaseMod.addCard(new EatTheCoins());
 		BaseMod.addCard(new CoinCaddy());
+		BaseMod.addCard(new HammerCoin());
+		BaseMod.addCard(new SaleSign());
+		BaseMod.addCard(new SofaHunt());
+		BaseMod.addCard(new EmptyWallet());
+		BaseMod.addCard(new PayToWin());
 		
-		UnlockTracker.unlockCard("Thief");
-		UnlockTracker.unlockCard("Spare Change");
-		UnlockTracker.unlockCard("Coin Wall");
-		UnlockTracker.unlockCard("Payday");
-		UnlockTracker.unlockCard("Treasure Map");
-		UnlockTracker.unlockCard("Strike_D");
-		UnlockTracker.unlockCard("Bag Slam");
-		UnlockTracker.unlockCard("Coin Toss");
-		UnlockTracker.unlockCard("Fistful of Coin");
-		UnlockTracker.unlockCard("Loose Change");
-		UnlockTracker.unlockCard("Best Bag");
-		UnlockTracker.unlockCard("Bouncing Bag");
-		UnlockTracker.unlockCard("Cheapskate");
-		UnlockTracker.unlockCard("Old Surprise");
-		UnlockTracker.unlockCard("Half Penny");
-		UnlockTracker.unlockCard("Bribe");
-		UnlockTracker.unlockCard("No Coin");
-		UnlockTracker.unlockCard("Coin Barrage");
-		UnlockTracker.unlockCard("Hard Crash");
-		UnlockTracker.unlockCard("Heavy Coin");
-		UnlockTracker.unlockCard("Secret Bags");
-		//UnlockTracker.unlockCard("Bigger Bag");
-		UnlockTracker.unlockCard("Block Chain");
-		UnlockTracker.unlockCard("Gold Rush");
-		//UnlockTracker.unlockCard("Sleight of Hand");
-		UnlockTracker.unlockCard("Rainmaker");
-		UnlockTracker.unlockCard("Bag Fu");
-		UnlockTracker.unlockCard("Gold Fu");
-		UnlockTracker.unlockCard("Market Crash");
-		UnlockTracker.unlockCard("Money");
-		UnlockTracker.unlockCard("Heads");
-		UnlockTracker.unlockCard("Tails");
-		UnlockTracker.unlockCard("Edge");
-		UnlockTracker.unlockCard("Coin Trick");
-		UnlockTracker.unlockCard("Greed is Good");
-		UnlockTracker.unlockCard("Payment Accepted");
-		UnlockTracker.unlockCard("Counting Desk");
-		UnlockTracker.unlockCard("Eat The Coins");
-		UnlockTracker.unlockCard("Coin Caddy");
+		unlockCards();
 	}
+
+	
 	
 	@Override
 	public void receiveEditStrings() {
@@ -275,5 +249,52 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 			System.out.println("Can't find act");
 			return 0;
 		}
+	}
+	
+	private void unlockCards() {
+		UnlockTracker.unlockCard("Thief");
+		UnlockTracker.unlockCard("Spare Change");
+		UnlockTracker.unlockCard("Coin Wall");
+		UnlockTracker.unlockCard("Payday");
+		UnlockTracker.unlockCard("Treasure Map");
+		UnlockTracker.unlockCard("Strike_D");
+		UnlockTracker.unlockCard("Bag Slam");
+		UnlockTracker.unlockCard("Coin Toss");
+		UnlockTracker.unlockCard("Fistful of Coin");
+		UnlockTracker.unlockCard("Loose Change");
+		UnlockTracker.unlockCard("Best Bag");
+		UnlockTracker.unlockCard("Bouncing Bag");
+		UnlockTracker.unlockCard("Cheapskate");
+		UnlockTracker.unlockCard("Old Surprise");
+		UnlockTracker.unlockCard("Half Penny");
+		UnlockTracker.unlockCard("Bribe");
+		UnlockTracker.unlockCard("No Coin");
+		UnlockTracker.unlockCard("Coin Barrage");
+		UnlockTracker.unlockCard("Hard Crash");
+		UnlockTracker.unlockCard("Heavy Coin");
+		UnlockTracker.unlockCard("Secret Bags");
+		//UnlockTracker.unlockCard("Bigger Bag");
+		UnlockTracker.unlockCard("Block Chain");
+		UnlockTracker.unlockCard("Gold Rush");
+		//UnlockTracker.unlockCard("Sleight of Hand");
+		UnlockTracker.unlockCard("Rainmaker");
+		UnlockTracker.unlockCard("Bag Fu");
+		UnlockTracker.unlockCard("Gold Fu");
+		UnlockTracker.unlockCard("Market Crash");
+		UnlockTracker.unlockCard("Money");
+		UnlockTracker.unlockCard("Heads");
+		UnlockTracker.unlockCard("Tails");
+		UnlockTracker.unlockCard("Edge");
+		UnlockTracker.unlockCard("Coin Trick");
+		UnlockTracker.unlockCard("Greed is Good");
+		UnlockTracker.unlockCard("Payment Accepted");
+		UnlockTracker.unlockCard("Counting Desk");
+		UnlockTracker.unlockCard("Eat The Coins");
+		UnlockTracker.unlockCard("Coin Caddy");
+		UnlockTracker.unlockCard("Hammer & Coin");
+		UnlockTracker.unlockCard("Sale Sign");
+		UnlockTracker.unlockCard("Sofa Hunt");
+		UnlockTracker.unlockCard("Empty Wallet");
+		UnlockTracker.unlockCard("Pay To Win");
 	}
 }
