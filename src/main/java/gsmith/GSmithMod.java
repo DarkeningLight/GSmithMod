@@ -29,7 +29,6 @@ import basemod.interfaces.PostInitializeSubscriber;
 import gsmith.cards.BagFu;
 import gsmith.cards.BagSlam;
 import gsmith.cards.BestBag;
-import gsmith.cards.BiggerBag;
 import gsmith.cards.BlockChain;
 import gsmith.cards.BouncingBag;
 import gsmith.cards.Bribe;
@@ -59,7 +58,6 @@ import gsmith.cards.Payday;
 import gsmith.cards.PaymentAccepted;
 import gsmith.cards.Rainmaker;
 import gsmith.cards.SecretBags;
-import gsmith.cards.SleightOfHand;
 import gsmith.cards.SpareChange;
 import gsmith.cards.StrikeD;
 import gsmith.cards.Tails;
@@ -115,7 +113,7 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 		BaseMod.subscribe(this);
 		
 		//Creating the colour Gold
-		BaseMod.addColor(AbstractCardEnum.GOLD.toString(), 
+		BaseMod.addColor(AbstractCardEnum.GOLD, 
 				GOLD, GOLD, GOLD, GOLD, GOLD, GOLD, GOLD, 
 				makePath(ATTACK_GOLD), makePath(SKILL_GOLD), 
 				makePath(POWER_GOLD), makePath(ENERGY_ORB_GOLD), 
@@ -133,9 +131,6 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
     	//Mod badge
     	BaseMod.registerModBadge(new Texture(makePath(BADGE_IMG)), MODNAME, AUTHOR, DESCRIPTION, new ModPanel());
     	
-    	ModPanel settingsPanel = new ModPanel();
-    	settingsPanel.addLabel("Mod", 400.0f, 700.0f, (me) -> {});
-    	
     	Settings.isDailyRun = false;
     	Settings.isTrial = false;
     	Settings.isDemo = false;
@@ -144,15 +139,15 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 	@Override
 	public void receiveEditCharacters() {
 		BaseMod.addCharacter(TheGoldsmith.class, "The Goldsmith", "Goldsmith class string",
-				AbstractCardEnum.GOLD.toString(), "The Goldsmith", 
+				AbstractCardEnum.GOLD, "The Goldsmith", 
 				makePath(GOLDSMITH_BUTTON), makePath(GOLDSMITH_PORTRAIT), 
-				TheGoldsmithEnum.THE_GOLDSMITH.toString());
+				TheGoldsmithEnum.THE_GOLDSMITH);
 		
 	}
 
 	@Override
 	public void receiveEditRelics() {
-		BaseMod.addRelicToCustomPool(new BagOfCoins(), AbstractCardEnum.GOLD.toString());
+		BaseMod.addRelicToCustomPool(new BagOfCoins(), AbstractCardEnum.GOLD );
 		
 	}
 	

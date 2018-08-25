@@ -49,8 +49,7 @@
 	},
 	"Cheapskate": {
 		"NAME": "Cheapskate",
-		"DESCRIPTION": "Deal 5 Damage. NL If Bankrupt draw a card.",
-		"UPGRADE_DESCRIPTION": "Deal 5 Damage. NL If Bankrupt draw !M! cards."
+		"DESCRIPTION": "Deal !D! Damage. NL If Bankrupt draw !M! cards."
 	},
 	"Old Surprise": {
 		"NAME": "Old Surprise",
