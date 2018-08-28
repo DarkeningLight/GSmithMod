@@ -28,6 +28,7 @@ import basemod.interfaces.EditStringsSubscriber;
 import basemod.interfaces.PostInitializeSubscriber;
 import gsmith.cards.BagFu;
 import gsmith.cards.BagSlam;
+import gsmith.cards.BedBank;
 import gsmith.cards.BestBag;
 import gsmith.cards.BlockChain;
 import gsmith.cards.BouncingBag;
@@ -45,6 +46,7 @@ import gsmith.cards.EatTheCoins;
 import gsmith.cards.Edge;
 import gsmith.cards.EmptyWallet;
 import gsmith.cards.FistFulOfCoin;
+import gsmith.cards.FloodTheMarket;
 import gsmith.cards.GoldFu;
 import gsmith.cards.GoldRush;
 import gsmith.cards.GreedIsGood;
@@ -56,12 +58,14 @@ import gsmith.cards.HeavyCoin;
 import gsmith.cards.LooseChange;
 import gsmith.cards.MarketCrash;
 import gsmith.cards.Money;
+import gsmith.cards.MoneyInjection;
 import gsmith.cards.NeowsCoin;
 import gsmith.cards.NoCoin;
 import gsmith.cards.OldSurprise;
 import gsmith.cards.PayToWin;
 import gsmith.cards.Payday;
 import gsmith.cards.PaymentAccepted;
+import gsmith.cards.ProtectionMoney;
 import gsmith.cards.Rainmaker;
 import gsmith.cards.SaleSign;
 import gsmith.cards.SecretBags;
@@ -209,6 +213,10 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 		BaseMod.addCard(new NeowsCoin());
 		BaseMod.addCard(new Distraction());
 		BaseMod.addCard(new CashToBurn());
+		BaseMod.addCard(new FloodTheMarket());
+		BaseMod.addCard(new MoneyInjection());
+		BaseMod.addCard(new ProtectionMoney());
+		BaseMod.addCard(new BedBank());
 		
 		unlockCards();
 	}
@@ -308,5 +316,9 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 		UnlockTracker.unlockCard("Neow's Coin");
 		UnlockTracker.unlockCard("Distraction_D");
 		UnlockTracker.unlockCard("Cash To Burn");
+		UnlockTracker.unlockCard("Flood The Market");
+		UnlockTracker.unlockCard("Money Injection");
+		UnlockTracker.unlockCard("Protection Money");
+		UnlockTracker.unlockCard("Bed Bank");
 	}
 }

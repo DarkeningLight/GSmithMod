@@ -195,5 +195,22 @@
 	"Cash To Burn": {
 		"NAME": "Cash to Burn",
 		"DESCRIPTION": "Lose 10 gold. NL Draw !M! cards."
+	},
+	"Flood The Market": {
+		"NAME": "Flood the Market",
+		"DESCRIPTION": "Deal !M! damage for each Exhausted card. (Deal !D! damage) NL Exhaust."
+	},
+	"Money Injection": {
+		"NAME": "Money Injection",
+		"DESCRIPTION": "Lose 20 gold. NL Gain [R]. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Lose 20 gold. NL Gain [R] [R]. NL Exhaust."
+	},
+	"Protection Money": {
+		"NAME": "Protection Money",
+		"DESCRIPTION": "Lose 50 gold. NL Gain !M! Artifact. NL Exhaust."
+	},
+	"Bed Bank": {
+		"NAME": "Bed Bank",
+		"DESCRIPTION": "Ethereal NL Exhaust you hand. Gain !M! gold for each Exhausted card."
 	}
 }
