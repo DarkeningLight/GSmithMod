@@ -212,5 +212,14 @@
 	"Bed Bank": {
 		"NAME": "Bed Bank",
 		"DESCRIPTION": "Ethereal NL Exhaust you hand. Gain !M! gold for each Exhausted card."
+	},
+	"Empty Hands": {
+		"NAME": "Empty Hands",
+		"DESCRIPTION": "Gain 1 Dexterity. NL If Prosperous gain 1 Dexterity. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Gain 2 Dexterity. NL If Prosperous gain 3 Dexterity. NL Exhaust."
+	},
+	"Dive": {
+		"NAME": "Dive",
+		"DESCRIPTION": "Gain !B! Block. NL Gain !B! Block for the next !M! turn. NL Exhaust."
 	}
 }

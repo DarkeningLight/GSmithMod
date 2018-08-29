@@ -42,8 +42,10 @@ import gsmith.cards.CoinTrick;
 import gsmith.cards.CoinWall;
 import gsmith.cards.CountingDesk;
 import gsmith.cards.Distraction;
+import gsmith.cards.Dive;
 import gsmith.cards.EatTheCoins;
 import gsmith.cards.Edge;
+import gsmith.cards.EmptyHands;
 import gsmith.cards.EmptyWallet;
 import gsmith.cards.FistFulOfCoin;
 import gsmith.cards.FloodTheMarket;
@@ -217,6 +219,8 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 		BaseMod.addCard(new MoneyInjection());
 		BaseMod.addCard(new ProtectionMoney());
 		BaseMod.addCard(new BedBank());
+		BaseMod.addCard(new EmptyHands());
+		BaseMod.addCard(new Dive());
 		
 		unlockCards();
 	}
@@ -320,5 +324,7 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 		UnlockTracker.unlockCard("Money Injection");
 		UnlockTracker.unlockCard("Protection Money");
 		UnlockTracker.unlockCard("Bed Bank");
+		UnlockTracker.unlockCard("Empty Hands");
+		UnlockTracker.unlockCard("Dive");
 	}
 }
