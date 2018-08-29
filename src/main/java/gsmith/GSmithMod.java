@@ -49,6 +49,7 @@ import gsmith.cards.EmptyHands;
 import gsmith.cards.EmptyWallet;
 import gsmith.cards.FistFulOfCoin;
 import gsmith.cards.FloodTheMarket;
+import gsmith.cards.GoldBar;
 import gsmith.cards.GoldFu;
 import gsmith.cards.GoldRush;
 import gsmith.cards.GreedIsGood;
@@ -221,6 +222,7 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 		BaseMod.addCard(new BedBank());
 		BaseMod.addCard(new EmptyHands());
 		BaseMod.addCard(new Dive());
+		BaseMod.addCard(new GoldBar());
 		
 		unlockCards();
 	}
@@ -326,5 +328,6 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 		UnlockTracker.unlockCard("Bed Bank");
 		UnlockTracker.unlockCard("Empty Hands");
 		UnlockTracker.unlockCard("Dive");
+		UnlockTracker.unlockCard("Gold Bar");
 	}
 }

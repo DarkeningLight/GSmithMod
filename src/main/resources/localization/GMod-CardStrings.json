@@ -221,5 +221,9 @@
 	"Dive": {
 		"NAME": "Dive",
 		"DESCRIPTION": "Gain !B! Block. NL Gain !B! Block for the next !M! turn. NL Exhaust."
+	},
+	"Gold Bar": {
+		"NAME": "Gold Bar",
+		"DESCRIPTION": "At the start of your turn, if Bankrupt gain !M! Strength and !M! Dexiterity."
 	}
 }

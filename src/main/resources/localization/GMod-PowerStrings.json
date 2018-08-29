@@ -40,5 +40,13 @@
       "At the end of your turn, lose ",
       " gold."
     ]
+  },
+  "Gold Bar": {
+    "NAME": "Gold Bar",
+    "DESCRIPTIONS": [
+      "At the start of your turn if #yBankrupt gain ",
+      " #yStrength and ",
+      " #yDexterity."
+    ]
   }
 }
