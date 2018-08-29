@@ -48,5 +48,12 @@
       " #yStrength and ",
       " #yDexterity."
     ]
+  },
+   "Treasure Hunt": {
+    "NAME": "Treasure Hunt",
+    "DESCRIPTIONS": [
+      "At the start of your turn if #yBankrupt ALL enemies lose ",
+      " #yStrength"
+    ]
   }
 }

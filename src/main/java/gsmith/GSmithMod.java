@@ -78,6 +78,7 @@ import gsmith.cards.SpareChange;
 import gsmith.cards.StrikeD;
 import gsmith.cards.Tails;
 import gsmith.cards.Thief;
+import gsmith.cards.TreasureHunt;
 import gsmith.cards.TreasureMap;
 import gsmith.characters.TheGoldsmith;
 import gsmith.patches.AbstractCardEnum;
@@ -223,6 +224,7 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 		BaseMod.addCard(new EmptyHands());
 		BaseMod.addCard(new Dive());
 		BaseMod.addCard(new GoldBar());
+		BaseMod.addCard(new TreasureHunt());
 		
 		unlockCards();
 	}
@@ -329,5 +331,6 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 		UnlockTracker.unlockCard("Empty Hands");
 		UnlockTracker.unlockCard("Dive");
 		UnlockTracker.unlockCard("Gold Bar");
+		UnlockTracker.unlockCard("Treasure Hunt");
 	}
 }

@@ -225,5 +225,9 @@
 	"Gold Bar": {
 		"NAME": "Gold Bar",
 		"DESCRIPTION": "At the start of your turn, if Bankrupt gain !M! Strength and !M! Dexiterity."
+	},
+	"Treasure Hunt": {
+		"NAME": "Treasure Hunt",
+		"DESCRIPTION": "At the start of your turn, if Bankrupt ALL enemies lose !M! Strength."
 	}
 }
