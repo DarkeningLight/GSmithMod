@@ -120,7 +120,7 @@
 		"DESCRIPTION": "Deal !D! damage."
 	},
 	"Money": {
-		"NAME": "Money Money Money",
+		"NAME": "Money!",
 		"DESCRIPTION": "If Prosperous deal !D! damage."
 	},
 	"Heads": {
@@ -182,7 +182,7 @@
 	},
 	"Smash & Run": {
 		"NAME": "Smash & Run",
-		"DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. Apply !M! Vulnerable. NL If Prosperous gain [R] [G] [B] [R]."
+		"DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL Apply !M! Vulnerable. NL If Prosperous gain [R] [G] [B] [R]."
 	},
 	"Neow's Coin": {
 		"NAME": "Neow's Coin",
@@ -194,7 +194,7 @@
 	},
 	"Cash To Burn": {
 		"NAME": "Cash to Burn",
-		"DESCRIPTION": "Lose 10 gold. NL Draw !M! cards."
+		"DESCRIPTION": "Lose 10 gold. NL Draw !M! cards. NL Exhaust."
 	},
 	"Flood The Market": {
 		"NAME": "Flood the Market",
