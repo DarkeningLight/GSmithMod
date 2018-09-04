@@ -1,12 +1,12 @@
 package gsmith.powers;
 
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+
 import gsmith.GSmithMod;
 import gsmith.actions.LoseGoldAction;
 
@@ -22,7 +22,7 @@ public class DebtPower extends AbstractPower {
 	
 	public int totalGold = 0;
 	
-	public DebtPower(AbstractCreature owner) {
+	public DebtPower(AbstractPlayer owner) {
 		super();
 		this.name = NAME;
 		this.ID = POWER_ID;
@@ -73,16 +73,12 @@ public class DebtPower extends AbstractPower {
 	}
 	
 	public int calculateGoldLoss() {
-		int count = 0;
+		int total = GSmithMod.getActNumber() * 10;
+		java.util.Random random = new java.util.Random();
+		int r = random.nextInt((int) (owner.gold *0.05));
 		
-		for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) 
-			if ((!m.isDead) && (m.intent == AbstractMonster.Intent.ATTACK || 
-			m.intent == AbstractMonster.Intent.ATTACK_BUFF || m.intent == AbstractMonster.Intent.ATTACK_DEBUFF ||
-			m.intent == AbstractMonster.Intent.ATTACK_DEFEND)) {
-				count++;
-			}
-		
-		return (count * GOLD_LOSS * GSmithMod.getActNumber());
+		return (total + r);
+	
 		
 	}
 	
