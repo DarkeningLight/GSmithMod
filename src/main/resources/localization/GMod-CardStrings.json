@@ -234,5 +234,9 @@
 		"NAME": "Big Spender",
 		"DESCRIPTION": "Deal damage equal to your gold. NL Lose all your gold.",
 		"UPGRADE_DESCRIPTION": "Innate. NL Deal damage equal to your gold. NL Lose all your gold."
+	},
+	"Lucky Find": {
+		"NAME": "Lucky Find",
+		"DESCRIPTION": "If Prosperous, gain a random relic at the end of combat. Lose 100 Gold. NL Exhaust."
 	}
 }

@@ -60,6 +60,7 @@ import gsmith.cards.HardCrash;
 import gsmith.cards.Heads;
 import gsmith.cards.HeavyCoin;
 import gsmith.cards.LooseChange;
+import gsmith.cards.LuckyFind;
 import gsmith.cards.MarketCrash;
 import gsmith.cards.Money;
 import gsmith.cards.MoneyInjection;
@@ -227,6 +228,7 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 		BaseMod.addCard(new GoldBar());
 		BaseMod.addCard(new TreasureHunt());
 		BaseMod.addCard(new BigSpender());
+		BaseMod.addCard(new LuckyFind());
 		
 		unlockCards();
 	}
@@ -335,5 +337,6 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 		UnlockTracker.unlockCard("Gold Bar");
 		UnlockTracker.unlockCard("Treasure Hunt");
 		UnlockTracker.unlockCard("Big Spender");
+		UnlockTracker.unlockCard("Lucky Find");
 	}
 }
