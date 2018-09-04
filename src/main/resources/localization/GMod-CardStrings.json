@@ -229,5 +229,10 @@
 	"Treasure Hunt": {
 		"NAME": "Treasure Hunt",
 		"DESCRIPTION": "At the start of your turn, if Bankrupt ALL enemies lose !M! Strength."
+	},
+	"Big Spender": {
+		"NAME": "Big Spender",
+		"DESCRIPTION": "Deal damage equal to your gold. NL Lose all your gold.",
+		"UPGRADE_DESCRIPTION": "Innate. NL Deal damage equal to your gold. NL Lose all your gold."
 	}
 }

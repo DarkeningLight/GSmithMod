@@ -30,6 +30,7 @@ import gsmith.cards.BagFu;
 import gsmith.cards.BagSlam;
 import gsmith.cards.BedBank;
 import gsmith.cards.BestBag;
+import gsmith.cards.BigSpender;
 import gsmith.cards.BlockChain;
 import gsmith.cards.BouncingBag;
 import gsmith.cards.Bribe;
@@ -225,6 +226,7 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 		BaseMod.addCard(new Dive());
 		BaseMod.addCard(new GoldBar());
 		BaseMod.addCard(new TreasureHunt());
+		BaseMod.addCard(new BigSpender());
 		
 		unlockCards();
 	}
@@ -332,5 +334,6 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 		UnlockTracker.unlockCard("Dive");
 		UnlockTracker.unlockCard("Gold Bar");
 		UnlockTracker.unlockCard("Treasure Hunt");
+		UnlockTracker.unlockCard("Big Spender");
 	}
 }

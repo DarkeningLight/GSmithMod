@@ -45,7 +45,6 @@ public class EmptyHands extends CustomCard {
 			this.rawDescription = UPGRADE_DESCRIPTION;
 			initializeDescription();
 		}
-
 	}
 
 	@Override
