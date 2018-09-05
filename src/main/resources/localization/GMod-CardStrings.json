@@ -238,5 +238,13 @@
 	"Lucky Find": {
 		"NAME": "Lucky Find",
 		"DESCRIPTION": "If Prosperous, gain a random relic at the end of combat. Lose 100 Gold. NL Exhaust."
+	},
+	"Spinning Bag": {
+		"NAME": "Spinning Bag",
+		"DESCRIPTION": "If Prosperous deal !D! damage !M! times."
+	},
+	"Exchange": {
+		"NAME": "Exchange",
+		"DESCRIPTION": "Gain 2 Weak. NL Gain 30 gold. NL Exhaust."
 	}
 }

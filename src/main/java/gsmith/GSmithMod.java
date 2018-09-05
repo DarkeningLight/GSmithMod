@@ -48,6 +48,7 @@ import gsmith.cards.EatTheCoins;
 import gsmith.cards.Edge;
 import gsmith.cards.EmptyHands;
 import gsmith.cards.EmptyWallet;
+import gsmith.cards.Exchange;
 import gsmith.cards.FistFulOfCoin;
 import gsmith.cards.FloodTheMarket;
 import gsmith.cards.GoldBar;
@@ -77,6 +78,7 @@ import gsmith.cards.SecretBags;
 import gsmith.cards.SmashAndRun;
 import gsmith.cards.SofaHunt;
 import gsmith.cards.SpareChange;
+import gsmith.cards.SpinningBag;
 import gsmith.cards.StrikeD;
 import gsmith.cards.Tails;
 import gsmith.cards.Thief;
@@ -229,6 +231,8 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 		BaseMod.addCard(new TreasureHunt());
 		BaseMod.addCard(new BigSpender());
 		BaseMod.addCard(new LuckyFind());
+		BaseMod.addCard(new SpinningBag());
+		BaseMod.addCard(new Exchange());
 		
 		unlockCards();
 	}
@@ -338,5 +342,7 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 		UnlockTracker.unlockCard("Treasure Hunt");
 		UnlockTracker.unlockCard("Big Spender");
 		UnlockTracker.unlockCard("Lucky Find");
+		UnlockTracker.unlockCard("Spinning Bag");
+		UnlockTracker.unlockCard("Exchange");
 	}
 }
