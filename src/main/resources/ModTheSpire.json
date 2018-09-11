@@ -1,0 +1,10 @@
+{
+  "modid": "gsmithmod",
+  "name": "Goldsmith Mod",
+  "author_list": ["DarkeningLight", "Lostintransit"],
+  "description": "Adds a new character. The Goldsmith",
+  "version": "0.0.0",
+  "sts_version": "09-06-2018",
+  "mts_version": "3.1.0",
+  "dependencies": ["basemod"]
+}

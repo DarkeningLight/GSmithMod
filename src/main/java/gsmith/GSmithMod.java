@@ -50,6 +50,7 @@ import gsmith.cards.EmptyHands;
 import gsmith.cards.EmptyWallet;
 import gsmith.cards.Exchange;
 import gsmith.cards.FistFulOfCoin;
+import gsmith.cards.FiveFingerDiscount;
 import gsmith.cards.FloodTheMarket;
 import gsmith.cards.GoldBar;
 import gsmith.cards.GoldFu;
@@ -233,6 +234,7 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 		BaseMod.addCard(new LuckyFind());
 		BaseMod.addCard(new SpinningBag());
 		BaseMod.addCard(new Exchange());
+		//BaseMod.addCard(new FiveFingerDiscount()); 
 		
 		unlockCards();
 	}
@@ -344,5 +346,6 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 		UnlockTracker.unlockCard("Lucky Find");
 		UnlockTracker.unlockCard("Spinning Bag");
 		UnlockTracker.unlockCard("Exchange");
+		//UnlockTracker.unlockCard("Five Finger Discount");
 	}
 }
