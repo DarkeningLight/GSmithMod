@@ -64,6 +64,7 @@ import gsmith.cards.HeavyCoin;
 import gsmith.cards.LooseChange;
 import gsmith.cards.LuckyFind;
 import gsmith.cards.MarketCrash;
+import gsmith.cards.MarketLove;
 import gsmith.cards.Money;
 import gsmith.cards.MoneyInjection;
 import gsmith.cards.NeowsCoin;
@@ -117,11 +118,14 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 	//relic images
 	public static final String BAG_OF_COINS_RELIC = "relics/bagofcoins.png";
 	
-	//badge image
+	//badge & button images
 	public static final String BADGE_IMG = "badge.png";
-	
 	private static final String GOLDSMITH_BUTTON = "charSelect/goldsmithButton.png";
     private static final String GOLDSMITH_PORTRAIT = "charSelect/goldsmithPortraitBG.jpg";
+    
+    //thresholds
+    public static final int BANKRUPT = 0;
+    public static final int PROSPEROUS = 500;
 	
 	
 	// Short Texture Methods
@@ -237,6 +241,7 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 		BaseMod.addCard(new Exchange());
 		//BaseMod.addCard(new FiveFingerDiscount()); 
 		BaseMod.addCard(new SleepingCash());
+		BaseMod.addCard(new MarketLove());
 		
 		unlockCards();
 	}
@@ -350,5 +355,6 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 		UnlockTracker.unlockCard("Exchange");
 		//UnlockTracker.unlockCard("Five Finger Discount");
 		UnlockTracker.unlockCard("Sleeping Cash");
+		UnlockTracker.unlockCard("Market Love");
 	}
 }
