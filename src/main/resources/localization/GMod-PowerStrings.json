@@ -55,5 +55,12 @@
       "At the start of your turn if #yBankrupt ALL enemies lose ",
       " #yStrength"
     ]
+  },
+    "Sleeping Cash": {
+    "NAME": "Sleeping Cash",
+    "DESCRIPTIONS": [
+      "Whenever you #yExhasut a card deal ",
+      " damage to ALL enemies."
+    ]
   }
 }

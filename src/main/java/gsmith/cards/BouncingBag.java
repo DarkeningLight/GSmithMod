@@ -34,6 +34,7 @@ public class BouncingBag extends CustomCard {
 				AbstractCardEnum.GOLD, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ALL_ENEMY);
 		
 		this.baseDamage = ATTACK_DMG;
+		this.magicNumber = ATTACK_DMG;
 		this.isMultiDamage = true;
 		this.baseMagicNumber = this.magicNumber = NUM_TIMES;
 	}

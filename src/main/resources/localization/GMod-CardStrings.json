@@ -224,7 +224,7 @@
 	},
 	"Gold Bar": {
 		"NAME": "Gold Bar",
-		"DESCRIPTION": "At the start of your turn, if Bankrupt gain !M! Strength and !M! Dexiterity."
+		"DESCRIPTION": "At the start of your turn, if Bankrupt gain !M! Strength and !M! Dexterity."
 	},
 	"Treasure Hunt": {
 		"NAME": "Treasure Hunt",
@@ -250,6 +250,10 @@
 	"Five Finger Discount": {
 		"NAME": "Five finger Discount",
 		"DESCRIPTION": "Deal !D! damage 5 times. NL If this kills the enemy, gain !M! gold."
+	},
+	"Sleeping Cash": {
+		"NAME": "Sleeping Cash",
+		"DESCRIPTION": "Whenever you Exhaust a card, deal !M! damage to ALL enemies."
 	}
 }
 

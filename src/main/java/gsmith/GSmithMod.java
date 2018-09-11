@@ -76,6 +76,7 @@ import gsmith.cards.ProtectionMoney;
 import gsmith.cards.Rainmaker;
 import gsmith.cards.SaleSign;
 import gsmith.cards.SecretBags;
+import gsmith.cards.SleepingCash;
 import gsmith.cards.SmashAndRun;
 import gsmith.cards.SofaHunt;
 import gsmith.cards.SpareChange;
@@ -235,6 +236,7 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 		BaseMod.addCard(new SpinningBag());
 		BaseMod.addCard(new Exchange());
 		//BaseMod.addCard(new FiveFingerDiscount()); 
+		BaseMod.addCard(new SleepingCash());
 		
 		unlockCards();
 	}
@@ -347,5 +349,6 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 		UnlockTracker.unlockCard("Spinning Bag");
 		UnlockTracker.unlockCard("Exchange");
 		//UnlockTracker.unlockCard("Five Finger Discount");
+		UnlockTracker.unlockCard("Sleeping Cash");
 	}
 }
