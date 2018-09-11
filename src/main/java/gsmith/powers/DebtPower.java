@@ -74,10 +74,16 @@ public class DebtPower extends AbstractPower {
 	
 	public int calculateGoldLoss() {
 		int total = GSmithMod.getActNumber() * 10;
-		java.util.Random random = new java.util.Random();
-		int r = random.nextInt((int) (owner.gold *0.05));
+		 
+		try {
+			java.util.Random random = new java.util.Random();
+			int r = random.nextInt((int) (owner.gold *0.05));
 		
-		return (total + r);
+			return (total + r);
+		} 
+		catch (IllegalArgumentException e) {
+			return total;
+		}
 	
 		
 	}
