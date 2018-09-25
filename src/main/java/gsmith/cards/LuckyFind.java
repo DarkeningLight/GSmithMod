@@ -51,7 +51,7 @@ public class LuckyFind extends CustomCard {
 
 	@Override
 	public void use(AbstractPlayer player, AbstractMonster monster) {
-		if (player.gold >= 500) {
+		if (player.gold >= GSmithMod.PROSPEROUS) {
 			AbstractDungeon.actionManager.addToBottom(new LoseGoldAction(player, GOLD_LOSS));
 			AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
 				

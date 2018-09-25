@@ -36,7 +36,7 @@ public class TreasureHuntPower extends AbstractPower {
 	public void atStartOfTurn() {
 		super.atStartOfTurn();
 		
-		if (owner.gold == 0) {
+		if (owner.gold <= GSmithMod.BANKRUPT) {
 			for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
 				if (!m.isDeadOrEscaped()) {
 					AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, owner, 

@@ -50,7 +50,7 @@ public class OldSurprise extends CustomCard {
 	@Override
 	public void use(AbstractPlayer player, AbstractMonster monster) {
 		
-		if (player.gold == 0 ) {
+		if (player.gold <= GSmithMod.BANKRUPT ) {
 			this.exhaust = true;
 			AbstractDungeon.actionManager.addToBottom(new GainGoldAction(player, this.magicNumber));
 		}

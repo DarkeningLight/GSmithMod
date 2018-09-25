@@ -36,7 +36,7 @@ public class GoldBarPower extends AbstractPower {
 	public void atStartOfTurn() {
 		super.atStartOfTurn();
 		
-		if (owner.gold == 0) {
+		if (owner.gold <= GSmithMod.BANKRUPT) {
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner, 
 					new StrengthPower(owner, this.amount), this.amount));
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner, 

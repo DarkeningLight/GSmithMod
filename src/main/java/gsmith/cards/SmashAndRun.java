@@ -70,7 +70,7 @@ public class SmashAndRun extends CustomCard {
 		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, player, 
 				new VulnerablePower(monster, this.magicNumber, false), this.magicNumber));
 		
-		if (player.gold >= 500) {
+		if (player.gold >= GSmithMod.PROSPEROUS) {
 			AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(ENERGY_GAIN));
 		}
 			

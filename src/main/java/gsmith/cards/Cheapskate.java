@@ -61,7 +61,7 @@ public class Cheapskate extends CustomCard {
 				new DamageInfo(player, this.damage, this.damageTypeForTurn), 
 				AbstractGameAction.AttackEffect.BLUNT_LIGHT));
 		
-		if (player.gold == 0) {
+		if (player.gold <= GSmithMod.BANKRUPT) {
 			AbstractDungeon.actionManager.addToBottom(new DrawCardAction(player, this.magicNumber));
 		}
 	}

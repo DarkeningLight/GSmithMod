@@ -61,7 +61,7 @@ public class HalfPenny extends CustomCard {
 			AbstractDungeon.actionManager.addToBottom(new GainBlockAction(player, player, this.block));
 		}
 		
-		if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead() && player.gold == 0)
+		if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead() && player.gold <= GSmithMod.BANKRUPT)
 	    {
 	      flash();
 	      for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {

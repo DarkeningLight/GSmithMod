@@ -51,7 +51,7 @@ public class HammerCoin extends CustomCard {
 	@Override
 	public void use(AbstractPlayer player, AbstractMonster monster) {
 		
-		if (player.gold == 0) {
+		if (player.gold <= GSmithMod.BANKRUPT) {
 			AbstractDungeon.actionManager.addToBottom(new DamageAction(monster, 
 				new DamageInfo(player, this.damage, this.damageTypeForTurn), 
 				AbstractGameAction.AttackEffect.SMASH));

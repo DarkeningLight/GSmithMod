@@ -51,7 +51,7 @@ public class Money extends CustomCard {
 	@Override
 	public void use(AbstractPlayer player, AbstractMonster monster) {
 		
-		if (player.gold >= 500) {
+		if (player.gold >= GSmithMod.PROSPEROUS) {
 			AbstractDungeon.actionManager.addToBottom(new DamageAction(monster, 
 				new DamageInfo(player, this.damage, this.damageTypeForTurn), 
 				AbstractGameAction.AttackEffect.BLUNT_HEAVY));

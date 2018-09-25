@@ -52,7 +52,7 @@ public class SpinningBag extends CustomCard {
 
 	@Override
 	public void use(AbstractPlayer player, AbstractMonster monster) {
-		if (player.gold >= 500) {
+		if (player.gold >= GSmithMod.PROSPEROUS) {
 			for (int i = 1 ; i <= this.magicNumber ; i++) {
 				AbstractDungeon.actionManager.addToBottom(new DamageAction(monster, 
 						new DamageInfo(player, this.damage, this.damageTypeForTurn), 

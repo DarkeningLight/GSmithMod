@@ -2,9 +2,6 @@ package gsmith.powers;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -37,7 +34,7 @@ public class GoldFuPower extends AbstractPower {
 	public void atStartOfTurn() {
 		super.atStartOfTurn();
 		
-		if (this.owner.gold >= 500) {
+		if (this.owner.gold >= GSmithMod.PROSPEROUS) {
 			this.flash();
 			AbstractDungeon.actionManager.addToBottom(new DrawCardAction(this.owner, this.amount));
 		}

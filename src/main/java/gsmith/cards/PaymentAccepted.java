@@ -56,7 +56,7 @@ public class PaymentAccepted extends CustomCard {
 		
 		AbstractDungeon.actionManager.addToBottom(new LoseGoldAction(player, GOLD_LOSE));
 		
-		if (player.gold == 0) {
+		if (player.gold <= GSmithMod.BANKRUPT) {
 			AbstractDungeon.actionManager.addToBottom(new DamageAction(monster, 
 					new DamageInfo(player, this.damage, this.damageTypeForTurn), 
 					AbstractGameAction.AttackEffect.BLUNT_HEAVY));

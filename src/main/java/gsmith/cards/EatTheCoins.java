@@ -52,7 +52,7 @@ public class EatTheCoins extends CustomCard {
 		
 		AbstractDungeon.actionManager.addToBottom(new LoseGoldAction(player, GOLD_LOSE));
 		
-		if (player.gold == 0) {
+		if (player.gold <= GSmithMod.BANKRUPT) {
 			player.increaseMaxHp(this.magicNumber, true);
 			this.exhaust = true;
 		}	

@@ -60,7 +60,7 @@ public class Bribe extends CustomCard {
 				new DamageInfo(player, this.damage, this.damageTypeForTurn), 
 				AbstractGameAction.AttackEffect.BLUNT_HEAVY));
 		
-		if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead() && player.gold >= 500)
+		if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead() && player.gold >= GSmithMod.PROSPEROUS)
 	    {
 	      flash();
 	      for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {

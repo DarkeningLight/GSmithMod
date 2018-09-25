@@ -64,7 +64,7 @@ public class HardCrash extends CustomCard {
 		
 		AbstractDungeon.actionManager.addToBottom(new LoseGoldAction(player, GOLD_LOSS));
 		
-		if(player.gold == 0) {
+		if(player.gold <= GSmithMod.BANKRUPT) {
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, 
 	        		  new StrengthPower(player, this.magicNumber), this.magicNumber));
 		}

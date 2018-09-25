@@ -49,7 +49,7 @@ public class SofaHunt extends CustomCard {
 
 	@Override
 	public void use(AbstractPlayer player, AbstractMonster monster) {
-		if (player.gold == 0 ) {
+		if (player.gold <= GSmithMod.BANKRUPT ) {
 			AbstractDungeon.actionManager.addToBottom(new GainBlockAction(player, player, this.block));
 		}
 	}

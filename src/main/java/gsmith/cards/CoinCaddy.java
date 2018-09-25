@@ -54,10 +54,10 @@ public class CoinCaddy extends CustomCard {
 		
 		int strGain = 1;
 		
-		if (upgraded && player.gold >= 500) {
+		if (upgraded && player.gold >= GSmithMod.PROSPEROUS) {
 			strGain += 4;
 		} 
-		else if (upgraded || player.gold > 500) {
+		else if (upgraded || player.gold >= GSmithMod.PROSPEROUS) {
 			strGain += 1;
 		}
 		
