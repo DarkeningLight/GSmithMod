@@ -61,6 +61,7 @@ import gsmith.cards.HammerCoin;
 import gsmith.cards.HardCrash;
 import gsmith.cards.Heads;
 import gsmith.cards.HeavyCoin;
+import gsmith.cards.Hoard;
 import gsmith.cards.LooseChange;
 import gsmith.cards.LuckyFind;
 import gsmith.cards.MarketCrash;
@@ -242,6 +243,7 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 		//BaseMod.addCard(new FiveFingerDiscount()); 
 		BaseMod.addCard(new SleepingCash());
 		BaseMod.addCard(new MarketLove());
+		BaseMod.addCard(new Hoard());
 		
 		unlockCards();
 	}
@@ -356,5 +358,6 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 		//UnlockTracker.unlockCard("Five Finger Discount");
 		UnlockTracker.unlockCard("Sleeping Cash");
 		UnlockTracker.unlockCard("Market Love");
+		UnlockTracker.unlockCard("Hoard");
 	}
 }

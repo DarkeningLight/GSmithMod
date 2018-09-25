@@ -259,6 +259,10 @@
 		"NAME": "Market Love",
 		"DESCRIPTION": "At the start of your turn if Bankrupt, heal !M! HP.",
 		"UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn if Bankrupt, heal !M! HP."
+	},
+	"Hoard": {
+		"NAME": "Hoard",
+		"DESCRIPTION": "Gain !M! gold for each Exhausted card. NL Exhaust."
 	}
 }
 
