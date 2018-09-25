@@ -263,6 +263,10 @@
 	"Hoard": {
 		"NAME": "Hoard",
 		"DESCRIPTION": "Gain !M! gold for each Exhausted card. NL Exhaust."
+	},
+	"Golden Glow": {
+		"NAME": "Golden Glow",
+		"DESCRIPTION": "ALL enemies lose !M! Strength until the start of your next turn. NL Gain 3 Stregnth. "
 	}
 }
 

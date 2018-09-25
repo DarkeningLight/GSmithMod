@@ -55,6 +55,7 @@ import gsmith.cards.FloodTheMarket;
 import gsmith.cards.GoldBar;
 import gsmith.cards.GoldFu;
 import gsmith.cards.GoldRush;
+import gsmith.cards.GoldenGlow;
 import gsmith.cards.GreedIsGood;
 import gsmith.cards.HalfPenny;
 import gsmith.cards.HammerCoin;
@@ -244,6 +245,7 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 		BaseMod.addCard(new SleepingCash());
 		BaseMod.addCard(new MarketLove());
 		BaseMod.addCard(new Hoard());
+		BaseMod.addCard(new GoldenGlow());
 		
 		unlockCards();
 	}
@@ -359,5 +361,6 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 		UnlockTracker.unlockCard("Sleeping Cash");
 		UnlockTracker.unlockCard("Market Love");
 		UnlockTracker.unlockCard("Hoard");
+		UnlockTracker.unlockCard("Golden Glow");
 	}
 }
