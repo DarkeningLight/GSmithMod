@@ -1,5 +1,6 @@
 package gsmith.cards;
 
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -12,16 +13,20 @@ import gsmith.GSmithMod;
 import gsmith.actions.GainGoldAction;
 import gsmith.patches.AbstractCardEnum;
 
+/**
+ * @version 2.0.0 25 Sep 2018
+ *
+ */
 public class OldSurprise extends CustomCard {
 	
 	public static final String ID = "Old Surprise";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+	public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 	private static final int COST = 0;
 	
-	private static final int GOLD_GAIN = 40;
-	private static final int UPGRADE_PLUS_GOLD = 30;
+	private static final int BLOCK_AMT =  3;
 	
 	public static final String PATH = "cards/old_surprise.png";
 	
@@ -30,7 +35,8 @@ public class OldSurprise extends CustomCard {
 				AbstractCardEnum.GOLD, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF);
 		
 		this.isInnate = true;
-		this.baseMagicNumber = this.magicNumber = GOLD_GAIN;
+		this.exhaust = true;
+		this.baseMagicNumber = this.magicNumber = GSmithMod.BANKRUPT;
 	}
 
 	@Override
@@ -42,7 +48,9 @@ public class OldSurprise extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			this.upgradeName();
-			this.upgradeMagicNumber(UPGRADE_PLUS_GOLD);
+			
+			this.rawDescription = UPGRADE_DESCRIPTION;
+			initializeDescription();
 		}
 
 	}
@@ -51,8 +59,11 @@ public class OldSurprise extends CustomCard {
 	public void use(AbstractPlayer player, AbstractMonster monster) {
 		
 		if (player.gold <= GSmithMod.BANKRUPT ) {
-			this.exhaust = true;
 			AbstractDungeon.actionManager.addToBottom(new GainGoldAction(player, this.magicNumber));
+			
+			if (upgraded) {
+				AbstractDungeon.actionManager.addToBottom(new GainBlockAction(player, player, BLOCK_AMT));
+			}
 		}
 	}
 

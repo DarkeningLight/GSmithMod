@@ -53,7 +53,8 @@
 	},
 	"Old Surprise": {
 		"NAME": "Old Surprise",
-		"DESCRIPTION": "Innate. NL If Bankrupt gain !M! gold. NL Exhaust."
+		"DESCRIPTION": "Innate. NL If Bankrupt gain !M! gold. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Innate. NL If Bankrupt gain !M! gold and 3 Block. NL Exhaust."
 	},
 	"Half Penny": {
 		"NAME": "Half Penny",
