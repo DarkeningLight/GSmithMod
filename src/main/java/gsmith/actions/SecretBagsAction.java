@@ -6,6 +6,10 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
+/**
+ * @version 0.1.2 26 Sep 2018
+ *
+ */
 public class SecretBagsAction extends AbstractGameAction {
 
 	private int energyOnUse = -1;
@@ -40,8 +44,8 @@ public class SecretBagsAction extends AbstractGameAction {
 			if (!this.freeToPlayOnce) {
 		        this.p.energy.use(EnergyPanel.totalCount);
 		    }
-		this.isDone = true;	
 		}
+		this.isDone = true;	
 	}
 
 }
