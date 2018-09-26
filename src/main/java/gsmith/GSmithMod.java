@@ -94,6 +94,10 @@ import gsmith.patches.AbstractCardEnum;
 import gsmith.patches.TheGoldsmithEnum;
 import gsmith.relics.BagOfCoins;
 
+/**
+ * @version 0.1.2 26 Sep 2018
+ *
+ */
 @SpireInitializer
 public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber, EditStringsSubscriber, 
 									EditCardsSubscriber, EditKeywordsSubscriber, EditCharactersSubscriber {
@@ -126,8 +130,8 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
     private static final String GOLDSMITH_PORTRAIT = "charSelect/goldsmithPortraitBG.jpg";
     
     //thresholds
-    public static final int BANKRUPT = 0;
-    public static final int PROSPEROUS = 500;
+    public static final int BANKRUPT = 50;
+    public static final int PROSPEROUS = 400;
 	
 	
 	// Short Texture Methods
@@ -273,9 +277,9 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 	@Override
 	public void receiveEditKeywords() {
 		BaseMod.addKeyword(new String[] {"bankrupt" , "Bankrupt"}, 
-				"You are #yBankrupt if you have 0 gold");
+				"You are #yBankrupt if you have 50 or fewer gold");
 		BaseMod.addKeyword(new String[] {"prosperous" , "Prosperous"}, 
-				"You are #yProsperous if you have 500 or more gold.");
+				"You are #yProsperous if you have 400 or more gold.");
 	}
 
 	public static int getActNumber() {

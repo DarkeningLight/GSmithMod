@@ -267,7 +267,7 @@
 	},
 	"Golden Glow": {
 		"NAME": "Golden Glow",
-		"DESCRIPTION": "ALL enemies lose !M! Strength until the start of your next turn. NL Gain 3 Stregnth. "
+		"DESCRIPTION": "ALL enemies lose !M! Strength until the start of your next turn. NL Gain 3 Stregnth. NL Exhaust."
 	}
 }
 
