@@ -14,6 +14,10 @@ import basemod.abstracts.CustomCard;
 import gsmith.GSmithMod;
 import gsmith.patches.AbstractCardEnum;
 
+/**
+ * @version 0.1.2 26 Sep 2018 
+ *
+ */
 public class FloodTheMarket extends CustomCard {
 	
 	public static final String ID = "Flood The Market";
@@ -63,10 +67,10 @@ public class FloodTheMarket extends CustomCard {
 	
 	@Override
 	public void triggerOnOtherCardPlayed(AbstractCard c) {
-		// TODO Auto-generated method stub
 		super.triggerOnOtherCardPlayed(c);
 		if (c.exhaust == true) {
-			this.baseDamage = this.damage += this.magicNumber;
+			this.baseDamage += this.magicNumber; 
+			this.damage = this.baseDamage;
 			initializeDescription();
 		}
 	}
