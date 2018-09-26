@@ -14,6 +14,10 @@ import gsmith.GSmithMod;
 import gsmith.actions.LoseGoldAction;
 import gsmith.patches.AbstractCardEnum;
 
+/**
+ * @version 0.1.2 26 Sep 2018
+ *
+ */
 public class BouncingBag extends CustomCard {
 	
 	public static final String ID = "Bouncing Bag";
@@ -37,6 +41,7 @@ public class BouncingBag extends CustomCard {
 		this.magicNumber = ATTACK_DMG;
 		this.isMultiDamage = true;
 		this.baseMagicNumber = this.magicNumber = NUM_TIMES;
+		this.isEthereal = true;
 	}
 
 	@Override
@@ -49,6 +54,7 @@ public class BouncingBag extends CustomCard {
 		if (!this.upgraded) {
 			this.upgradeName();
 			this.upgradeMagicNumber(UPGRADE_PLUS_TIMES);
+			this.isEthereal = false;
 		}
 	}
 
@@ -60,12 +66,5 @@ public class BouncingBag extends CustomCard {
 					this.damageTypeForTurn, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
 			}
 		AbstractDungeon.actionManager.addToBottom(new LoseGoldAction(player, GOLD_LOSS));
-	}
-	
-	@Override
-	public void triggerOnEndOfPlayerTurn() {
-		if (!upgraded) {
-			AbstractDungeon.player.hand.moveToExhaustPile(this);
-		}
 	}
 }

@@ -13,6 +13,10 @@ import basemod.abstracts.CustomCard;
 import gsmith.GSmithMod;
 import gsmith.patches.AbstractCardEnum;
 
+/**
+ * @version 0.1.2 26 Sep 2018
+ *
+ */
 public class CoinTrick extends CustomCard {
 	
 	public static final String ID = "Coin Trick";
@@ -31,6 +35,7 @@ public class CoinTrick extends CustomCard {
 				AbstractCardEnum.GOLD, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
 		
 		this.baseMagicNumber = this.magicNumber = CARD_DRAW;
+		this.isEthereal = true;
 	}
 
 	@Override
@@ -52,10 +57,4 @@ public class CoinTrick extends CustomCard {
 		AbstractDungeon.actionManager.addToBottom(new DrawCardAction(player, this.magicNumber));
 		AbstractDungeon.actionManager.addToBottom(new DiscardAction(player, player, 1, false));
 	}
-	
-	@Override
-	public void triggerOnEndOfPlayerTurn() {
-		AbstractDungeon.player.hand.moveToExhaustPile(this);
-	}
-
 }

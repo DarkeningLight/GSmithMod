@@ -12,6 +12,10 @@ import gsmith.GSmithMod;
 import gsmith.actions.GainGoldAction;
 import gsmith.patches.AbstractCardEnum;
 
+/**
+ * @version 0.1.2 26 Sep 2018
+ *
+ */
 public class Payday extends CustomCard {
 
 	public static final String ID = "Payday";
@@ -31,6 +35,7 @@ public class Payday extends CustomCard {
 		this.exhaust = true;
 		
 		this.baseMagicNumber = this.magicNumber = GOLD_GAIN;
+		this.isEthereal = true;
 	}
 	
 	@Override
@@ -51,10 +56,4 @@ public class Payday extends CustomCard {
 	public void use(AbstractPlayer player, AbstractMonster monster) {
 		AbstractDungeon.actionManager.addToBottom(new GainGoldAction(player, this.magicNumber));
 	}
-	
-	@Override
-	public void triggerOnEndOfPlayerTurn() {
-		AbstractDungeon.player.hand.moveToExhaustPile(this); //To Exhaust
-	}
-
 }

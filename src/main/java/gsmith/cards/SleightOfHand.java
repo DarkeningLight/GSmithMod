@@ -13,6 +13,10 @@ import gsmith.GSmithMod;
 import gsmith.patches.AbstractCardEnum;
 import gsmith.powers.SleightOfHandPower;
 
+/**
+ * @version 0.1.2 26 Sep 2018
+ *
+ */
 public class SleightOfHand extends CustomCard {
 	
 	public static final String ID = "Sleight of Hand";
@@ -31,6 +35,7 @@ public class SleightOfHand extends CustomCard {
 				AbstractCardEnum.GOLD, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
 		
 		this.baseMagicNumber = this.magicNumber = GOLD_GAIN;
+		this.isEthereal = true;
 	}
 
 	@Override
@@ -52,12 +57,4 @@ public class SleightOfHand extends CustomCard {
 		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, 
 				new SleightOfHandPower(player, this.magicNumber), this.magicNumber));
 	}
-
-	@Override
-	public void triggerOnEndOfPlayerTurn() {
-		AbstractDungeon.player.hand.moveToExhaustPile(this);
-	}
-	
-	
-
 }

@@ -13,6 +13,10 @@ import gsmith.GSmithMod;
 import gsmith.actions.SecretBagsAction;
 import gsmith.patches.AbstractCardEnum;
 
+/**
+ * @version 0.1.2 26 Sep 2018
+ *
+ */
 public class SecretBags extends CustomCard {
 	
 	public static final String ID = "Secret Bags";
@@ -32,6 +36,7 @@ public class SecretBags extends CustomCard {
 		
 		this.baseMagicNumber = this.magicNumber = GOLD_GAIN;
 		this.exhaust = true;
+		this.isEthereal = true;
 	}
 
 	@Override
@@ -57,10 +62,5 @@ public class SecretBags extends CustomCard {
 		
 		AbstractDungeon.actionManager.addToBottom(
 				new SecretBagsAction(player, this.energyOnUse, (this.magicNumber*this.energyOnUse), this.freeToPlayOnce));
-	}
-	
-	@Override
-	public void triggerOnEndOfPlayerTurn() {
-		AbstractDungeon.player.hand.moveToExhaustPile(this);
 	}
 }
