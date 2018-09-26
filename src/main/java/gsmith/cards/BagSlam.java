@@ -16,7 +16,10 @@ import gsmith.actions.LoseGoldAction;
 import gsmith.patches.AbstractCardEnum;
 
 
-
+/**
+ * @version 0.1.2 26 Sep 2018
+ *
+ */
 public class BagSlam extends CustomCard {
 	
 	public static final String ID = "Bag Slam";
@@ -55,11 +58,11 @@ public class BagSlam extends CustomCard {
 	@Override
 	public void use(AbstractPlayer player, AbstractMonster monster) {
 		
+		AbstractDungeon.actionManager.addToBottom(new LoseGoldAction(player, GOLD_LOSS));
+		
 		AbstractDungeon.actionManager.addToBottom(new DamageAction(monster, 
 				new DamageInfo(player, this.damage, this.damageTypeForTurn), 
 				AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-		
-		AbstractDungeon.actionManager.addToBottom(new LoseGoldAction(player, GOLD_LOSS));
 	}
 
 }

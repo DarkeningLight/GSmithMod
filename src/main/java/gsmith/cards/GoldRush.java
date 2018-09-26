@@ -15,6 +15,10 @@ import gsmith.GSmithMod;
 import gsmith.actions.GainGoldAction;
 import gsmith.patches.AbstractCardEnum;
 
+/**
+ * @version 0.1.2 26 Sep 2018
+ *
+ */
 public class GoldRush extends CustomCard {
 	
 	public static final String ID = "Gold Rush";
@@ -57,11 +61,11 @@ public class GoldRush extends CustomCard {
 	@Override
 	public void use(AbstractPlayer player, AbstractMonster monster) {
 		
+		AbstractDungeon.actionManager.addToBottom(new GainGoldAction(player, this.magicNumber));
+		
 		AbstractDungeon.actionManager.addToBottom(new DamageAction(monster, 
 				new DamageInfo(player, this.damage, this.damageTypeForTurn), 
 				AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-
-		AbstractDungeon.actionManager.addToBottom(new GainGoldAction(player, this.magicNumber));
 	}
 
 }

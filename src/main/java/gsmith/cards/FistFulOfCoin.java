@@ -15,6 +15,10 @@ import gsmith.GSmithMod;
 import gsmith.actions.LoseGoldAction;
 import gsmith.patches.AbstractCardEnum;
 
+/**
+ * @version 0.1.2 26 Sep 2018
+ *
+ */
 public class FistFulOfCoin extends CustomCard {
 	
 	public static final String ID = "Fistful of Coin";
@@ -53,11 +57,11 @@ public class FistFulOfCoin extends CustomCard {
 	@Override
 	public void use(AbstractPlayer player, AbstractMonster monster) {
 		
+		AbstractDungeon.actionManager.addToBottom(new LoseGoldAction(player, GOLD_LOSS));
+		
 		AbstractDungeon.actionManager.addToBottom(new DamageAction(monster, 
 				new DamageInfo(player, this.damage, this.damageTypeForTurn), 
 				AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-		
-		AbstractDungeon.actionManager.addToBottom(new LoseGoldAction(player, GOLD_LOSS));
 	}
 
 }

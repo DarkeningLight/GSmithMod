@@ -14,6 +14,10 @@ import gsmith.GSmithMod;
 import gsmith.actions.LoseGoldAction;
 import gsmith.patches.AbstractCardEnum;
 
+/**
+ * @version 0.1.2 26 Sep 2018
+ *
+ */
 public class HeavyCoin extends CustomCard {
 	
 	public static final String ID = "Heavy Coin";
@@ -53,9 +57,9 @@ public class HeavyCoin extends CustomCard {
 	@Override
 	public void use(AbstractPlayer player, AbstractMonster monster) {
 		
+		AbstractDungeon.actionManager.addToBottom(new LoseGoldAction(player, GOLD_LOSS));
+		
 		AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(player, this.multiDamage, 
 					this.damageTypeForTurn, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-			
-		AbstractDungeon.actionManager.addToBottom(new LoseGoldAction(player, GOLD_LOSS));
 	}
 }
