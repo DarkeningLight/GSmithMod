@@ -62,6 +62,8 @@ public class SleepingCashPower extends AbstractPower {
 			AbstractMonster m = i.next(); 
 			if (!m.isDeadOrEscaped()) {
 				list.add(this.amount);
+			} else {
+				list.add(0);
 			}
 		}
 		
