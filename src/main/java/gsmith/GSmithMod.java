@@ -121,9 +121,6 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 	private static final String POWER_GOLD_PORTRAIT = "1024/bg_power_gold.png";
 	private static final String ENERGY_ORB_GOLD_PORTRAIT = "1024/card_gold_orb.png";
 	
-	//relic images
-	public static final String BAG_OF_COINS_RELIC = "relics/bagofcoins.png";
-	
 	//badge & button images
 	public static final String BADGE_IMG = "badge.png";
 	private static final String GOLDSMITH_BUTTON = "charSelect/goldsmithButton.png";
@@ -133,9 +130,6 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
     public static final int BANKRUPT = 50;
     public static final int PROSPEROUS = 400;
 	
-	
-	// Short Texture Methods
-	public static Texture getBagOfCoinsTexture() { return new Texture(makePath(BAG_OF_COINS_RELIC)); }
 
 	public static final String makePath(String resource) {
 		String s = ASSETS_FOLDER + "/" + resource;

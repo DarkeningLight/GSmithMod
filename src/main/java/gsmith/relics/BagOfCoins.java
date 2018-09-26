@@ -1,5 +1,6 @@
 package gsmith.relics;
 
+import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -10,11 +11,17 @@ import basemod.abstracts.CustomRelic;
 import gsmith.GSmithMod;
 import gsmith.powers.DebtPower;
 
+/**
+ * @version 0.1.2 26 Sep 2018
+ *
+ */
 public  class BagOfCoins extends CustomRelic {
 	public static final String ID = "Bag of Coins";
 	
+	public static final String PATH = "relics/bagofcoins.png";
+	
 	public BagOfCoins() {
-		super(ID, GSmithMod.getBagOfCoinsTexture(), AbstractRelic.RelicTier.STARTER, AbstractRelic.LandingSound.SOLID);
+		super(ID, getTexture(), AbstractRelic.RelicTier.STARTER, AbstractRelic.LandingSound.SOLID);
 	}
 	
 	public String getUpdatedDescription() {
@@ -48,4 +55,8 @@ public  class BagOfCoins extends CustomRelic {
 	public AbstractRelic makeCopy() {
 		return new BagOfCoins();
 	}
+	
+	public static Texture getTexture() { 
+		return new Texture(GSmithMod.makePath(PATH)); 
+		}
 }
