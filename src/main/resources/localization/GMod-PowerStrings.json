@@ -49,25 +49,32 @@
       " #yDexterity."
     ]
   },
-   "Treasure Hunt": {
+  "Treasure Hunt": {
     "NAME": "Treasure Hunt",
     "DESCRIPTIONS": [
       "At the start of your turn if #yBankrupt ALL enemies lose ",
       " #yStrength"
     ]
   },
-    "Sleeping Cash": {
+  "Sleeping Cash": {
     "NAME": "Sleeping Cash",
     "DESCRIPTIONS": [
       "Whenever you #yExhasut a card deal ",
       " damage to ALL enemies."
     ]
   },
-    "Market Love": {
+  "Market Love": {
     "NAME": "Market Love",
     "DESCRIPTIONS": [
       "At the start of your turn if #yBankrupt heal ",
       " HP"
+    ]
+  },
+  "Funding": {
+    "NAME": "Funding",
+    "DESCRIPTIONS": [
+      "At the start of your turn gain ",
+      " gold."
     ]
   }
 }

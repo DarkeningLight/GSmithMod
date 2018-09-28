@@ -212,7 +212,7 @@
 	},
 	"Bed Bank": {
 		"NAME": "Bed Bank",
-		"DESCRIPTION": "Ethereal NL Exhaust you hand. Gain !M! gold for each Exhausted card."
+		"DESCRIPTION": "Ethereal. NL Exhaust you hand. Gain !M! gold for each Exhausted card."
 	},
 	"Empty Hands": {
 		"NAME": "Empty Hands",
@@ -268,6 +268,10 @@
 	"Golden Glow": {
 		"NAME": "Golden Glow",
 		"DESCRIPTION": "ALL enemies lose !M! Strength until the start of your next turn. NL Gain 3 Stregnth. NL Exhaust."
+	},
+	"Funding": {
+		"NAME": "Funding",
+		"DESCRIPTION": "Ethereal. NL At the start of your turn gain !M! gold."
 	}
 }
 
