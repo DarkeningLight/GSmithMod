@@ -1,6 +1,7 @@
 package gsmith.powers;
 
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -10,8 +11,11 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import gsmith.GSmithMod;
-import gsmith.actions.GainGoldAction;
 
+/**
+ * @version 0.2.0 28 Sep 2018
+ *
+ */
 public class SleightOfHandPower extends AbstractPower {
 	
 	public static final String PATH = "powers/sleight_of_hand.png";
@@ -20,23 +24,20 @@ public class SleightOfHandPower extends AbstractPower {
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 	public static final String NAME = powerStrings.NAME;
 	
-	public SleightOfHandPower(AbstractCreature owner, int goldGain) {
+	public SleightOfHandPower(AbstractCreature owner, int blockGain) {
 		super();
 		this.name = NAME;
 		this.ID = POWER_ID;
 		this.owner = owner;
-		this.amount = goldGain;
+		this.amount = blockGain;
 		updateDescription();
 		this.img = getTexture();
-		
-		System.out.println("<Init> Amount: " + this.amount);
 	}  
 
 	@Override
 	public void onUseCard(AbstractCard card, UseCardAction action) {
-		System.out.println("Amount: " + this.amount);
 		if (card.type == AbstractCard.CardType.SKILL) {
-			AbstractDungeon.actionManager.addToBottom(new GainGoldAction(this.owner, this.amount));
+			AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this.owner, this.owner, this.amount));
 		}
 	}
 	

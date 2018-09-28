@@ -14,7 +14,7 @@ import gsmith.patches.AbstractCardEnum;
 import gsmith.powers.SleightOfHandPower;
 
 /**
- * @version 0.1.2 26 Sep 2018
+ * @version 0.2.0 28 Sep 2018
  *
  */
 public class SleightOfHand extends CustomCard {
@@ -25,8 +25,8 @@ public class SleightOfHand extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
 	
-	private static final int GOLD_GAIN = 1;
-	private static final int UPGRADE_INCREASE_GOLD = 1;
+	private static final int BLOCK_GAIN = 2;
+	private static final int UPGRADE_PLUS_BLOCK = 1;
 	
 	public static final String PATH = "cards/sleight_of_hand.png";
 	
@@ -34,7 +34,7 @@ public class SleightOfHand extends CustomCard {
 		super(ID, NAME, GSmithMod.makePath(PATH), COST, DESCRIPTION, AbstractCard.CardType.POWER, 
 				AbstractCardEnum.GOLD, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
 		
-		this.baseMagicNumber = this.magicNumber = GOLD_GAIN;
+		this.baseMagicNumber = this.magicNumber = BLOCK_GAIN;
 		this.isEthereal = true;
 	}
 
@@ -47,7 +47,7 @@ public class SleightOfHand extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			this.upgradeName();
-			this.upgradeMagicNumber(UPGRADE_INCREASE_GOLD);
+			this.upgradeMagicNumber(UPGRADE_PLUS_BLOCK);
 		}
 
 	}
