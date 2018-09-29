@@ -38,6 +38,7 @@ import gsmith.cards.CashToBurn;
 import gsmith.cards.Cheapskate;
 import gsmith.cards.CoinBarrage;
 import gsmith.cards.CoinCaddy;
+import gsmith.cards.CoinCannon;
 import gsmith.cards.CoinToss;
 import gsmith.cards.CoinTrick;
 import gsmith.cards.CoinWall;
@@ -247,6 +248,7 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 		BaseMod.addCard(new Hoard());
 		BaseMod.addCard(new GoldenGlow());
 		BaseMod.addCard(new Funding());
+		BaseMod.addCard(new CoinCannon());
 		
 		unlockCards();
 	}
@@ -364,5 +366,6 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 		UnlockTracker.unlockCard("Hoard");
 		UnlockTracker.unlockCard("Golden Glow");
 		UnlockTracker.unlockCard("Funding");
+		UnlockTracker.unlockCard("Coin Cannon");
 	}
 }

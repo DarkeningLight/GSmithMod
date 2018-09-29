@@ -272,6 +272,10 @@
 	"Funding": {
 		"NAME": "Funding",
 		"DESCRIPTION": "Ethereal. NL At the start of your turn gain !M! gold."
+	},
+	"Coin Cannon": {
+		"NAME": "Coin Cannon",
+		"DESCRIPTION": "Lose 15 gold. NL Deal !D! damage X times."
 	}
 }
 
