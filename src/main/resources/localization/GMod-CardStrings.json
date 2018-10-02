@@ -249,7 +249,7 @@
 		"DESCRIPTION": "Gain 2 Weak. NL Gain 30 gold. NL Exhaust."
 	},
 	"Five Finger Discount": {
-		"NAME": "Five finger Discount",
+		"NAME": "Five Finger Discount",
 		"DESCRIPTION": "Deal !D! damage 5 times. NL If this kills the enemy, gain !M! gold."
 	},
 	"Sleeping Cash": {
@@ -276,7 +276,12 @@
 	"Coin Cannon": {
 		"NAME": "Coin Cannon",
 		"DESCRIPTION": "Lose 15 gold. NL Deal !D! damage X times."
+	},
+	"Discount": {
+		"NAME": "Discount",
+		"DESCRIPTION": "Choose a card. That card costs 0 this turn. NL Exhaust."
 	}
+	
 }
 
 	

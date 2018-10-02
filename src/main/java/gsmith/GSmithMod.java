@@ -43,6 +43,7 @@ import gsmith.cards.CoinToss;
 import gsmith.cards.CoinTrick;
 import gsmith.cards.CoinWall;
 import gsmith.cards.CountingDesk;
+import gsmith.cards.Discount;
 import gsmith.cards.Distraction;
 import gsmith.cards.Dive;
 import gsmith.cards.EatTheCoins;
@@ -242,13 +243,14 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 		BaseMod.addCard(new LuckyFind());
 		BaseMod.addCard(new SpinningBag());
 		BaseMod.addCard(new Exchange());
-		//BaseMod.addCard(new FiveFingerDiscount()); 
+		BaseMod.addCard(new FiveFingerDiscount()); 
 		BaseMod.addCard(new SleepingCash());
 		BaseMod.addCard(new MarketLove());
 		BaseMod.addCard(new Hoard());
 		BaseMod.addCard(new GoldenGlow());
 		BaseMod.addCard(new Funding());
 		BaseMod.addCard(new CoinCannon());
+		BaseMod.addCard(new Discount());
 		
 		unlockCards();
 	}
@@ -360,12 +362,13 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 		UnlockTracker.unlockCard("Lucky Find");
 		UnlockTracker.unlockCard("Spinning Bag");
 		UnlockTracker.unlockCard("Exchange");
-		//UnlockTracker.unlockCard("Five Finger Discount");
+		UnlockTracker.unlockCard("Five Finger Discount");
 		UnlockTracker.unlockCard("Sleeping Cash");
 		UnlockTracker.unlockCard("Market Love");
 		UnlockTracker.unlockCard("Hoard");
 		UnlockTracker.unlockCard("Golden Glow");
 		UnlockTracker.unlockCard("Funding");
 		UnlockTracker.unlockCard("Coin Cannon");
+		UnlockTracker.unlockCard("Discount");
 	}
 }
