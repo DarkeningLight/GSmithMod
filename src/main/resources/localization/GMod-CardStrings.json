@@ -91,8 +91,8 @@
 	},
 	"Bigger Bag": {
 		"NAME": "Bigger Bag",
-		"DESCRIPTION": "Gain !M! gold. NL Place a copy of this card into your discard pile. All Bigger Bag cards give 1 additional gold this combat",
-		"UPGRADE_DESCRIPTION": "Gain !M! gold. NL Place a copy of this card into your discard pile. All Bigger Bag cards give 2 additional gold this combat"
+		"DESCRIPTION": "Place a copy of this card into your discard pile. NL Put 2 Discounts in your discard pile.",
+		"UPGRADE_DESCRIPTION": "Gain !M! gold. NL Place a copy of this card into your discard pile. NL Put 2 Discounts in your discard pile."
 	},
 	"Gold Rush": {
 		"NAME": "Gold Rush",

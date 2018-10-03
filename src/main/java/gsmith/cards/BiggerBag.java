@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import basemod.abstracts.CustomCard;
 import gsmith.GSmithMod;
-import gsmith.actions.BiggerBagAction;
 import gsmith.actions.GainGoldAction;
 import gsmith.patches.AbstractCardEnum;
 
@@ -22,11 +21,10 @@ public class BiggerBag extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-	private static final int COST = 0;
+	private static final int COST = 1;
 	
-	private static int increaseAmt = 1;
-	public static int totalGoldGain = 1;
-	public static boolean hasReset = false;
+	private static final int GOLD_GAIN = 5;
+	private static final int DISCOUNT_NUM = 2;
 	
 	public static final String PATH = "cards/bigger_bag.png";
 	
@@ -34,14 +32,13 @@ public class BiggerBag extends CustomCard {
 		super(ID, NAME, GSmithMod.makePath(PATH), COST, DESCRIPTION, AbstractCard.CardType.SKILL, 
 				AbstractCardEnum.GOLD, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
 		
-		this.baseMagicNumber = this.magicNumber = totalGoldGain;
+		this.baseMagicNumber = this.magicNumber = GOLD_GAIN;
 	}
 	
 	@Override
 	public void upgrade() {
 		if (!this.upgraded) {
 			this.upgradeName();
-			increaseAmt += 1;
 			
 			this.rawDescription = UPGRADE_DESCRIPTION;
 			initializeDescription();
@@ -55,21 +52,12 @@ public class BiggerBag extends CustomCard {
 
 	@Override
 	public void use(AbstractPlayer player, AbstractMonster monster) {
-		
-		System.out.println("Magic Number:" + this.magicNumber);
-		System.out.println("Total Gold Gain:" + totalGoldGain);
-		
-		if (!hasReset) {
-			AbstractDungeon.actionManager.addToNextCombat(new BiggerBagAction());
+		if (this.upgraded) {
+			AbstractDungeon.actionManager.addToBottom(new GainGoldAction(player, this.magicNumber));
 		}
 		
-		this.magicNumber = totalGoldGain;
-		initializeDescription();
-		System.out.println("Magic Number 2:" + this.magicNumber);
-		
-		AbstractDungeon.actionManager.addToBottom(new GainGoldAction(player, this.magicNumber));
 		AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(this.makeStatEquivalentCopy(), 1));
-		totalGoldGain += increaseAmt;
+		AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(new Discount(), DISCOUNT_NUM));
 
 	}
 

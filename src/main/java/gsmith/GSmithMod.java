@@ -31,6 +31,7 @@ import gsmith.cards.BagSlam;
 import gsmith.cards.BedBank;
 import gsmith.cards.BestBag;
 import gsmith.cards.BigSpender;
+import gsmith.cards.BiggerBag;
 import gsmith.cards.BlockChain;
 import gsmith.cards.BouncingBag;
 import gsmith.cards.Bribe;
@@ -204,7 +205,7 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 		BaseMod.addCard(new HardCrash());
 		BaseMod.addCard(new HeavyCoin());
 		BaseMod.addCard(new SecretBags());
-		//BaseMod.addCard(new BiggerBag());
+		BaseMod.addCard(new BiggerBag());
 		BaseMod.addCard(new BlockChain());
 		BaseMod.addCard(new GoldRush());
 		BaseMod.addCard(new SleightOfHand());
@@ -323,7 +324,7 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 		UnlockTracker.unlockCard("Hard Crash");
 		UnlockTracker.unlockCard("Heavy Coin");
 		UnlockTracker.unlockCard("Secret Bags");
-		//UnlockTracker.unlockCard("Bigger Bag");
+		UnlockTracker.unlockCard("Bigger Bag");
 		UnlockTracker.unlockCard("Block Chain");
 		UnlockTracker.unlockCard("Gold Rush");
 		UnlockTracker.unlockCard("Sleight of Hand");
