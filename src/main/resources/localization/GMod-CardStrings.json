@@ -249,8 +249,10 @@
 		"DESCRIPTION": "Gain 2 Weak. NL Gain 30 gold. NL Exhaust."
 	},
 	"Five Finger Discount": {
-		"NAME": "Five Finger Discount",
-		"DESCRIPTION": "Deal !D! damage 5 times. NL If this kills the enemy, gain !M! gold."
+		"NAME": "Five Fingers",
+		"DESCRIPTION": "Deal !D! damage. NL Put 2 discounts in your discard pile. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Deal !D! damage twice. NL Put 2 discounts in your discard pile. NL Exhaust."
+		
 	},
 	"Sleeping Cash": {
 		"NAME": "Sleeping Cash",
