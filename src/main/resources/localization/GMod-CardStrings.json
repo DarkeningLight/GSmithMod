@@ -71,7 +71,7 @@
 	},
 	"No Coin": {
 		"NAME": "No Coin",
-		"DESCRIPTION": "Lose 5 gold. NL If Bankrupt draw !M! cards."
+		"DESCRIPTION": "Put 2 Discounts in your discard pile. NL Draw 2 cards. NL Exhaust."
 	},
 	"Coin Barrage": {
 		"NAME": "Coin Barrage",
@@ -250,8 +250,8 @@
 	},
 	"Five Finger Discount": {
 		"NAME": "Five Fingers",
-		"DESCRIPTION": "Deal !D! damage. NL Put 2 discounts in your discard pile. NL Exhaust.",
-		"UPGRADE_DESCRIPTION": "Deal !D! damage twice. NL Put 2 discounts in your discard pile. NL Exhaust."
+		"DESCRIPTION": "Deal !D! damage. NL Put 2 Discounts in your discard pile. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Deal !D! damage twice. NL Put 2 Discounts in your discard pile. NL Exhaust."
 		
 	},
 	"Sleeping Cash": {
