@@ -18,8 +18,6 @@ public class DebtPower extends AbstractPower {
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 	public static final String NAME = powerStrings.NAME;
 	
-	public static final int GOLD_LOSS = 15;
-	
 	public int totalGold = 0;
 	
 	public DebtPower(AbstractPlayer owner) {
@@ -74,18 +72,17 @@ public class DebtPower extends AbstractPower {
 	
 	public int calculateGoldLoss() {
 		int total = GSmithMod.getActNumber() * 10;
+		double mul = 0.1 * GSmithMod.getActNumber();
 		 
 		try {
 			java.util.Random random = new java.util.Random();
-			int r = random.nextInt((int) (owner.gold *0.05));
+			int r = random.nextInt((int) (owner.gold * mul));
 		
 			return (total + r);
 		} 
 		catch (IllegalArgumentException e) {
 			return total;
 		}
-	
-		
 	}
 	
 	public static Texture getTexture() { return new Texture(GSmithMod.makePath(PATH)); }

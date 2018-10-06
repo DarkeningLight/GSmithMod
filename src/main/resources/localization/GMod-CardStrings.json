@@ -1,289 +1,285 @@
 {
-	"Thief": {
-		"NAME": "Thief",
-		"DESCRIPTION": "Ethereal. Whenever you play an attack gain a gold."
-	},
-	"Spare Change": {
-		"NAME": "Spare Change",
-		"DESCRIPTION": "Gain !M! gold. Exhaust."
-	},
-	"Coin Wall": {
-		"NAME": "Coin Wall",
-		"DESCRIPTION": "Gain !M! gold. Exhaust."
-	},
-	"Payday": {
-		"NAME": "Payday",
-		"DESCRIPTION": "Ethereal. Gain !M! gold. Exhaust."
-	},
-	"Treasure Map": {
-		"NAME": "Treasure Map",
-		"DESCRIPTION": "Gain !M! gold. Exhaust."
-	},
-	"Strike_D": {
-		"NAME": "Strike",
-		"DESCRIPTION": "Deal !D! damage."
-	},
-	"Bag Slam": {
-		"NAME": "Bag Slam",
-		"DESCRIPTION": "Deal !D! damage. NL Lose 10 gold." 
-	},
-	"Coin Toss": {
-		"NAME": "Coin Toss",
-		"DESCRIPTION": "Deal !D! damage. NL Place a card from your discard pile on top of your draw pile." 
-	},
-	"Fistful of Coin": {
-		"NAME": "Fistful of Coin",
-		"DESCRIPTION": "Deal !D! damage. NL Lose 5 gold."  
-	},
-	"Loose Change": {
-		"NAME": "Loose Change",
-		"DESCRIPTION": "Deal !D! damage. NL Exhaust a card from your hand."  
-	},
-	"Best Bag": {
-		"NAME": "Best Bag #1",
-		"DESCRIPTION": "Deal !D! damage. NL Gain !M! gold. NL Exhaust."
-	}, 
-	"Bouncing Bag": {
-		"NAME": "Bouncing Bag",
-		"DESCRIPTION": "Ethereal. NL Deal !D! damage to ALL enemies !M! times. NL Lose 10 gold."
-	},
-	"Cheapskate": {
-		"NAME": "Cheapskate",
-		"DESCRIPTION": "Deal !D! Damage. NL If Bankrupt draw !M! cards."
-	},
-	"Old Surprise": {
-		"NAME": "Old Surprise",
-		"DESCRIPTION": "Innate. NL If Bankrupt gain !M! gold. NL Exhaust.",
-		"UPGRADE_DESCRIPTION": "Innate. NL If Bankrupt gain !M! gold and 3 Block. NL Exhaust."
-	},
-	"Half Penny": {
-		"NAME": "Half Penny",
-		"DESCRIPTION": "If Bankrupt apply !M! Weak to ALL enemies.",  
-		"UPGRADE_DESCRIPTION": "Gain !B! Block. NL If Bankrupt apply !M! Weak to ALL enemies."
-	},
-	"Bribe": {
-		"NAME": "Bribe",
-		"DESCRIPTION": "Deal !D! damage. If Prosperous apply !M! Vulnerable to ALL enemies."
-	},
-	"Block Chain": {
-		"NAME": "Block Chain",
-		"DESCRIPTION": "Gain !B! Block. NL Exhaust."
-	},
-	"No Coin": {
-		"NAME": "No Coin",
-		"DESCRIPTION": "Put 2 Discounts in your discard pile. NL Draw 2 cards. NL Exhaust."
-	},
-	"Coin Barrage": {
-		"NAME": "Coin Barrage",
-		"DESCRIPTION": "Lose 50 gold. NL Deal !D! damage to ALL enemies. NL Exhaust."
-	},
-	"Hard Crash": {
-		"NAME": "Hard Crash",
-		"DESCRIPTION": "Deal !D! damage. NL Lose 10 gold. NL If Bankrupt gain !M! Strength."
-	},
-	"Heavy Coin": {
-		"NAME": "Heavy Coin",
-		"DESCRIPTION": "Deal !D! damage to ALL enemies. NL Lose 5 gold. Exhaust."
-	},
-	"Secret Bags": {
-		"NAME": "Secret Bags",
-		"DESCRIPTION": "Ethereal. NL Spend all [R]. NL Gain !M! gold X times. NL Exhaust"
-	},
-	"Bigger Bag": {
-		"NAME": "Bigger Bag",
-		"DESCRIPTION": "Place a copy of this card into your discard pile. NL Put 2 Discounts in your discard pile.",
-		"UPGRADE_DESCRIPTION": "Gain !M! gold. NL Place a copy of this card into your discard pile. NL Put 2 Discounts in your discard pile."
-	},
-	"Gold Rush": {
-		"NAME": "Gold Rush",
-		"DESCRIPTION": "Deal !D! damage. NL Gain !M! gold. NL Exhaust."
-	},
-	"Sleight of Hand": {
-		"NAME": "Sleight of Hand",
-		"DESCRIPTION": "Ethereal. Whenever you play a skill gain !M! Block."
-	},
-	"Rainmaker": {
-		"NAME": "Rainmaker",
-		"DESCRIPTION": "At the start of your turn, if Prosperous gain !M! [R]."
-	},
 	"Bag Fu": {
 		"NAME": "Bag Fu",
 		"DESCRIPTION": "At the start of your turn, if Prosperous gain !M! Thorns.",
 		"UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn if Prosperous gain !M! Thorns."
 	},
-	"Gold Fu": {
-		"NAME": "Gold Fu",
-		"DESCRIPTION": "At the start of your turn, if Prosperous draw !M! cards.",
-		"UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, if Prosperous draw !M! cards."
-	},
-	"Market Crash": {
-		"NAME": "Market Crash",
-		"DESCRIPTION": "Deal !D! damage."
-	},
-	"Money": {
-		"NAME": "Money!",
-		"DESCRIPTION": "If Prosperous deal !D! damage."
-	},
-	"Heads": {
-		"NAME": "Heads",
-		"DESCRIPTION": "Deal !D! damage. NL Gain !M! Strength."
-	},
-	"Tails": {
-		"NAME": "Tails",
-		"DESCRIPTION": "Deal !D! damage. NL Gain !M! Dexterity."
-	},
-	"Edge": {
-		"NAME": "Edge",
-		"DESCRIPTION": "Deal !D! damage. NL Gain !B! Block"
-	},
-	"Coin Trick": {
-		"NAME": "Coin Trick",
-		"DESCRIPTION": "Ethereal. NL Draw !M! cards NL Discard 1 card."
-	},
-	"Greed is Good": {
-		"NAME": "Greed is Good",
-		"DESCRIPTION": "Gain !M! gold for each enemy. NL Draw 1 card."
-	},
-	"Payment Accepted": {
-		"NAME": "Payment Accepted",
-		"DESCRIPTION": "Lose !M! gold. NL If Bankrupt deal !D! damage. Exhaust"
-	},
-	"Counting Desk": {
-		"NAME": "Counting Desk",
-		"DESCRIPTION": "Gain !M! Dexterity. NL At the end of your turn, lose !M! Dexterity."
-	},
-	"Eat The Coins": {
-		"NAME": "Eat The Coins",
-		"DESCRIPTION": "Lose 10 gold. NL If Bankrupt increase your Max HP by !M!. Exhaust."
-	},
-	"Coin Caddy": {
-		"NAME": "Coin Caddy",
-		"DESCRIPTION": "Gain 1 Strength. NL If Prosperous gain 1 Strength. NL Exhaust.",
-		"UPGRADE_DESCRIPTION": "Gain 2 Strength. NL If Prosperous gain 3 Strength. NL Exhaust."
-	},
-	"Hammer & Coin": {
-		"NAME": "Hammer & Coin",
-		"DESCRIPTION": "If Bankrupt deal !D! damage."
-	},
-	"Sale Sign": {
-		"NAME": "Sale Sign",
-		"DESCRIPTION": "If Bankrupt gain !B! Block."
-	},
-	"Sofa Hunt": {
-		"NAME": "Sofa Hunt",
-		"DESCRIPTION": "If Bankrupt gain !B! Block. Exhaust"
-	},
-	"Empty Wallet": {
-		"NAME": "Empty Wallet",
-		"DESCRIPTION": "Lose 10 gold NL Deal !D! damage and apply !M! Vulnerable."
-	},
-	"Pay To Win": {
-		"NAME": "Pay To Win",
-		"DESCRIPTION": "Lose 10 gold. NL Gain 1 Strength and 1 Dexterity."
-	},
-	"Smash & Run": {
-		"NAME": "Smash & Run",
-		"DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL Apply !M! Vulnerable. NL If Prosperous gain [R] [G] [B] [R]."
-	},
-	"Neow's Coin": {
-		"NAME": "Neow's Coin",
-		"DESCRIPTION": "If Bankrupt deal !D! damage and gain !B! Block."
-	},
-	"Distraction_D": {
-		"NAME": "Distraction",
-		"DESCRIPTION": "Gain !B! Block. NL Apply !M! Weak."
-	},
-	"Cash To Burn": {
-		"NAME": "Cash to Burn",
-		"DESCRIPTION": "Lose 10 gold. NL Draw !M! cards. NL Exhaust."
-	},
-	"Flood The Market": {
-		"NAME": "Flood the Market",
-		"DESCRIPTION": "Deal !M! damage for each Exhausted card. (Deal !D! damage) NL Exhaust."
-	},
-	"Money Injection": {
-		"NAME": "Money Injection",
-		"DESCRIPTION": "Lose 20 gold. NL Gain [R]. NL Exhaust.",
-		"UPGRADE_DESCRIPTION": "Lose 20 gold. NL Gain [R] [R]. NL Exhaust."
-	},
-	"Protection Money": {
-		"NAME": "Protection Money",
-		"DESCRIPTION": "Lose 50 gold. NL Gain !M! Artifact. NL Exhaust."
+	"Bag Slam": {
+		"NAME": "Bag Slam",
+		"DESCRIPTION": "Deal !D! damage. NL Lose 10 gold."
 	},
 	"Bed Bank": {
 		"NAME": "Bed Bank",
 		"DESCRIPTION": "Ethereal. NL Exhaust you hand. Gain !M! gold for each Exhausted card."
 	},
-	"Empty Hands": {
-		"NAME": "Empty Hands",
-		"DESCRIPTION": "Gain 1 Dexterity. NL If Prosperous gain 1 Dexterity. NL Exhaust.",
-		"UPGRADE_DESCRIPTION": "Gain 2 Dexterity. NL If Prosperous gain 3 Dexterity. NL Exhaust."
-	},
-	"Dive": {
-		"NAME": "Dive",
-		"DESCRIPTION": "Gain !B! Block. NL Gain !B! Block for the next !M! turn. NL Exhaust."
-	},
-	"Gold Bar": {
-		"NAME": "Gold Bar",
-		"DESCRIPTION": "At the start of your turn, if Bankrupt gain !M! Strength and !M! Dexterity."
-	},
-	"Treasure Hunt": {
-		"NAME": "Treasure Hunt",
-		"DESCRIPTION": "At the start of your turn, if Bankrupt ALL enemies lose !M! Strength."
+	"Best Bag": {
+		"NAME": "Best Bag #1",
+		"DESCRIPTION": "Deal !D! damage. NL Gain !M! gold. NL Exhaust."
 	},
 	"Big Spender": {
 		"NAME": "Big Spender",
 		"DESCRIPTION": "Deal damage equal to your gold. NL Lose all your gold.",
 		"UPGRADE_DESCRIPTION": "Innate. NL Deal damage equal to your gold. NL Lose all your gold."
 	},
-	"Lucky Find": {
-		"NAME": "Lucky Find",
-		"DESCRIPTION": "If Prosperous, gain a random relic at the end of combat. Lose 100 Gold. NL Exhaust."
+	"Bigger Bag": {
+		"NAME": "Bigger Bag",
+		"DESCRIPTION": "Place a copy of this card into your discard pile. NL Put 2 Discounts in your discard pile.",
+		"UPGRADE_DESCRIPTION": "Gain !M! gold. NL Place a copy of this card into your discard pile. NL Put 2 Discounts in your discard pile."
 	},
-	"Spinning Bag": {
-		"NAME": "Spinning Bag",
-		"DESCRIPTION": "If Prosperous deal !D! damage !M! times."
+	"Block Chain": {
+		"NAME": "Block Chain",
+		"DESCRIPTION": "Gain !B! Block. NL Exhaust."
+	},
+	"Bouncing Bag": {
+		"NAME": "Bouncing Bag",
+		"DESCRIPTION": "Ethereal. NL Deal !D! damage to ALL enemies !M! times. NL Lose 10 gold."
+	},
+	"Bribe": {
+		"NAME": "Bribe",
+		"DESCRIPTION": "Deal !D! damage. If Prosperous apply !M! Vulnerable to ALL enemies."
+	},
+	"Cash To Burn": {
+		"NAME": "Cash to Burn",
+		"DESCRIPTION": "Lose 10 gold. NL Draw !M! cards. NL Exhaust."
+	},
+	"Cheapskate": {
+		"NAME": "Cheapskate",
+		"DESCRIPTION": "Deal !D! Damage. NL If Bankrupt draw !M! cards."
+	},
+	"Coin Barrage": {
+		"NAME": "Coin Barrage",
+		"DESCRIPTION": "Lose 50 gold. NL Deal !D! damage to ALL enemies. NL Exhaust."
+	},
+	"Coin Caddy": {
+		"NAME": "Coin Caddy",
+		"DESCRIPTION": "Gain 1 Strength. NL If Prosperous gain 1 Strength. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Gain 2 Strength. NL If Prosperous gain 3 Strength. NL Exhaust."
+	},
+	"Coin Cannon": {
+		"NAME": "Coin Cannon",
+		"DESCRIPTION": "Lose 15 gold. NL Deal !D! damage X times."
+	},
+	"Coin Toss": {
+		"NAME": "Coin Toss",
+		"DESCRIPTION": "Deal !D! damage. NL Place a card from your discard pile on top of your draw pile."
+	},
+	"Coin Trick": {
+		"NAME": "Coin Trick",
+		"DESCRIPTION": "Ethereal. NL Draw !M! cards NL Discard 1 card."
+	},
+	"Coin Wall": {
+		"NAME": "Coin Wall",
+		"DESCRIPTION": "Gain !M! gold. Exhaust."
+	},
+	"Counting Desk": {
+		"NAME": "Counting Desk",
+		"DESCRIPTION": "Gain !M! Dexterity. NL At the end of your turn, lose !M! Dexterity."
+	},
+	"Discount": {
+		"NAME": "Discount",
+		"DESCRIPTION": "Choose a card. That card costs 0 this turn. NL Exhaust."
+	},
+	"Distraction_D": {
+		"NAME": "Distraction",
+		"DESCRIPTION": "Gain !B! Block. NL Apply !M! Weak."
+	},
+	"Dive": {
+		"NAME": "Dive",
+		"DESCRIPTION": "Gain !B! Block. NL Gain !B! Block for the next !M! turn. NL Exhaust."
+	},
+	"Eat The Coins": {
+		"NAME": "Eat The Coins",
+		"DESCRIPTION": "Lose 10 gold. NL If Bankrupt increase your Max HP by !M!. Exhaust."
+	},
+	"Edge": {
+		"NAME": "Edge",
+		"DESCRIPTION": "Deal !D! damage. NL Gain !B! Block"
+	},
+	"Empty Hands": {
+		"NAME": "Empty Hands",
+		"DESCRIPTION": "Gain 1 Dexterity. NL If Prosperous gain 1 Dexterity. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Gain 2 Dexterity. NL If Prosperous gain 3 Dexterity. NL Exhaust."
+	},
+	"Empty Wallet": {
+		"NAME": "Empty Wallet",
+		"DESCRIPTION": "Lose 10 gold NL Deal !D! damage and apply !M! Vulnerable."
 	},
 	"Exchange": {
 		"NAME": "Exchange",
 		"DESCRIPTION": "Gain 2 Weak. NL Gain 30 gold. NL Exhaust."
 	},
+	"Fistful of Coin": {
+		"NAME": "Fistful of Coin",
+		"DESCRIPTION": "Deal !D! damage. NL Lose 5 gold."
+	},
 	"Five Finger Discount": {
 		"NAME": "Five Fingers",
 		"DESCRIPTION": "Deal !D! damage. NL Put 2 Discounts in your discard pile. NL Exhaust.",
 		"UPGRADE_DESCRIPTION": "Deal !D! damage twice. NL Put 2 Discounts in your discard pile. NL Exhaust."
-		
 	},
-	"Sleeping Cash": {
-		"NAME": "Sleeping Cash",
-		"DESCRIPTION": "Whenever you Exhaust a card, deal !M! damage to ALL enemies."
+	"Flood The Market": {
+		"NAME": "Flood the Market",
+		"DESCRIPTION": "Deal !M! damage for each Exhausted card. (Deal !D! damage) NL Exhaust."
+	},
+	"Funding": {
+		"NAME": "Funding",
+		"DESCRIPTION": "Ethereal. NL At the start of your turn gain !M! gold."
+	},
+	"Gold Bar": {
+		"NAME": "Gold Bar",
+		"DESCRIPTION": "At the start of your turn, if Bankrupt gain !M! Strength and !M! Dexterity."
+	},
+	"Gold Fu": {
+		"NAME": "Gold Fu",
+		"DESCRIPTION": "At the start of your turn, if Prosperous draw !M! cards.",
+		"UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, if Prosperous draw !M! cards."
+	},
+	"Gold Rush": {
+		"NAME": "Gold Rush",
+		"DESCRIPTION": "Deal !D! damage. NL Gain !M! gold. NL Exhaust."
+	},
+	"Golden Glow": {
+		"NAME": "Golden Glow",
+		"DESCRIPTION": "ALL enemies lose !M! Strength until the start of your next turn. NL Gain 3 Stregnth. NL Exhaust."
+	},
+	"Greed is Good": {
+		"NAME": "Greed is Good",
+		"DESCRIPTION": "Gain !M! gold for each enemy. NL Draw 1 card."
+	},
+	"Half Penny": {
+		"NAME": "Half Penny",
+		"DESCRIPTION": "If Bankrupt apply !M! Weak to ALL enemies.",
+		"UPGRADE_DESCRIPTION": "Gain !B! Block. NL If Bankrupt apply !M! Weak to ALL enemies."
+	},
+	"Hammer & Coin": {
+		"NAME": "Hammer & Coin",
+		"DESCRIPTION": "If Bankrupt deal !D! damage."
+	},
+	"Hard Crash": {
+		"NAME": "Hard Crash",
+		"DESCRIPTION": "Deal !D! damage. NL Lose 10 gold. NL If Bankrupt gain !M! Strength."
+	},
+	"Heads": {
+		"NAME": "Heads",
+		"DESCRIPTION": "Deal !D! damage. NL Gain !M! Strength."
+	},
+	"Heavy Coin": {
+		"NAME": "Heavy Coin",
+		"DESCRIPTION": "Deal !D! damage to ALL enemies. NL Lose 5 gold. Exhaust."
+	},
+	"Hoard": {
+		"NAME": "Hoard",
+		"DESCRIPTION": "Gain !M! gold for each Exhausted card. NL Exhaust."
+	},
+	"Loose Change": {
+		"NAME": "Loose Change",
+		"DESCRIPTION": "Deal !D! damage. NL Exhaust a card from your hand."
+	},
+	"Lucky Find": {
+		"NAME": "Lucky Find",
+		"DESCRIPTION": "If Prosperous, gain a random relic at the end of combat. Lose 100 Gold. NL Exhaust."
+	},
+	"Market Crash": {
+		"NAME": "Market Crash",
+		"DESCRIPTION": "Deal !D! damage."
 	},
 	"Market Love": {
 		"NAME": "Market Love",
 		"DESCRIPTION": "At the start of your turn if Bankrupt, heal !M! HP.",
 		"UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn if Bankrupt, heal !M! HP."
 	},
-	"Hoard": {
-		"NAME": "Hoard",
-		"DESCRIPTION": "Gain !M! gold for each Exhausted card. NL Exhaust."
+	"Money Injection": {
+		"NAME": "Money Injection",
+		"DESCRIPTION": "Lose 20 gold. NL Gain [R]. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Lose 20 gold. NL Gain [R] [R]. NL Exhaust."
 	},
-	"Golden Glow": {
-		"NAME": "Golden Glow",
-		"DESCRIPTION": "ALL enemies lose !M! Strength until the start of your next turn. NL Gain 3 Stregnth. NL Exhaust."
+	"Money": {
+		"NAME": "Money!",
+		"DESCRIPTION": "If Prosperous deal !D! damage."
 	},
-	"Funding": {
-		"NAME": "Funding",
-		"DESCRIPTION": "Ethereal. NL At the start of your turn gain !M! gold."
+	"Neow's Coin": {
+		"NAME": "Neow's Coin",
+		"DESCRIPTION": "If Bankrupt deal !D! damage and gain !B! Block."
 	},
-	"Coin Cannon": {
-		"NAME": "Coin Cannon",
-		"DESCRIPTION": "Lose 15 gold. NL Deal !D! damage X times."
+	"No Coin": {
+		"NAME": "No Coin",
+		"DESCRIPTION": "Put 2 Discounts in your discard pile. NL Draw 2 cards. NL Exhaust."
 	},
-	"Discount": {
-		"NAME": "Discount",
-		"DESCRIPTION": "Choose a card. That card costs 0 this turn. NL Exhaust."
+	"Old Surprise": {
+		"NAME": "Old Surprise",
+		"DESCRIPTION": "Innate. NL If Bankrupt gain !M! gold. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Innate. NL If Bankrupt gain !M! gold and 3 Block. NL Exhaust."
+	},
+	"Pay To Win": {
+		"NAME": "Pay To Win",
+		"DESCRIPTION": "Lose 10 gold. NL Gain 1 Strength and 1 Dexterity."
+	},
+	"Payday": {
+		"NAME": "Payday",
+		"DESCRIPTION": "Ethereal. Gain !M! gold. Exhaust."
+	},
+	"Payment Accepted": {
+		"NAME": "Payment Accepted",
+		"DESCRIPTION": "Lose !M! gold. NL If Bankrupt deal !D! damage. Exhaust"
+	},
+	"Protection Money": {
+		"NAME": "Protection Money",
+		"DESCRIPTION": "Lose 50 gold. NL Gain !M! Artifact. NL Exhaust."
+	},
+	"Rainmaker": {
+		"NAME": "Rainmaker",
+		"DESCRIPTION": "At the start of your turn, if Prosperous gain !M! [R]."
+	},
+	"Sale Sign": {
+		"NAME": "Sale Sign",
+		"DESCRIPTION": "If Bankrupt gain !B! Block."
+	},
+	"Secret Bags": {
+		"NAME": "Secret Bags",
+		"DESCRIPTION": "Ethereal. NL Spend all [R]. NL Gain !M! gold X times. NL Exhaust"
+	},
+	"Sleeping Cash": {
+		"NAME": "Sleeping Cash",
+		"DESCRIPTION": "Whenever you Exhaust a card, deal !M! damage to ALL enemies."
+	},
+	"Sleight of Hand": {
+		"NAME": "Sleight of Hand",
+		"DESCRIPTION": "Ethereal. Whenever you play a skill gain !M! Block."
+	},
+	"Smash & Run": {
+		"NAME": "Smash & Run",
+		"DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL Apply !M! Vulnerable. NL If Prosperous gain [R] [G] [B] [R]."
+	},
+	"Sofa Hunt": {
+		"NAME": "Sofa Hunt",
+		"DESCRIPTION": "If Bankrupt gain !B! Block. Exhaust"
+	},
+	"Spare Change": {
+		"NAME": "Spare Change",
+		"DESCRIPTION": "Gain !M! gold. Exhaust."
+	},
+	"Spinning Bag": {
+		"NAME": "Spinning Bag",
+		"DESCRIPTION": "If Prosperous deal !D! damage !M! times."
+	},
+	"Strike_D": {
+		"NAME": "Strike",
+		"DESCRIPTION": "Deal !D! damage."
+	},
+	"Tails": {
+		"NAME": "Tails",
+		"DESCRIPTION": "Deal !D! damage. NL Gain !M! Dexterity."
+	},
+	"Thief": {
+		"NAME": "Thief",
+		"DESCRIPTION": "Ethereal. Whenever you play an attack gain a gold."
+	},
+	"Treasure Hunt": {
+		"NAME": "Treasure Hunt",
+		"DESCRIPTION": "At the start of your turn, if Bankrupt ALL enemies lose !M! Strength."
+	},
+	"Treasure Map": {
+		"NAME": "Treasure Map",
+		"DESCRIPTION": "Gain !M! gold. Exhaust."
 	}
-	
 }
-
-	
