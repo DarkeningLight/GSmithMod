@@ -12,6 +12,10 @@ import basemod.abstracts.CustomCard;
 import gsmith.GSmithMod;
 import gsmith.patches.AbstractCardEnum;
 
+/**
+ * @version 0.2.0 9 Oct 2018
+ *
+ */
 public class SaleSign extends CustomCard {
 	
 	public static final String ID = "Sale Sign";
@@ -48,10 +52,6 @@ public class SaleSign extends CustomCard {
 
 	@Override
 	public void use(AbstractPlayer player, AbstractMonster monster) {
-		
-		if (player.gold <= GSmithMod.BANKRUPT) {
-			AbstractDungeon.actionManager.addToBottom(new GainBlockAction(player, player, this.block));
-		}
+		AbstractDungeon.actionManager.addToBottom(new GainBlockAction(player, player, this.block));
 	}
-
 }

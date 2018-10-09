@@ -153,7 +153,7 @@
 	},
 	"Hammer & Coin": {
 		"NAME": "Hammer & Coin",
-		"DESCRIPTION": "If Bankrupt deal !D! damage."
+		"DESCRIPTION": "If Bankrupt or Prosperous deal !D! damage."
 	},
 	"Hard Crash": {
 		"NAME": "Hard Crash",
@@ -195,7 +195,7 @@
 	},
 	"Money": {
 		"NAME": "Money!",
-		"DESCRIPTION": "If Prosperous deal !D! damage."
+		"DESCRIPTION": "Costs 1 less [R] for each skill played this turn. NL Deal !D! damage !M! times."
 	},
 	"Neow's Coin": {
 		"NAME": "Neow's Coin",
@@ -252,7 +252,7 @@
 	},
 	"Sofa Hunt": {
 		"NAME": "Sofa Hunt",
-		"DESCRIPTION": "If Bankrupt gain !B! Block. Exhaust"
+		"DESCRIPTION": "Gain !B! Block 5 times. NL Exhaust."
 	},
 	"Spare Change": {
 		"NAME": "Spare Change",

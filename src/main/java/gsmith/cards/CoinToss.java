@@ -15,6 +15,10 @@ import basemod.abstracts.CustomCard;
 import gsmith.GSmithMod;
 import gsmith.patches.AbstractCardEnum;
 
+/**
+ * @version 0.1.2 9 Oct 2018
+ *
+ */
 public class CoinToss extends CustomCard {
 	
 	public static final String ID = "Coin Toss";
@@ -22,7 +26,7 @@ public class CoinToss extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
-	private static final int ATTACK_DMG = 6;
+	private static final int ATTACK_DMG = 9;
 	private static final int UPGRADE_PLUS_DMG =  3;
 	public static final String PATH = "cards/coin_toss.png";
 	

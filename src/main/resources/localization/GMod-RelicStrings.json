@@ -1,9 +1,9 @@
 {
   "Bag of Coins": {
     "NAME": "Bag of Coins",
-    "FLAVOR": "Flavour",
+    "FLAVOR": "Borrowed from Neow by the first Goldsmith. Neow now requires compensation while in the spire. ",
     "DESCRIPTIONS": [
-      "Whenever you take damage during combat instead lose that much gold. NL Gold is stolen at the end of your turn." 
+      "Damage taken in combat loses you gold instead. Suffer from Neow's Tax." 
       ]
   }
 }

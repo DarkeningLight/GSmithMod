@@ -15,6 +15,10 @@ import basemod.abstracts.CustomCard;
 import gsmith.GSmithMod;
 import gsmith.patches.AbstractCardEnum;
 
+/**
+ * @version 0.1.2 9 Oct 2018
+ *
+ */
 public class LooseChange extends CustomCard {
 	
 	public static final String ID = "Loose Change";
@@ -23,7 +27,7 @@ public class LooseChange extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
 	
-	private static final int ATTACK_DMG = 8;
+	private static final int ATTACK_DMG = 10;
 	private static final int UPGRADE_PLUS_DMG =  3;
 	
 	public static final String PATH = "cards/loose_change.png";

@@ -15,6 +15,8 @@ import gsmith.patches.TheGoldsmithEnum;
 
 public class TheGoldsmith extends CustomPlayer {
 	public static final int ENERGY_PER_TURN = 3;
+	public static final String NAME = "The Goldsmith";
+	public static final String DESCRIPTION = "The latest soul to wear the hat of the goldsmiths. NL Draws power from the spire's gold.";
 	
     public static final String GOLDSMITH_SHOULDER_1 = "char/goldsmith/shoulder.png";
     public static final String GOLDSMITH_SHOULDER_2 = "char/goldsmith/shoulder2.png";
@@ -112,8 +114,7 @@ public class TheGoldsmith extends CustomPlayer {
 	}
 	
 	public static CharSelectInfo getLoadout() {
-		return new CharSelectInfo("The Goldsmith", "Blah Blah Blah. Gold. Blah Blah",
-				30, 30, 0, 149, 5,
+		return new CharSelectInfo(NAME, DESCRIPTION, 30, 30, 0, 149, 5,
 			TheGoldsmithEnum.THE_GOLDSMITH, getStartingRelics(), getStartingDeck(), false);
 	}
 }

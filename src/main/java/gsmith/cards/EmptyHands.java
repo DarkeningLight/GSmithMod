@@ -52,10 +52,10 @@ public class EmptyHands extends CustomCard {
 		
 		int dexGain = 1;
 		
-		if (upgraded && player.gold >= GSmithMod.PROSPEROUS) {
+		if (upgraded && player.gold >= GSmithMod.BANKRUPT) {
 			dexGain += 4;
 		} 
-		else if (upgraded || player.gold >= GSmithMod.PROSPEROUS) {
+		else if (upgraded || player.gold >= GSmithMod.BANKRUPT) {
 			dexGain += 1;
 		}
 		

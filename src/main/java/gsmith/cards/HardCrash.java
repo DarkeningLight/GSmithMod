@@ -17,7 +17,7 @@ import gsmith.actions.LoseGoldAction;
 import gsmith.patches.AbstractCardEnum;
 
 /**
- * @version 0.1.3 26 Sep 2018
+ * @version 0.1.4 9 Oct 2018
  *
  */
 public class HardCrash extends CustomCard {
@@ -28,7 +28,7 @@ public class HardCrash extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
 	
-	private static final int ATTACK_DMG = 8;
+	private static final int ATTACK_DMG = 11;
 	private static final int UPGRADE_PLUS_DMG =  3;
 	private static final int STR_AMT = 1;
 	private static final int UPGRADE_PLUS_STR = 1;

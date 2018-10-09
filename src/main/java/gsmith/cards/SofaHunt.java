@@ -12,6 +12,10 @@ import basemod.abstracts.CustomCard;
 import gsmith.GSmithMod;
 import gsmith.patches.AbstractCardEnum;
 
+/**
+ * @version 0.2.0 9 Oct 2018
+ *
+ */
 public class SofaHunt extends CustomCard {
 	
 	public static final String ID = "Sofa Hunt";
@@ -20,8 +24,9 @@ public class SofaHunt extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
 	
-	private static final int BLOCK_AMT = 25;
-	private static final int UPGRADE_PLUS_BLOCK = 10;
+	private static final int BLOCK_AMT = 3;
+	private static final int UPGRADE_PLUS_BLOCK = 2;
+	private static final int NUM_TIMES = 5;
 	
 	public static final String PATH = "cards/sofa_hunt.png";
 	
@@ -44,14 +49,12 @@ public class SofaHunt extends CustomCard {
 			this.upgradeName();
 			this.upgradeBlock(UPGRADE_PLUS_BLOCK);
 		}
-
 	}
 
 	@Override
 	public void use(AbstractPlayer player, AbstractMonster monster) {
-		if (player.gold <= GSmithMod.BANKRUPT ) {
+		for (int i = 0 ; i < NUM_TIMES ; i++) {
 			AbstractDungeon.actionManager.addToBottom(new GainBlockAction(player, player, this.block));
 		}
 	}
-
 }

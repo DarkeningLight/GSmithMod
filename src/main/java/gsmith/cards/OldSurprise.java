@@ -14,7 +14,7 @@ import gsmith.actions.GainGoldAction;
 import gsmith.patches.AbstractCardEnum;
 
 /**
- * @version 2.0.0 25 Sep 2018
+ * @version 0.2.1 9 Oct 2018
  *
  */
 public class OldSurprise extends CustomCard {
@@ -37,6 +37,7 @@ public class OldSurprise extends CustomCard {
 		this.isInnate = true;
 		this.exhaust = true;
 		this.baseMagicNumber = this.magicNumber = GSmithMod.BANKRUPT;
+		this.baseBlock = this.block = BLOCK_AMT;
 	}
 
 	@Override
@@ -62,7 +63,7 @@ public class OldSurprise extends CustomCard {
 			AbstractDungeon.actionManager.addToBottom(new GainGoldAction(player, this.magicNumber));
 			
 			if (upgraded) {
-				AbstractDungeon.actionManager.addToBottom(new GainBlockAction(player, player, BLOCK_AMT));
+				AbstractDungeon.actionManager.addToBottom(new GainBlockAction(player, player, this.block));
 			}
 		}
 	}
