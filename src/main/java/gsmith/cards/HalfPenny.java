@@ -14,6 +14,10 @@ import basemod.abstracts.CustomCard;
 import gsmith.GSmithMod;
 import gsmith.patches.AbstractCardEnum;
 
+/**
+ * @version 0.1.2 9 Oct 2018
+ *
+ */
 public class HalfPenny extends CustomCard {
 	
 	public static final String ID = "Half Penny";
@@ -31,7 +35,7 @@ public class HalfPenny extends CustomCard {
 	
 	public HalfPenny() {
 		super(ID, NAME, GSmithMod.makePath(PATH), COST, DESCRIPTION, AbstractCard.CardType.SKILL, 
-				AbstractCardEnum.GOLD, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.ALL_ENEMY);
+				AbstractCardEnum.GOLD, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ALL_ENEMY);
 		
 		this.baseMagicNumber = this.magicNumber = WEAK_AMT;
 	}
