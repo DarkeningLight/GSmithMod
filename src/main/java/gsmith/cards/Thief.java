@@ -14,7 +14,7 @@ import gsmith.patches.AbstractCardEnum;
 import gsmith.powers.ThiefPower;
 
 /**
- * @version 0.1.2 26 Sep 2018
+ * @version 0.1.3 9 Oct 2018
  *
  */
 public class Thief extends CustomCard {
@@ -25,12 +25,16 @@ public class Thief extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 2;
 	private static final int UPGRADED_COST = 1;
+	
+	private static final int GOLD_GAIN = 3;
+	
 	public static final String PATH = "cards/thief.png";
 	
 	public Thief() {
 		super(ID, NAME, GSmithMod.makePath(PATH), COST, DESCRIPTION, AbstractCard.CardType.POWER, 
 				AbstractCardEnum.GOLD, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.SELF);
 		
+		this.baseMagicNumber = this.magicNumber = GOLD_GAIN;
 		this.isEthereal = true;
 	}
 
@@ -50,6 +54,7 @@ public class Thief extends CustomCard {
 
 	@Override
 	public void use(AbstractPlayer player, AbstractMonster monster) {
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, monster, new ThiefPower(player), 1));
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, monster, 
+				new ThiefPower(player, this.magicNumber), this.magicNumber));
 	}
 }

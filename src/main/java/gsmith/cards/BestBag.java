@@ -16,7 +16,7 @@ import gsmith.actions.GainGoldAction;
 import gsmith.patches.AbstractCardEnum;
 
 /**
- * @version 0.1.2 26 Sep 2018
+ * @version 0.1.3 9 Oct 2018
  *
  */
 public class BestBag extends CustomCard {
@@ -27,9 +27,9 @@ public class BestBag extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
 	
-	private static final int ATTACK_DMG = 5;
+	private static final int ATTACK_DMG = 7;
 	private static final int UPGRADE_PLUS_DMG =  2;
-	private static final int GOLD_GAIN = 5;
+	private static final int GOLD_GAIN = 7;
 	private static final int UPGRADE_PLUS_GOLD = 2;
 	
 	public static final String PATH = "cards/best_bag.png";

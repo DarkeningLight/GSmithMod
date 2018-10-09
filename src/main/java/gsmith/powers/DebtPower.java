@@ -10,6 +10,10 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import gsmith.GSmithMod;
 import gsmith.actions.LoseGoldAction;
 
+/**
+ * @version 0.2.2 9 Oct 2018
+ *
+ */
 public class DebtPower extends AbstractPower {
 	
 	public static final String PATH = "powers/debt.png";
@@ -71,8 +75,8 @@ public class DebtPower extends AbstractPower {
 	}
 	
 	public int calculateGoldLoss() {
-		int total = GSmithMod.getActNumber() * 10;
-		double mul = 0.1 * GSmithMod.getActNumber();
+		int total = GSmithMod.getActNumber() * 5;
+		double mul = 0.2;
 		 
 		try {
 			java.util.Random random = new java.util.Random();

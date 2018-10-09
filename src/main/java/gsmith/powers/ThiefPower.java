@@ -11,6 +11,10 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import gsmith.GSmithMod;
 
+/**
+ * @version 0.1.2 9 Oct 2018
+ *
+ */
 public class ThiefPower extends AbstractPower {
 	
 	public static final String PATH = "powers/thief.png";
@@ -19,12 +23,12 @@ public class ThiefPower extends AbstractPower {
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 	public static final String NAME = powerStrings.NAME;
 	
-	public ThiefPower(AbstractCreature owner) {
+	public ThiefPower(AbstractCreature owner, int goldGain) {
 		super();
 		this.name = NAME;
 		this.ID = POWER_ID;
 		this.owner = owner;
-		this.amount = 1;
+		this.amount = goldGain;
 		updateDescription();
 		this.img = getTexture();
 	}  
@@ -40,7 +44,7 @@ public class ThiefPower extends AbstractPower {
 	public void updateDescription() {
 		StringBuilder sb = new StringBuilder();
 		sb.append(DESCRIPTIONS[0]);
-		if (amount == 1) { sb.append("a"); } else sb.append("#b" + amount);
+		sb.append("#b" + amount);
 		sb.append(DESCRIPTIONS[1]);
 		
 		this.description = sb.toString();

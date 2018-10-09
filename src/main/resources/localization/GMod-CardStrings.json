@@ -233,7 +233,7 @@
 	},
 	"Sale Sign": {
 		"NAME": "Sale Sign",
-		"DESCRIPTION": "If Bankrupt gain !B! Block."
+		"DESCRIPTION": "Gain !B! Block."
 	},
 	"Secret Bags": {
 		"NAME": "Secret Bags",
@@ -249,7 +249,7 @@
 	},
 	"Smash & Run": {
 		"NAME": "Smash & Run",
-		"DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL Apply !M! Vulnerable. NL If Prosperous gain [R] [G] [B] [R]."
+		"DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL Apply !M! Vulnerable. NL If Prosperous gain [R] [R] [R] [R]."
 	},
 	"Sofa Hunt": {
 		"NAME": "Sofa Hunt",
