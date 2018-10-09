@@ -32,7 +32,8 @@
 	},
 	"Bouncing Bag": {
 		"NAME": "Bouncing Bag",
-		"DESCRIPTION": "Ethereal. NL Deal !D! damage to ALL enemies !M! times. NL Lose 10 gold."
+		"DESCRIPTION": "Ethereal. NL Lose 10 gold. NL Deal !D! damage to ALL enemies !M! times.",
+		"UPGRADE_DESCRIPTION": "Lose 10 gold. NL Deal !D! damage to ALL enemies !M! times."
 	},
 	"Bribe": {
 		"NAME": "Bribe",

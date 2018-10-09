@@ -15,7 +15,7 @@ import gsmith.actions.LoseGoldAction;
 import gsmith.patches.AbstractCardEnum;
 
 /**
- * @version 0.1.3 26 Sep 2018
+ * @version 0.1.4 9 Oct 2018
  *
  */
 public class BouncingBag extends CustomCard {
@@ -24,6 +24,7 @@ public class BouncingBag extends CustomCard {
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+	public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 	private static final int COST = 1;
 	
 	private static final int ATTACK_DMG = 3;
@@ -55,6 +56,9 @@ public class BouncingBag extends CustomCard {
 			this.upgradeName();
 			this.upgradeMagicNumber(UPGRADE_PLUS_TIMES);
 			this.isEthereal = false;
+			
+			this.rawDescription = UPGRADE_DESCRIPTION;
+			initializeDescription();
 		}
 	}
 
