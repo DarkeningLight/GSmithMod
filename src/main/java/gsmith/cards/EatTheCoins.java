@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import basemod.abstracts.CustomCard;
 import gsmith.GSmithMod;
-import gsmith.actions.LoseGoldAction;
+import gsmith.actions.EatTheCoinsAction;
 import gsmith.patches.AbstractCardEnum;
 
 public class EatTheCoins extends CustomCard {
@@ -31,6 +31,7 @@ public class EatTheCoins extends CustomCard {
 				AbstractCardEnum.GOLD, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
 		
 		this.baseMagicNumber = this.magicNumber = HP_GAIN;
+		this.exhaust = true;
 	}
 
 	@Override
@@ -49,13 +50,6 @@ public class EatTheCoins extends CustomCard {
 
 	@Override
 	public void use(AbstractPlayer player, AbstractMonster monster) {
-		
-		AbstractDungeon.actionManager.addToBottom(new LoseGoldAction(player, GOLD_LOSE));
-		
-		if (player.gold <= GSmithMod.BANKRUPT) {
-			player.increaseMaxHp(this.magicNumber, true);
-			this.exhaust = true;
-		}	
+		AbstractDungeon.actionManager.addToBottom(new EatTheCoinsAction(player, GOLD_LOSE, this.magicNumber));
 	}
-
 }
