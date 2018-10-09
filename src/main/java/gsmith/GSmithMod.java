@@ -282,6 +282,8 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 				"You are #yBankrupt if you have 50 or fewer gold");
 		BaseMod.addKeyword(new String[] {"prosperous" , "Prosperous"}, 
 				"You are #yProsperous if you have 400 or more gold.");
+		BaseMod.addKeyword(new String[] {"discounts" , "Discounts"}, 
+				"Discounts are a #b0 cost Skill cards which reduce cost.");
 	}
 
 	public static int getActNumber() {

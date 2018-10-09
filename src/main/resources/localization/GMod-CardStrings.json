@@ -98,8 +98,8 @@
 	},
 	"Empty Hands": {
 		"NAME": "Empty Hands",
-		"DESCRIPTION": "Gain 1 Dexterity. NL If Prosperous gain 1 Dexterity. NL Exhaust.",
-		"UPGRADE_DESCRIPTION": "Gain 2 Dexterity. NL If Prosperous gain 3 Dexterity. NL Exhaust."
+		"DESCRIPTION": "Gain 1 Dexterity. NL If Bankrupt gain 1 Dexterity. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Gain 2 Dexterity. NL If Bankrupt gain 3 Dexterity. NL Exhaust."
 	},
 	"Empty Wallet": {
 		"NAME": "Empty Wallet",

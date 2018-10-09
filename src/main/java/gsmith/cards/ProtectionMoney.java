@@ -21,9 +21,9 @@ public class ProtectionMoney extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
 	
-	private static final int GOLD_LOSS = 50;
-	private static final int ARTIFACT_GAIN = 2;
-	private static final int UPGRADE_PLUS_ARTIFACT = 2;
+	private static final int GOLD_LOSS = 25;
+	private static final int ARTIFACT_GAIN = 1;
+	private static final int UPGRADE_PLUS_ARTIFACT = 1;
 	
 	public static final String PATH = "cards/protection_money.png";
 	
