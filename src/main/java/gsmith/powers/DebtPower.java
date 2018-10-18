@@ -75,18 +75,12 @@ public class DebtPower extends AbstractPower {
 	}
 	
 	public int calculateGoldLoss() {
-		int total = GSmithMod.getActNumber() * 5;
-		double mul = 0.2;
-		 
-		try {
-			java.util.Random random = new java.util.Random();
-			int r = random.nextInt((int) (owner.gold * mul));
 		
-			return (total + r);
-		} 
-		catch (IllegalArgumentException e) {
-			return total;
-		}
+		int total = GSmithMod.getActNumber() * 5;
+		double mul = 0.7;
+		
+		return (int) (total + (owner.gold * mul));
+		 
 	}
 	
 	public static Texture getTexture() { return new Texture(GSmithMod.makePath(PATH)); }
