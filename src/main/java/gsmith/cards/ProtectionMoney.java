@@ -13,8 +13,11 @@ import gsmith.GSmithMod;
 import gsmith.actions.LoseGoldAction;
 import gsmith.patches.AbstractCardEnum;
 
-public class ProtectionMoney extends CustomCard {
-	
+/**
+ * @version 0.1.2 18 Oct 2018
+ *
+ */
+public class ProtectionMoney extends CustomCard { 
 	public static final String ID = "Protection Money";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;

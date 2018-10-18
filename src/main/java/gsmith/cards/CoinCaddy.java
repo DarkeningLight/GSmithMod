@@ -21,7 +21,6 @@ public class CoinCaddy extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 	private static final int COST = 1;
-	private static final int UPGRADED_COST = 0;
 	
 	public static final String PATH = "cards/coin_caddy.png";
 	
@@ -41,7 +40,6 @@ public class CoinCaddy extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			this.upgradeName();
-			this.upgradeBaseCost(UPGRADED_COST);
 			
 			this.rawDescription = UPGRADE_DESCRIPTION;
 			initializeDescription();
@@ -55,9 +53,9 @@ public class CoinCaddy extends CustomCard {
 		int strGain = 1;
 		
 		if (upgraded && player.gold >= GSmithMod.PROSPEROUS) {
-			strGain += 4;
+			strGain += 2;
 		} 
-		else if (upgraded || player.gold >= GSmithMod.PROSPEROUS) {
+		else if (player.gold >= GSmithMod.PROSPEROUS) {
 			strGain += 1;
 		}
 		

@@ -54,7 +54,7 @@
 	"Coin Caddy": {
 		"NAME": "Coin Caddy",
 		"DESCRIPTION": "Gain 1 Strength. NL If Prosperous gain 1 Strength. NL Exhaust.",
-		"UPGRADE_DESCRIPTION": "Gain 2 Strength. NL If Prosperous gain 3 Strength. NL Exhaust."
+		"UPGRADE_DESCRIPTION": "Gain 1 Strength. NL If Prosperous gain 2 Strength. NL Exhaust."
 	},
 	"Coin Cannon": {
 		"NAME": "Coin Cannon",
@@ -70,7 +70,7 @@
 	},
 	"Coin Wall": {
 		"NAME": "Coin Wall",
-		"DESCRIPTION": "Gain !M! gold. Exhaust."
+		"DESCRIPTION": "Gain !M! gold. NL Exhaust."
 	},
 	"Counting Desk": {
 		"NAME": "Counting Desk",
@@ -167,7 +167,7 @@
 	},
 	"Heavy Coin": {
 		"NAME": "Heavy Coin",
-		"DESCRIPTION": "Deal !D! damage to ALL enemies. NL Lose 5 gold. Exhaust."
+		"DESCRIPTION": "Deal !D! damage to ALL enemies. NL Lose 5 gold. NL Exhaust."
 	},
 	"Hoard": {
 		"NAME": "Hoard",
@@ -218,20 +218,20 @@
 	},
 	"Payday": {
 		"NAME": "Payday",
-		"DESCRIPTION": "Ethereal. Gain !M! gold. Exhaust."
+		"DESCRIPTION": "Ethereal. NL Gain !M! gold. Exhaust."
 	},
 	"Payment Accepted": {
 		"NAME": "Payment Accepted",
-		"DESCRIPTION": "Lose !M! gold. NL If Bankrupt deal !D! damage. Exhaust"
+		"DESCRIPTION": "Lose !M! gold. NL If Bankrupt deal !D! damage. NL Exhaust"
 	},
 	"Protection Money": {
 		"NAME": "Protection Money",
-		"DESCRIPTION": "Lose 50 gold. NL Gain !M! Artifact. NL Exhaust."
+		"DESCRIPTION": "Lose 25 gold. NL Gain !M! Artifact. NL Exhaust."
 	},
 	"Rainmaker": {
 		"NAME": "Rainmaker",
 		"DESCRIPTION": "At the start of your turn, if Prosperous gain [R].",
-		"UPGRADE_DESCRIPTION":"At the start of your turn, if Prosperous gain [R] [R].",
+		"UPGRADE_DESCRIPTION":"At the start of your turn, if Prosperous gain [R] [R]."
 	},
 	"Sale Sign": {
 		"NAME": "Sale Sign",
@@ -247,7 +247,7 @@
 	},
 	"Sleight of Hand": {
 		"NAME": "Sleight of Hand",
-		"DESCRIPTION": "Ethereal. Whenever you play a skill gain !M! Block."
+		"DESCRIPTION": "Ethereal. NL Whenever you play a skill gain !M! Block."
 	},
 	"Smash & Run": {
 		"NAME": "Smash & Run",
@@ -255,11 +255,11 @@
 	},
 	"Sofa Hunt": {
 		"NAME": "Sofa Hunt",
-		"DESCRIPTION": "Gain !B! Block 5 times. NL Exhaust."
+		"DESCRIPTION": "Gain !B! Block 4 times. NL Exhaust."
 	},
 	"Spare Change": {
 		"NAME": "Spare Change",
-		"DESCRIPTION": "Gain !M! gold. Exhaust."
+		"DESCRIPTION": "Gain !M! gold. NL Exhaust."
 	},
 	"Spinning Bag": {
 		"NAME": "Spinning Bag",
@@ -275,7 +275,7 @@
 	},
 	"Thief": {
 		"NAME": "Thief",
-		"DESCRIPTION": "Ethereal. Whenever you play an attack gain !M! gold."
+		"DESCRIPTION": "Ethereal. NL Whenever you play an attack gain !M! gold."
 	},
 	"Treasure Hunt": {
 		"NAME": "Treasure Hunt",
@@ -283,6 +283,6 @@
 	},
 	"Treasure Map": {
 		"NAME": "Treasure Map",
-		"DESCRIPTION": "Gain !M! gold. Exhaust."
+		"DESCRIPTION": "Gain !M! gold. NL Exhaust."
 	}
 }

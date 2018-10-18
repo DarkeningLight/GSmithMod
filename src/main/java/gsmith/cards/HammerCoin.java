@@ -15,7 +15,7 @@ import gsmith.GSmithMod;
 import gsmith.patches.AbstractCardEnum;
 
 /**
- * @version 0.1.2 9 Oct 2018
+ * @version 0.1.3 18 Oct 2018
  *
  */
 public class HammerCoin extends CustomCard {
@@ -26,8 +26,8 @@ public class HammerCoin extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 3;
 	
-	private static final int ATTACK_DMG = 42;
-	private static final int UPGRADE_PLUS_DMG =  12;
+	private static final int ATTACK_DMG = 30;
+	private static final int UPGRADE_PLUS_DMG =  10;
 	
 	public static final String PATH = "cards/hammer_and_coin.png";
 	

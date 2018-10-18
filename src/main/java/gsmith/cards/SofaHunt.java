@@ -13,7 +13,7 @@ import gsmith.GSmithMod;
 import gsmith.patches.AbstractCardEnum;
 
 /**
- * @version 0.2.0 9 Oct 2018
+ * @version 0.2.1 18 Oct 2018
  *
  */
 public class SofaHunt extends CustomCard {
@@ -26,7 +26,7 @@ public class SofaHunt extends CustomCard {
 	
 	private static final int BLOCK_AMT = 3;
 	private static final int UPGRADE_PLUS_BLOCK = 2;
-	private static final int NUM_TIMES = 5;
+	private static final int NUM_TIMES = 4;
 	
 	public static final String PATH = "cards/sofa_hunt.png";
 	
