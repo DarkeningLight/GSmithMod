@@ -229,7 +229,7 @@
 	},
 	"Rainmaker": {
 		"NAME": "Rainmaker",
-		"DESCRIPTION": "At the start of your turn, if Prosperous gain !M! [R]."
+		"DESCRIPTION": "At the start of your turn, if Prosperous gain [R] [R]."
 	},
 	"Sale Sign": {
 		"NAME": "Sale Sign",
@@ -273,7 +273,7 @@
 	},
 	"Thief": {
 		"NAME": "Thief",
-		"DESCRIPTION": "Ethereal. Whenever you play an attack gain a gold."
+		"DESCRIPTION": "Ethereal. Whenever you play an attack gain !M! gold."
 	},
 	"Treasure Hunt": {
 		"NAME": "Treasure Hunt",

@@ -9,14 +9,14 @@
   "Sleight of Hand": {
     "NAME": "Sleight of Hand",
     "DESCRIPTIONS": [
-      "Whenever you play an #ySkill gain ",
+      "Whenever you play a #ySkill gain ",
       " #yBlock."
     ]
   },
   "Rainmaker": {
     "NAME": "Rain Maker",
     "DESCRIPTIONS": [
-      "At the start of your turn, #yProsperous: Gain ",
+      "At the start of your turn, if #yProsperous: Gain ",
       " #yEnergy."
     ]
   },
