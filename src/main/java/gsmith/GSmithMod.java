@@ -170,10 +170,8 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 
 	@Override
 	public void receiveEditCharacters() {
-		BaseMod.addCharacter(TheGoldsmith.class, "The Goldsmith", "Goldsmith class string",
-				AbstractCardEnum.GOLD, "The Goldsmith", 
-				makePath(GOLDSMITH_BUTTON), makePath(GOLDSMITH_PORTRAIT), 
-				TheGoldsmithEnum.THE_GOLDSMITH);
+		BaseMod.addCharacter(new TheGoldsmith("The Goldsmith"), AbstractCardEnum.GOLD, makePath(GOLDSMITH_BUTTON), 
+				makePath(GOLDSMITH_PORTRAIT), TheGoldsmithEnum.THE_GOLDSMITH);
 		
 	}
 

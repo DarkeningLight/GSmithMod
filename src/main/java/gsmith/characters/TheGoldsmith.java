@@ -2,15 +2,25 @@ package gsmith.characters;
 
 import java.util.ArrayList;
 
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.math.MathUtils;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import com.megacrit.cardcrawl.helpers.CardHelper;
+import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.ScreenShake; 
 
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpriterAnimation;
 import gsmith.GSmithMod;
+import gsmith.cards.BagSlam;
 import gsmith.patches.TheGoldsmithEnum;
 
 public class TheGoldsmith extends CustomPlayer {
@@ -25,10 +35,6 @@ public class TheGoldsmith extends CustomPlayer {
     public static final String GOLDSMITH_SKELETON_JSON = "char/goldsmith/skeleton.json";
 	
 	public static int turnTracker = 0;
-	public static final float[] orbRotations = {
-			0.0F, 0.0F, 0.0F, 0.0F, 0.0F,
-			0.0F, 0.0F, 0.0F, 0.0F, 0.0F,
-	};
 	
 	public static final String[] orbTextures = {
 			"img/char/goldsmith/orb/goldsmith_layer1.png",
@@ -44,8 +50,8 @@ public class TheGoldsmith extends CustomPlayer {
 			"img/char/goldsmith/orb/goldsmith_layer5d.png",
 	};
 	
-	public TheGoldsmith(String name, PlayerClass setClass) {
-		super(name, setClass, orbTextures, "img/char/goldsmith/orb/energyGoldVFX.png", 
+	public TheGoldsmith(String name) {
+		super(name, TheGoldsmithEnum.THE_GOLDSMITH, orbTextures, "img/char/goldsmith/orb/energyGoldVFX.png", 
 				new float[] {1,1,1,1,1,1,1,1,1,1,1,1}, 
 				new SpriterAnimation(GSmithMod.makePath("char/goldsmith/goldsmith.scml")));
 		
@@ -89,7 +95,7 @@ public class TheGoldsmith extends CustomPlayer {
 		}
 	}
 	
-	public static ArrayList<String> getStartingDeck() {
+	public ArrayList<String> getStartingDeck() {
 		ArrayList<String> retVal = new ArrayList<>();
 		retVal.add("Strike_D");
 		retVal.add("Strike_D");
@@ -106,15 +112,70 @@ public class TheGoldsmith extends CustomPlayer {
 		return retVal;
 	}
 	
-	public static ArrayList<String> getStartingRelics() {
+	public ArrayList<String> getStartingRelics() {
 		ArrayList<String> retVal = new ArrayList<>();
 		retVal.add("Bag of Coins");
 		UnlockTracker.markRelicAsSeen("Bag of Coins");
 		return retVal;
 	}
-	
-	public static CharSelectInfo getLoadout() {
-		return new CharSelectInfo(NAME, DESCRIPTION, 30, 30, 0, 149, 5,
-			TheGoldsmithEnum.THE_GOLDSMITH, getStartingRelics(), getStartingDeck(), false);
+
+	@Override
+	public void doCharSelectScreenSelectEffect() {
+		CardCrawlGame.sound.playA("GOLD_JINGLE", MathUtils.random(-0.2F, 0.2F));
+	    CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.MED, ScreenShake.ShakeDur.SHORT, true);
+		
 	}
+
+	@Override
+	public int getAscensionMaxHPLoss() {
+		return 3;
+	}
+
+	@Override
+	public Color getCardColor() {
+		return CardHelper.getColor(210.0f, 187.0f, 26.0f);
+	}
+
+	@Override
+	public Color getCardTrailColor() {
+		return CardHelper.getColor(210.0f, 187.0f, 26.0f);
+	}
+
+	@Override
+	public String getCustomModeCharacterButtonSoundKey() {
+		return "GOLD_JINGLE";
+	}
+
+	@Override
+	public BitmapFont getEnergyNumFont() {
+		return FontHelper.energyNumFontRed;
+	}
+
+	@Override
+	public CharSelectInfo getLoadout() {
+		return new CharSelectInfo(NAME, DESCRIPTION, 30, 30, 0, 149, 5, this, 
+				getStartingRelics(), getStartingDeck(), false);
+	}
+
+	@Override
+	public String getLocalizedCharacterName() {
+		return NAME;
+	}
+
+	@Override
+	public AbstractCard getStartCardForEvent() {
+		return new BagSlam();
+	}
+
+	@Override
+	public String getTitle(PlayerClass arg0) {
+		return NAME;	
+	}
+
+	@Override
+	public AbstractPlayer newInstance() {
+		return new TheGoldsmith(NAME);
+	}
+	
+	
 }

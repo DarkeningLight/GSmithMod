@@ -11,8 +11,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import basemod.abstracts.CustomCard;
-import basemod.helpers.BaseModTags;
-import basemod.helpers.CardTags;
+import basemod.helpers.BaseModCardTags;
 import gsmith.GSmithMod;
 import gsmith.patches.AbstractCardEnum;
 
@@ -34,7 +33,8 @@ public class StrikeD extends CustomCard {
 				AbstractCardEnum.GOLD, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.ENEMY);
 		
 		this.baseDamage = ATTACK_DMG;
-		CardTags.addTags(this, BaseModTags.BASIC_STRIKE);
+		this.tags.add(CardTags.STRIKE);
+		this.tags.add(BaseModCardTags.BASIC_STRIKE);
 	}
 
 	@Override
