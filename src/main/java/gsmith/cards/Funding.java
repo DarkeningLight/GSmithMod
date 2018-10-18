@@ -14,7 +14,7 @@ import gsmith.patches.AbstractCardEnum;
 import gsmith.powers.FundingPower;
 
 /**
- * @version 0.1.0 28 Sep 2018
+ * @version 0.2.0 18 Oct 2018
  *
  */
 public class Funding extends CustomCard {
@@ -31,7 +31,7 @@ public class Funding extends CustomCard {
 	
 	public Funding() {
 		super(ID, NAME, GSmithMod.makePath(PATH), COST, DESCRIPTION, AbstractCard.CardType.POWER, 
-				AbstractCardEnum.GOLD, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF);
+				AbstractCardEnum.GOLD, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
 		
 		this.isEthereal = true;
 		this.baseMagicNumber = this.magicNumber = GOLD_GAIN;
@@ -53,7 +53,9 @@ public class Funding extends CustomCard {
 
 	@Override
 	public void use(AbstractPlayer player, AbstractMonster monster) {
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, monster, 
-				new FundingPower(player, this.magicNumber), this.magicNumber));
+		if (player.gold <= GSmithMod.BANKRUPT) {
+			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, monster, 
+					new FundingPower(player, this.magicNumber), this.magicNumber));
+		}
 	}
 }

@@ -13,6 +13,10 @@ import gsmith.GSmithMod;
 import gsmith.patches.AbstractCardEnum;
 import gsmith.powers.GoldFuPower;
 
+/**
+ * @version 0.2.0 18 Oct 2018
+ *
+ */
 public class GoldFu extends CustomCard {
 	
 	public static final String ID = "Gold Fu";
@@ -28,7 +32,7 @@ public class GoldFu extends CustomCard {
 	
 	public GoldFu() {
 		super(ID, NAME, GSmithMod.makePath(PATH), COST, DESCRIPTION, AbstractCard.CardType.POWER, 
-				AbstractCardEnum.GOLD, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
+				AbstractCardEnum.GOLD, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF);
 		
 		this.baseMagicNumber = this.magicNumber = CARD_DRAW;
 	}

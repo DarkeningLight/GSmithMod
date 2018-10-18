@@ -25,8 +25,8 @@ public class CoinCannon extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = -1;
 	
-	private static final int GOLD_LOSS = 15;
-	private static final int DMG_AMT = 11;
+	private static final int GOLD_LOSS = 25;
+	private static final int DMG_AMT = 8;
 	private static final int UPGRADE_PLUS_DMG = 4;
 	
 	public static final String PATH = "cards/coin_cannon.png";

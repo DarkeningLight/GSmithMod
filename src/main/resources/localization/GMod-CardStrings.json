@@ -128,7 +128,8 @@
 	},
 	"Gold Bar": {
 		"NAME": "Gold Bar",
-		"DESCRIPTION": "At the start of your turn, if Bankrupt gain !M! Strength and !M! Dexterity."
+		"DESCRIPTION": "Ethereal. NL At the start of your turn, if Bankrupt gain !M! Strength and !M! Dexterity.",
+		"UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, if Bankrupt gain !M! Strength and !M! Dexterity."
 	},
 	"Gold Fu": {
 		"NAME": "Gold Fu",
@@ -229,7 +230,8 @@
 	},
 	"Rainmaker": {
 		"NAME": "Rainmaker",
-		"DESCRIPTION": "At the start of your turn, if Prosperous gain [R] [R]."
+		"DESCRIPTION": "At the start of your turn, if Prosperous gain [R].",
+		"UPGRADE_DESCRIPTION":"At the start of your turn, if Prosperous gain [R] [R].",
 	},
 	"Sale Sign": {
 		"NAME": "Sale Sign",

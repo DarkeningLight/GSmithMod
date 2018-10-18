@@ -19,7 +19,8 @@ public class Rainmaker extends CustomCard {
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	private static final int COST = 2;
+	public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+	private static final int COST = 3;
 	
 	private static final int ENERGY_GAIN = 1;
 	private static final int UPGRADE_INCREASE_ENERGY = 1;
@@ -43,6 +44,9 @@ public class Rainmaker extends CustomCard {
 		if (!this.upgraded) {
 			this.upgradeName();
 			this.upgradeMagicNumber(UPGRADE_INCREASE_ENERGY);
+			
+			this.rawDescription = UPGRADE_DESCRIPTION;
+			initializeDescription();
 		}
 
 	}
