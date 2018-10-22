@@ -5,7 +5,10 @@ import java.util.ArrayList;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.math.MathUtils;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.AbstractCard.CardColor;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
@@ -21,8 +24,13 @@ import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpriterAnimation;
 import gsmith.GSmithMod;
 import gsmith.cards.BagSlam;
+import gsmith.patches.AbstractCardEnum;
 import gsmith.patches.TheGoldsmithEnum;
 
+/**
+ * @version 0.3.0 22 Oct 2018
+ *
+ */
 public class TheGoldsmith extends CustomPlayer {
 	public static final int ENERGY_PER_TURN = 3;
 	public static final String NAME = "The Goldsmith";
@@ -132,8 +140,8 @@ public class TheGoldsmith extends CustomPlayer {
 	}
 
 	@Override
-	public Color getCardColor() {
-		return CardHelper.getColor(210.0f, 187.0f, 26.0f);
+	public CardColor getCardColor() {
+		return AbstractCardEnum.GOLD;
 	}
 
 	@Override
@@ -176,6 +184,35 @@ public class TheGoldsmith extends CustomPlayer {
 	public AbstractPlayer newInstance() {
 		return new TheGoldsmith(NAME);
 	}
+
+	@Override
+	public Color getCardRenderColor() {
+		return CardHelper.getColor(210.0f, 187.0f, 26.0f);
+	}
+
+	@Override
+	public Color getSlashAttackColor() {
+		return CardHelper.getColor(210.0f, 187.0f, 26.0f);
+	}
+
+	@Override
+	public AttackEffect[] getSpireHeartSlashEffect() {
+		return new AbstractGameAction.AttackEffect[] { AbstractGameAction.AttackEffect.BLUNT_LIGHT, 
+				AbstractGameAction.AttackEffect.BLUNT_HEAVY, AbstractGameAction.AttackEffect.BLUNT_LIGHT, 
+				AbstractGameAction.AttackEffect.SMASH, AbstractGameAction.AttackEffect.BLUNT_HEAVY, 
+				AbstractGameAction.AttackEffect.BLUNT_LIGHT};
+	}
+
+	@Override
+	public String getSpireHeartText() {
+		return "NL You draw power from all your gold.";
+	}
+
+	@Override
+	public String getVampireText() {
+		return com.megacrit.cardcrawl.events.city.Vampires.DESCRIPTIONS[0];
+	}
+	
 	
 	
 }

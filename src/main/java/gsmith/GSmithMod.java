@@ -100,7 +100,7 @@ import gsmith.patches.TheGoldsmithEnum;
 import gsmith.relics.BagOfCoins;
 
 /**
- * @version 0.1.2 26 Sep 2018
+ * @version 0.1.4 22 Oct 2018
  *
  */
 @SpireInitializer
@@ -170,7 +170,7 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 
 	@Override
 	public void receiveEditCharacters() {
-		BaseMod.addCharacter(new TheGoldsmith("The Goldsmith"), AbstractCardEnum.GOLD, makePath(GOLDSMITH_BUTTON), 
+		BaseMod.addCharacter(new TheGoldsmith("The Goldsmith"), makePath(GOLDSMITH_BUTTON), 
 				makePath(GOLDSMITH_PORTRAIT), TheGoldsmithEnum.THE_GOLDSMITH);
 		
 	}
