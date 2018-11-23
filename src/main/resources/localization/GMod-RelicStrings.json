@@ -5,5 +5,19 @@
     "DESCRIPTIONS": [
       "Damage taken in combat loses you gold instead. Suffer from Neow's Tax." 
       ]
+  },
+  "Fools Gold": {
+    "NAME": "Fool's Gold",
+    "FLAVOR": "Only fools rush in!",
+    "DESCRIPTIONS": [
+      "You are bankrupt at 75 gold or fewer instead of 50." 
+      ]
+  },
+  "Credit": {
+    "NAME": "Credit",
+    "FLAVOR": "Only 2500% APR. Terms and conditions apply.",
+    "DESCRIPTIONS": [
+      "You are prosperous at 350 gold or more instead of 400." 
+      ]
   }
 }

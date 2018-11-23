@@ -99,6 +99,8 @@ import gsmith.characters.TheGoldsmith;
 import gsmith.patches.AbstractCardEnum;
 import gsmith.patches.TheGoldsmithEnum;
 import gsmith.relics.BagOfCoins;
+import gsmith.relics.Credit;
+import gsmith.relics.FoolsGold;
 
 /**
  * @version 0.1.5 23 Nov 2018
@@ -179,6 +181,8 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 	@Override
 	public void receiveEditRelics() {
 		BaseMod.addRelicToCustomPool(new BagOfCoins(), AbstractCardEnum.GOLD );
+		BaseMod.addRelicToCustomPool(new FoolsGold(), AbstractCardEnum.GOLD);
+		BaseMod.addRelicToCustomPool(new Credit(), AbstractCardEnum.GOLD);
 	}
 	
 	@Override
@@ -304,13 +308,31 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 	}
 	
 	public static boolean isBankrupt(AbstractPlayer p) {
-		int t = p.hasRelic("Fools Gold") ? GSmithMod.BANKRUPT : (GSmithMod.BANKRUPT + 50);
+		int t;
+		if (p.hasRelic("Fools Gold")) {
+			t = BANKRUPT + 25;
+			if (p.gold > BANKRUPT && p.gold <= t) {
+				p.getRelic("Fools Gold").flash();
+			}
+		}
+		else {
+			t = BANKRUPT;
+		}
 		
 		if (p.gold <= t) { return true; } else { return false; }
 	}
 	
 	public static boolean isProsperous(AbstractPlayer p) {
-		int t = p.hasRelic("Credit") ? GSmithMod.PROSPEROUS : (GSmithMod.PROSPEROUS - 50);
+		int t;
+		if (p.hasRelic("Credit")) {
+			t = PROSPEROUS - 50;
+			if (p.gold <= t && p.gold < PROSPEROUS) {
+				p.getRelic("Credit").flash();
+			}
+		}
+		else {
+			t = PROSPEROUS;
+		}
 		
 		if (p.gold >= t) { return true; } else { return false; }
 	}
