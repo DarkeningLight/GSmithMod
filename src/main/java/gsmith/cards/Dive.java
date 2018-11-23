@@ -14,6 +14,10 @@ import gsmith.GSmithMod;
 import gsmith.patches.AbstractCardEnum;
 import gsmith.powers.DivePower;
 
+/**
+ * @version 0.1.2 23 Nov 2018
+ *
+ */
 public class Dive extends CustomCard {
 
 	public static final String ID = "Dive";
@@ -21,7 +25,6 @@ public class Dive extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
-	private static final int UPGRADED_COST = 0;
 	
 	private static final int BLOCK_GAIN = 3;
 	private static final int TURNS_AMT = 2;
@@ -42,7 +45,6 @@ public class Dive extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			this.upgradeName();
-			this.upgradeBaseCost(UPGRADED_COST);
 			this.upgradeMagicNumber(UPGRADE_TURNS_AMT);
 		}
 

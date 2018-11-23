@@ -212,7 +212,4 @@ public class TheGoldsmith extends CustomPlayer {
 	public String getVampireText() {
 		return com.megacrit.cardcrawl.events.city.Vampires.DESCRIPTIONS[0];
 	}
-	
-	
-	
 }

@@ -45,7 +45,8 @@
 	},
 	"Cheapskate": {
 		"NAME": "Cheapskate",
-		"DESCRIPTION": "Deal !D! Damage. NL If Bankrupt draw !M! cards."
+		"DESCRIPTION": "Deal !D! Damage. NL If Bankrupt draw !M! card.",
+		"UPGRADE_DESCRIPTION": "Deal !D! Damage. NL If Bankrupt draw !M! cards."
 	},
 	"Coin Barrage": {
 		"NAME": "Coin Barrage",
@@ -209,8 +210,8 @@
 	},
 	"Old Surprise": {
 		"NAME": "Old Surprise",
-		"DESCRIPTION": "Innate. NL If Bankrupt gain !M! gold. NL Exhaust.",
-		"UPGRADE_DESCRIPTION": "Innate. NL If Bankrupt gain !M! gold and 3 Block. NL Exhaust."
+		"DESCRIPTION": "Innate. NL If Bankrupt gain NL !M! gold. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Innate. NL If Bankrupt gain NL !M! gold and NL 3 Block. NL Exhaust."
 	},
 	"Pay To Win": {
 		"NAME": "Pay To Win",

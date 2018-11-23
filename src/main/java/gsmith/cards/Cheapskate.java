@@ -15,12 +15,17 @@ import basemod.abstracts.CustomCard;
 import gsmith.GSmithMod;
 import gsmith.patches.AbstractCardEnum;
 
+/**
+ * @version 0.1.2 23 Nov 2018
+ *
+ */
 public class Cheapskate extends CustomCard {
 	
 	public static final String ID = "Cheapskate";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+	public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 	private static final int COST = 0;
 	
 	private static final int ATTACK_DMG = 5;
@@ -49,6 +54,9 @@ public class Cheapskate extends CustomCard {
 			this.upgradeName();
 			this.upgradeMagicNumber(UPGRADE_PLUS_CARD);
 			this.upgradeDamage(UPGRADE_PLUS_DMG);
+			
+			this.rawDescription = UPGRADE_DESCRIPTION;
+			initializeDescription();
 			
 		}
 
