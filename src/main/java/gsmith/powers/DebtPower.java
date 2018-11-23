@@ -77,7 +77,7 @@ public class DebtPower extends AbstractPower {
 	public int calculateGoldLoss() {
 		
 		int total = GSmithMod.getActNumber() * 5;
-		double mul = 0.7;
+		double mul = 0.3;
 		
 		return (int) (total + (owner.gold * mul));
 		 
