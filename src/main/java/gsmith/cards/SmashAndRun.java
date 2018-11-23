@@ -18,6 +18,10 @@ import basemod.abstracts.CustomCard;
 import gsmith.GSmithMod;
 import gsmith.patches.AbstractCardEnum;
 
+/**
+ * @version 0.1.2 23 Nov 2018
+ *
+ */
 public class SmashAndRun extends CustomCard {
 	
 	public static final String ID = "Smash & Run";
@@ -70,7 +74,7 @@ public class SmashAndRun extends CustomCard {
 		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, player, 
 				new VulnerablePower(monster, this.magicNumber, false), this.magicNumber));
 		
-		if (player.gold >= GSmithMod.PROSPEROUS) {
+		if (GSmithMod.isBankrupt(player)) {
 			AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(ENERGY_GAIN));
 		}
 			

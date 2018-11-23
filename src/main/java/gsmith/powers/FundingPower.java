@@ -1,7 +1,7 @@
 package gsmith.powers;
 
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
@@ -10,6 +10,10 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import gsmith.GSmithMod;
 import gsmith.actions.GainGoldAction;
 
+/**
+ * @version 0.1.2 23 Nov 2018
+ *
+ */
 public class FundingPower extends AbstractPower {
 	
 	public static final String PATH = "powers/funding.png";
@@ -18,7 +22,7 @@ public class FundingPower extends AbstractPower {
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 	public static final String NAME = powerStrings.NAME;
 	
-	public FundingPower(AbstractCreature owner, int goldGain) {
+	public FundingPower(AbstractPlayer owner, int goldGain) {
 		super();
 		this.name = NAME;
 		this.ID = POWER_ID;
@@ -32,6 +36,7 @@ public class FundingPower extends AbstractPower {
 	
 	@Override
 	public void atStartOfTurn() {
+		if (GSmithMod.isBankrupt((AbstractPlayer)owner))
 		super.atStartOfTurn();
 		AbstractDungeon.actionManager.addToBottom(new GainGoldAction(this.owner, this.amount));
 	}

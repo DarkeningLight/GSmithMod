@@ -2,7 +2,7 @@ package gsmith.powers;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
-import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
@@ -10,6 +10,10 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import gsmith.GSmithMod;
 
+/**
+ * @version 1.0.2 23 Nov 2018
+ *
+ */
 public class RainmakerPower extends AbstractPower {
 	
 	public static final String PATH = "powers/rainmaker.png";
@@ -18,7 +22,7 @@ public class RainmakerPower extends AbstractPower {
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 	public static final String NAME = powerStrings.NAME;
 	
-	public RainmakerPower(AbstractCreature owner, int energyGain) {
+	public RainmakerPower(AbstractPlayer owner, int energyGain) {
 		super();
 		this.name = NAME;
 		this.ID = POWER_ID;
@@ -34,7 +38,7 @@ public class RainmakerPower extends AbstractPower {
 	public void atStartOfTurn() {
 		super.atStartOfTurn();
 		
-		if (this.owner.gold >= GSmithMod.PROSPEROUS) {
+		if (GSmithMod.isProsperous((AbstractPlayer)owner)) {
 			this.flash();
 			AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(this.amount));
 		}

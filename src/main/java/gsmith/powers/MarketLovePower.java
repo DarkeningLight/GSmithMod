@@ -2,7 +2,7 @@ package gsmith.powers;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.HealAction;
-import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
@@ -10,6 +10,10 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import gsmith.GSmithMod;
 
+/**
+ * @version 0.1.2 23 Nov 2018
+ *
+ */
 public class MarketLovePower extends AbstractPower {
 	
 	public static final String PATH = "powers/market_love.png";
@@ -20,7 +24,7 @@ public class MarketLovePower extends AbstractPower {
 	
 	
 	
-	public MarketLovePower(AbstractCreature owner) {
+	public MarketLovePower(AbstractPlayer owner) {
 		super();
 		this.name = NAME;
 		this.ID = POWER_ID;
@@ -34,7 +38,7 @@ public class MarketLovePower extends AbstractPower {
 	public void atStartOfTurn() {
 		super.atStartOfTurn();
 		
-		if (owner.gold <= GSmithMod.BANKRUPT) {
+		if (GSmithMod.isBankrupt((AbstractPlayer)owner)) {
 			AbstractDungeon.actionManager.addToBottom(new HealAction(owner,owner, this.amount));
 		}
 	}

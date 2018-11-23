@@ -12,6 +12,10 @@ import basemod.abstracts.CustomCard;
 import gsmith.GSmithMod;
 import gsmith.patches.AbstractCardEnum;
 
+/**
+ * @version 0.1.2 23 Nov 2018
+ *
+ */
 public class EmptyHands extends CustomCard {
 	
 	public static final String ID = "Empty Hands";
@@ -52,10 +56,10 @@ public class EmptyHands extends CustomCard {
 		
 		int dexGain = 1;
 		
-		if (upgraded && player.gold >= GSmithMod.BANKRUPT) {
+		if (upgraded && GSmithMod.isBankrupt(player)) {
 			dexGain += 4;
 		} 
-		else if (upgraded || player.gold >= GSmithMod.BANKRUPT) {
+		else if (upgraded || GSmithMod.isBankrupt(player)) {
 			dexGain += 1;
 		}
 		

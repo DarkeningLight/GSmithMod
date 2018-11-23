@@ -2,7 +2,7 @@ package gsmith.powers;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
@@ -11,6 +11,10 @@ import com.megacrit.cardcrawl.powers.ThornsPower;
 
 import gsmith.GSmithMod;
 
+/**
+ * @version 0.1.2 23 Nov 2018
+ *
+ */
 public class BagFuPower extends AbstractPower {
 	
 	public static final String PATH = "powers/bag_fu.png";
@@ -19,7 +23,7 @@ public class BagFuPower extends AbstractPower {
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 	public static final String NAME = powerStrings.NAME;
 	
-	public BagFuPower(AbstractCreature owner, int thornsGain) {
+	public BagFuPower(AbstractPlayer owner, int thornsGain) {
 		super();
 		this.name = NAME;
 		this.ID = POWER_ID;
@@ -35,7 +39,7 @@ public class BagFuPower extends AbstractPower {
 	public void atStartOfTurn() {
 		super.atStartOfTurn();
 		
-		if (this.owner.gold >= GSmithMod.PROSPEROUS) {
+		if (GSmithMod.isProsperous((AbstractPlayer) owner)) {
 			this.flash();
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, 
 					new ThornsPower(this.owner, this.amount), this.amount));

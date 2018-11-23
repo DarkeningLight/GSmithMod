@@ -15,7 +15,7 @@ import gsmith.GSmithMod;
 import gsmith.patches.AbstractCardEnum;
 
 /**
- * @version 0.1.2 9 Oct 2018
+ * @version 0.1.3 23 Nov 2018
  *
  */
 public class HalfPenny extends CustomCard {
@@ -65,7 +65,7 @@ public class HalfPenny extends CustomCard {
 			AbstractDungeon.actionManager.addToBottom(new GainBlockAction(player, player, this.block));
 		}
 		
-		if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead() && player.gold <= GSmithMod.BANKRUPT)
+		if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead() && GSmithMod.isBankrupt(player))
 	    {
 	      flash();
 	      for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {

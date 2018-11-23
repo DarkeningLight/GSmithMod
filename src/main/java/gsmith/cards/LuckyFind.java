@@ -15,6 +15,10 @@ import gsmith.GSmithMod;
 import gsmith.actions.LoseGoldAction;
 import gsmith.patches.AbstractCardEnum;
 
+/**
+ * @version 0.1.2 23 Nov 2018
+ *
+ */
 public class LuckyFind extends CustomCard {
 
 	public static final String ID = "Lucky Find";
@@ -51,7 +55,7 @@ public class LuckyFind extends CustomCard {
 
 	@Override
 	public void use(AbstractPlayer player, AbstractMonster monster) {
-		if (player.gold >= GSmithMod.PROSPEROUS) {
+		if (GSmithMod.isProsperous(player)) {
 			AbstractDungeon.actionManager.addToBottom(new LoseGoldAction(player, GOLD_LOSS));
 			AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
 				

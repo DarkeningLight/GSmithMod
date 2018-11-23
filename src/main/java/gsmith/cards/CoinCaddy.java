@@ -13,6 +13,10 @@ import basemod.abstracts.CustomCard;
 import gsmith.GSmithMod;
 import gsmith.patches.AbstractCardEnum;
 
+/**
+ * @version 0.1.2 23 Nov 2018
+ *
+ */
 public class CoinCaddy extends CustomCard {
 	
 	public static final String ID = "Coin Caddy";
@@ -52,10 +56,10 @@ public class CoinCaddy extends CustomCard {
 		
 		int strGain = 1;
 		
-		if (upgraded && player.gold >= GSmithMod.PROSPEROUS) {
+		if (upgraded && GSmithMod.isProsperous(player)) {
 			strGain += 2;
 		} 
-		else if (player.gold >= GSmithMod.PROSPEROUS) {
+		else if (GSmithMod.isProsperous(player)) {
 			strGain += 1;
 		}
 		

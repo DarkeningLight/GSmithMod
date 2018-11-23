@@ -6,6 +6,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -100,7 +101,7 @@ import gsmith.patches.TheGoldsmithEnum;
 import gsmith.relics.BagOfCoins;
 
 /**
- * @version 0.1.4 22 Oct 2018
+ * @version 0.1.5 23 Nov 2018
  *
  */
 @SpireInitializer
@@ -300,6 +301,18 @@ public class GSmithMod implements PostInitializeSubscriber, EditRelicsSubscriber
 			System.out.println("Can't find act");
 			return 0;
 		}
+	}
+	
+	public static boolean isBankrupt(AbstractPlayer p) {
+		int t = p.hasRelic("Fools Gold") ? GSmithMod.BANKRUPT : (GSmithMod.BANKRUPT + 50);
+		
+		if (p.gold <= t) { return true; } else { return false; }
+	}
+	
+	public static boolean isProsperous(AbstractPlayer p) {
+		int t = p.hasRelic("Credit") ? GSmithMod.PROSPEROUS : (GSmithMod.PROSPEROUS - 50);
+		
+		if (p.gold >= t) { return true; } else { return false; }
 	}
 	
 	private void unlockCards() {

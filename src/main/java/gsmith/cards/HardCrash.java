@@ -17,7 +17,7 @@ import gsmith.actions.LoseGoldAction;
 import gsmith.patches.AbstractCardEnum;
 
 /**
- * @version 0.1.4 9 Oct 2018
+ * @version 0.1.5 23 Nov 2018
  *
  */
 public class HardCrash extends CustomCard {
@@ -68,7 +68,7 @@ public class HardCrash extends CustomCard {
 				new DamageInfo(player, this.damage, this.damageTypeForTurn), 
 				AbstractGameAction.AttackEffect.BLUNT_LIGHT));
 		
-		if(player.gold <= GSmithMod.BANKRUPT) {
+		if(GSmithMod.isBankrupt(player)) {
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, 
 	        		  new StrengthPower(player, this.magicNumber), this.magicNumber));
 		}

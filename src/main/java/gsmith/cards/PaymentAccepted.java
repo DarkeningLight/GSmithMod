@@ -15,6 +15,10 @@ import gsmith.GSmithMod;
 import gsmith.actions.LoseGoldAction;
 import gsmith.patches.AbstractCardEnum;
 
+/**
+ * @version 1.0.2 23Nov 2018
+ *
+ */
 public class PaymentAccepted extends CustomCard {
 	
 	public static final String ID = "Payment Accepted";
@@ -56,7 +60,7 @@ public class PaymentAccepted extends CustomCard {
 		
 		AbstractDungeon.actionManager.addToBottom(new LoseGoldAction(player, GOLD_LOSE));
 		
-		if (player.gold <= GSmithMod.BANKRUPT) {
+		if (GSmithMod.isBankrupt(player)) {
 			AbstractDungeon.actionManager.addToBottom(new DamageAction(monster, 
 					new DamageInfo(player, this.damage, this.damageTypeForTurn), 
 					AbstractGameAction.AttackEffect.BLUNT_HEAVY));

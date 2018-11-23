@@ -15,6 +15,10 @@ import basemod.abstracts.CustomCard;
 import gsmith.GSmithMod;
 import gsmith.patches.AbstractCardEnum;
 
+/**
+ * @version 0.1.2 23 Nov 2018
+ *
+ */
 public class Bribe extends CustomCard {
 	
 	public static final String ID = "Bribe";
@@ -60,7 +64,7 @@ public class Bribe extends CustomCard {
 				new DamageInfo(player, this.damage, this.damageTypeForTurn), 
 				AbstractGameAction.AttackEffect.BLUNT_HEAVY));
 		
-		if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead() && player.gold >= GSmithMod.PROSPEROUS)
+		if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead() && GSmithMod.isProsperous(player))
 	    {
 	      flash();
 	      for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {

@@ -14,6 +14,10 @@ import basemod.abstracts.CustomCard;
 import gsmith.GSmithMod;
 import gsmith.patches.AbstractCardEnum;
 
+/**
+ * @version 0.1.2 23 Nov 2018
+ *
+ */
 public class SpinningBag extends CustomCard {
 	
 	public static final String ID = "Spinning Bag";
@@ -52,7 +56,7 @@ public class SpinningBag extends CustomCard {
 
 	@Override
 	public void use(AbstractPlayer player, AbstractMonster monster) {
-		if (player.gold >= GSmithMod.PROSPEROUS) {
+		if (GSmithMod.isProsperous(player)) {
 			for (int i = 1 ; i <= this.magicNumber ; i++) {
 				AbstractDungeon.actionManager.addToBottom(new DamageAction(monster, 
 						new DamageInfo(player, this.damage, this.damageTypeForTurn), 

@@ -2,7 +2,7 @@ package gsmith.powers;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
@@ -18,7 +18,7 @@ public class GoldFuPower extends AbstractPower {
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 	public static final String NAME = powerStrings.NAME;
 	
-	public GoldFuPower(AbstractCreature owner, int cardDraw) {
+	public GoldFuPower(AbstractPlayer owner, int cardDraw) {
 		super();
 		this.name = NAME;
 		this.ID = POWER_ID;
@@ -34,7 +34,7 @@ public class GoldFuPower extends AbstractPower {
 	public void atStartOfTurn() {
 		super.atStartOfTurn();
 		
-		if (this.owner.gold >= GSmithMod.PROSPEROUS) {
+		if (GSmithMod.isProsperous((AbstractPlayer)owner)) {
 			this.flash();
 			AbstractDungeon.actionManager.addToBottom(new DrawCardAction(this.owner, this.amount));
 		}

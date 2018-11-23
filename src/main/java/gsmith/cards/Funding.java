@@ -14,7 +14,7 @@ import gsmith.patches.AbstractCardEnum;
 import gsmith.powers.FundingPower;
 
 /**
- * @version 0.2.0 18 Oct 2018
+ * @version 0.2.1 23 Nov 2018
  *
  */
 public class Funding extends CustomCard {
@@ -53,9 +53,7 @@ public class Funding extends CustomCard {
 
 	@Override
 	public void use(AbstractPlayer player, AbstractMonster monster) {
-		if (player.gold <= GSmithMod.BANKRUPT) {
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, monster, 
 					new FundingPower(player, this.magicNumber), this.magicNumber));
-		}
 	}
 }

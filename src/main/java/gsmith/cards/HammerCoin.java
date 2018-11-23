@@ -15,7 +15,7 @@ import gsmith.GSmithMod;
 import gsmith.patches.AbstractCardEnum;
 
 /**
- * @version 0.1.3 18 Oct 2018
+ * @version 0.1.4 24 Nov 2018
  *
  */
 public class HammerCoin extends CustomCard {
@@ -55,7 +55,7 @@ public class HammerCoin extends CustomCard {
 	@Override
 	public void use(AbstractPlayer player, AbstractMonster monster) {
 		
-		if (player.gold <= GSmithMod.BANKRUPT || player.gold >= GSmithMod.PROSPEROUS) {
+		if (GSmithMod.isBankrupt(player) || GSmithMod.isProsperous(player)) {
 			AbstractDungeon.actionManager.addToBottom(new DamageAction(monster, 
 				new DamageInfo(player, this.damage, this.damageTypeForTurn), 
 				AbstractGameAction.AttackEffect.SMASH));

@@ -3,9 +3,12 @@ package gsmith.actions;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
-
 import gsmith.GSmithMod;
 
+/**
+ * @version 0.1.2 23 Nov 2018
+ *
+ */
 public class EatTheCoinsAction extends AbstractGameAction {
 	private final int GOLD_LOSS;
 	private final int HP_GAIN;
@@ -25,7 +28,7 @@ public class EatTheCoinsAction extends AbstractGameAction {
 			return;
 		}
 		
-		if (this.source.gold <= GSmithMod.BANKRUPT) {
+		if (GSmithMod.isBankrupt((AbstractPlayer)this.source)) {
 			this.source.increaseMaxHp(this.HP_GAIN, true);
 		}	
 		

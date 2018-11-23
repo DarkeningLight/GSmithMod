@@ -12,6 +12,10 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import gsmith.GSmithMod;
 
+/**
+ * @version 0.1.2 23 Nov 2018
+ *
+ */
 public class TreasureHuntPower extends AbstractPower {
 	
 	public static final String PATH = "powers/treasure_hunt.png";
@@ -36,7 +40,7 @@ public class TreasureHuntPower extends AbstractPower {
 	public void atStartOfTurn() {
 		super.atStartOfTurn();
 		
-		if (owner.gold <= GSmithMod.BANKRUPT) {
+		if (GSmithMod.isBankrupt((AbstractPlayer)owner)) {
 			for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
 				if (!m.isDeadOrEscaped()) {
 					AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, owner, 

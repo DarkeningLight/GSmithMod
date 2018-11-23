@@ -125,7 +125,7 @@
 	},
 	"Funding": {
 		"NAME": "Funding",
-		"DESCRIPTION": "Ethereal. NL At the start of your turn gain !M! gold."
+		"DESCRIPTION": "Ethereal. NL If Bankrupt at the start of your turn gain !M! gold."
 	},
 	"Gold Bar": {
 		"NAME": "Gold Bar",
@@ -252,7 +252,7 @@
 	},
 	"Smash & Run": {
 		"NAME": "Smash & Run",
-		"DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL Apply !M! Vulnerable. NL If Prosperous gain [R] [R] [R] [R]."
+		"DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL Apply !M! Vulnerable. NL If Bankrupt gain [R] [R] [R] [R]."
 	},
 	"Sofa Hunt": {
 		"NAME": "Sofa Hunt",

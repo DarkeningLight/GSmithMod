@@ -14,7 +14,7 @@ import gsmith.actions.GainGoldAction;
 import gsmith.patches.AbstractCardEnum;
 
 /**
- * @version 0.2.1 9 Oct 2018
+ * @version 0.2.2 23 Nov 2018
  *
  */
 public class OldSurprise extends CustomCard {
@@ -59,7 +59,7 @@ public class OldSurprise extends CustomCard {
 	@Override
 	public void use(AbstractPlayer player, AbstractMonster monster) {
 		
-		if (player.gold <= GSmithMod.BANKRUPT ) {
+		if (GSmithMod.isBankrupt(player) ) {
 			AbstractDungeon.actionManager.addToBottom(new GainGoldAction(player, this.magicNumber));
 			
 			if (upgraded) {
